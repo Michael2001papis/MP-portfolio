@@ -34,6 +34,10 @@ body {
     color: #1828d7;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -42,6 +46,7 @@ body {
     min-height: 100vh;
     background-color: #e5c77c;
     direction: rtl;
+    padding: 1rem;
 }
 
 /* - קונטיינר ראשי למחשבון -
@@ -63,7 +68,7 @@ body {
 /* קונטיינר ראשי למחשבון */
 .calculator {
     padding: 10px;
-    width: 90%;
+    width: 100%;
     max-width: 300px;
     background-color: black;
     border-radius: 10px;
@@ -71,11 +76,12 @@ body {
 }
 
 .calculator p {
-    font-size: xx-large;
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
     height: 50px;
     color: white;
     text-align: right;
     padding: 5px;
+    overflow-x: auto;
     background-color: #222;
     border-radius: 5px;
 }
@@ -107,9 +113,10 @@ body {
     margin-top: 10px;
 }
 
-/* כפתורי המחשבון */
+/* כפתורי המחשבון - min 44px tap */
 .calculator .AllCalculatorButtons button { 
     width: calc(25% - 5px);
+    min-height: 44px;
     font-size: larger;
     background-color: white;
     border-radius: 8px;

@@ -1,5 +1,9 @@
 
-        .project-nav {
+        html, body {
+    overflow-x: hidden;
+}
+
+.project-nav {
             background: rgba(82, 249, 255, 0.69);
             padding: 10px 20px;
             text-align: center;

@@ -4,6 +4,10 @@
     padding: 0; /* הסרת ריפודים כלליים */
     box-sizing: border-box; /* הגדרת אופן חישוב גודל אלמנטים */
   }
+  html, body {
+    overflow-x: hidden;
+  }
+
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
@@ -45,11 +49,11 @@
     margin: 0 0 20px 0;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
-  /* עיצוב לוח המשחק */
+  /* עיצוב לוח המשחק - רספונסיבי */
   .game-board {
-    display: grid; /* הגדרת לוח המשחק כרשת */
-    grid-template-columns: repeat(4, 120px); /* 4 עמודות בגודל 120px כל אחת */
-    grid-gap: 15px; /* רווחים בין הקלפים */
+    display: grid;
+    grid-template-columns: repeat(4, minmax(70px, 120px));
+    grid-gap: clamp(8px, 2vw, 15px);
     justify-content: center; /* ישור הרשת למרכז */
     align-items: center; /* יישור אוטומטי של כל פריט במרכזו */
     margin: 20px auto; /* רווחים סביב הלוח */
@@ -60,8 +64,10 @@
   }
   /* עיצוב קלפים */
   .card {
-    width: 120px; /* גודל הכרטיס */
-    height: 120px; /* גובה הכרטיס */
+    width: 100%;
+    aspect-ratio: 1;
+    min-width: 70px;
+    min-height: 70px;
     background: #ffffff; /* צבע רקע בהיר לכרטיס */
     border: 2px solid #ddd; /* גבול רך בצבע אפור בהיר */
     border-radius: 15px; /* קצוות מעוגלים */

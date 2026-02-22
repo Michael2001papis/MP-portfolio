@@ -13,6 +13,10 @@
     --site-text-light: #718096;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 /* תפריט עליון אחיד */
 .site-header,
 .top-menu {

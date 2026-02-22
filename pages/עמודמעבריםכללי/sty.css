@@ -17,6 +17,7 @@
 html {
     direction: rtl;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -25,6 +26,7 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 /* תפריט עליון */
@@ -83,12 +85,12 @@ body {
     width: 100%;
 }
 
-/* כרטיסי פרויקט */
+/* כרטיסי פרויקט - min 44px tap target */
 .button-container .btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 140px;
+    min-height: 120px;
     padding: 1rem;
     font-size: 1rem;
     font-weight: 600;
