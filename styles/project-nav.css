@@ -34,14 +34,50 @@
     transform: translateY(-1px);
 }
 
-@media (max-width: 480px) {
+/* המבורגר למובייל */
+.project-nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    flex-direction: column;
+    gap: 5px;
+}
+.project-nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+}
+.project-nav.open .project-nav-toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.project-nav.open .project-nav-toggle span:nth-child(2) { opacity: 0; }
+.project-nav.open .project-nav-toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
     .project-nav {
-        flex-direction: column;
-        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: space-between;
         padding: 0.75rem 1rem;
     }
-    .project-nav a {
+    .project-nav-toggle {
+        display: flex;
+    }
+    .project-nav > a {
+        display: none;
         width: 100%;
-        max-width: 200px;
+    }
+    .project-nav.open > a {
+        display: inline-flex;
+    }
+}
+@media (max-width: 480px) {
+    .project-nav.open > a {
+        max-width: 100%;
     }
 }

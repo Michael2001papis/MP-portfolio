@@ -267,12 +267,20 @@
         <form action="" class="form" id="contact-form">
             <input type="text" placeholder="שם מלא" id="contact-name" name="name" required>
             <input type="email" placeholder="אימייל" id="contact-email" name="email" required>
-            <input type="tel" placeholder="טלפון" id="contact-phone" name="phone">
+            <input type="tel" placeholder="טלפון אישי/עסקי" id="contact-phone" name="phone">
+            <select id="contact-reason" name="reason">
+                <option value="">סיבת הפנייה</option>
+                <option value="develop-website">לפתח אתר</option>
+                <option value="personal">אישי</option>
+                <option value="support">תמיכה</option>
+            </select>
+            <input type="text" placeholder="מיקום (לא חובה)" id="contact-location" name="location">
             <textarea placeholder="הודעה" id="contact-message" name="message" rows="4"></textarea>
             <input type="submit" value="שלח">
         </form>
+        <a href="/MPContactusforofficialwebsitedevelopment.html" class="btn-official-dev">יצירת קשר לפיתוח אתר רשמי</a>
         <p id="form-message" class="form-message" aria-live="polite"></p>
-        <p class="form-demo-notice">This form is for demo purposes. No data is sent to a server.</p>
+        <p class="form-demo-notice">לחיצה על "שלח" תפתח את תוכנת המייל שלך עם הפרטים. יש לאשר ולשלוח משם.</p>
     </section>
 
     <footer class="portfolio-footer">

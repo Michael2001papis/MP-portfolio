@@ -40,25 +40,34 @@ body {
     padding: 2rem 1rem;
     max-width: 600px;
     margin: 0 auto;
+    background: linear-gradient(135deg, rgba(30,58,95,0.05) 0%, rgba(44,82,130,0.08) 100%);
+    border-radius: 16px;
+    border: 1px solid rgba(30,58,95,0.15);
+    box-shadow: 0 4px 20px rgba(30,58,95,0.06);
 }
 
 .addify-project-header h1 {
     font-size: 1.75rem;
     font-weight: 700;
-    color: var(--addify-text);
+    color: var(--addify-primary);
     margin: 0 0 0.5rem 0;
 }
 
 .addify-tagline {
     font-size: 1rem;
-    color: var(--addify-text-light);
-    margin: 0 0 0.5rem 0;
+    color: var(--addify-text);
+    margin: 0 0 0.25rem 0;
 }
 
 .addify-demo-notice {
     font-size: 0.85rem;
     color: var(--addify-text-light);
     opacity: 0.9;
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    background: rgba(30,58,95,0.08);
+    border-radius: 20px;
+    margin-top: 0.5rem;
 }
 
 /* Main */
@@ -183,6 +192,17 @@ body {
     color: var(--addify-success);
     margin-top: 1rem;
     font-weight: 500;
+}
+.success-message.success-visible {
+    padding: 1rem;
+    background: rgba(45, 122, 74, 0.1);
+    border-radius: 8px;
+    border: 1px solid var(--addify-success);
+}
+.login-welcome-msg {
+    font-size: 1.1rem;
+    color: var(--addify-primary);
+    padding: 1rem;
 }
 
 /* Users Section */

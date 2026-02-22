@@ -393,6 +393,7 @@ img, video {
 }
 
 .contact-section input,
+.contact-section select,
 .contact-section textarea {
     padding: 0.75rem;
     border: 1px solid var(--border);
@@ -402,9 +403,34 @@ img, video {
     width: 100%;
 }
 
+.contact-section select {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: var(--bg-card);
+}
+
 .contact-section textarea {
     resize: vertical;
     min-height: 80px;
+}
+
+.btn-official-dev {
+    display: block;
+    text-align: center;
+    padding: 0.85rem 1.5rem;
+    margin-top: 1rem;
+    background: linear-gradient(135deg, #276d42, #2d7a4a);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-official-dev:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(39,109,66,0.4);
 }
 
 .form-demo-notice {

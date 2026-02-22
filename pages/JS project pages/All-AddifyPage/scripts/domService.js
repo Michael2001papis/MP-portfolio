@@ -197,7 +197,10 @@ if (registerForm) {
         new User(firstName, lastName, email, password);
 
         const successEl = document.getElementById('register-success');
-        if (successEl) successEl.textContent = 'Account created successfully';
+        if (successEl) {
+            successEl.innerHTML = '✓ <strong>ההרשמה הושלמה בהצלחה!</strong> חשבונך נוצר.';
+            successEl.className = 'success-message success-visible';
+        }
 
         e.target.reset();
         if (submitBtn) {
@@ -212,7 +215,8 @@ if (registerForm) {
 }
 
 const loginForm = document.querySelector('.login-form');
-if (loginForm) {
+const loginCard = document.querySelector('.addify-login-card');
+if (loginForm && loginCard) {
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault();
         clearErrors(loginForm);
@@ -229,6 +233,18 @@ if (loginForm) {
 
         User.login(user.id);
         e.target.reset();
+
+        const welcomeEl = document.getElementById('login-welcome');
+        if (welcomeEl) {
+            welcomeEl.innerHTML = `<div class="login-welcome-msg">שלום <strong>${user.firstName}</strong>, שובך! 👋</div>`;
+            welcomeEl.style.display = 'block';
+        }
+        loginForm.style.display = 'none';
+        setTimeout(() => {
+            if (welcomeEl) welcomeEl.style.display = 'none';
+            loginForm.style.display = 'flex';
+            if (welcomeEl) welcomeEl.innerHTML = '';
+        }, 4000);
     });
 }
 

@@ -47,7 +47,7 @@ function checkMatch() {
     card2.classList.add('matched');
     matchedCards += 2;
     if (matchedCards === cards.length) {
-      setTimeout(() => alert('ניצחתם!'), 300);
+      setTimeout(showVictoryScreen, 400);
     }
   } else {
     // אם אין התאמה בין הקלפים - הפיכת הקלפים חזרה
@@ -58,6 +58,24 @@ function checkMatch() {
   }
 
   flippedCards = [];
+}
+
+function showVictoryScreen() {
+  const overlay = document.createElement('div');
+  overlay.className = 'victory-overlay';
+  overlay.innerHTML = `
+    <div class="victory-card">
+      <div class="victory-emoji">🎉</div>
+      <h2>כל הכבוד!</h2>
+      <p>הצלחת להתאים את כל הזוגות!</p>
+      <button class="victory-btn" onclick="this.closest('.victory-overlay').remove()">שחק שוב</button>
+    </div>
+  `;
+  overlay.querySelector('.victory-btn').addEventListener('click', () => {
+    overlay.remove();
+    resetGame();
+  });
+  document.body.appendChild(overlay);
 }
 
 // הוספת אירוע לכפתור איפוס המשחק

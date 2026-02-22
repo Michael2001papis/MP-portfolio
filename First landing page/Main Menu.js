@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Contact Form
+    // Contact Form - mailto
     var form = document.getElementById('contact-form');
     if (form) {
         form.addEventListener('submit', function(e) {
@@ -44,9 +44,10 @@ document.addEventListener('DOMContentLoaded', function() {
             var nameInput = document.getElementById('contact-name');
             var emailInput = document.getElementById('contact-email');
             var phoneInput = document.getElementById('contact-phone');
+            var reasonInput = document.getElementById('contact-reason');
+            var locationInput = document.getElementById('contact-location');
             var messageInput = document.getElementById('contact-message');
 
-            // Validation before submit
             var name = nameInput ? nameInput.value.trim() : '';
             var email = emailInput ? emailInput.value.trim() : '';
             var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -67,13 +68,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            msg.textContent = 'הטופס נקלט. תודה!';
+            if (!confirm('לשלוח את המייל? ייפתח דוא"ל עם הפרטים. ישלחו משם.')) return;
+
+            var phone = phoneInput ? phoneInput.value.trim() : '';
+            var reason = reasonInput ? reasonInput.options[reasonInput.selectedIndex].text : '';
+            var location = locationInput ? locationInput.value.trim() : '';
+            var message = messageInput ? messageInput.value.trim() : '';
+
+            var body = 'שם: ' + name + '\nאימייל: ' + email + '\nטלפון: ' + phone + '\nסיבה: ' + reason + '\nמיקום: ' + location + '\n\nהודעה:\n' + message;
+            var subject = 'פנייה מ-MP Portfolio - ' + name;
+            var mailto = 'mailto:dvnka2@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+            window.location.href = mailto;
+
+            msg.textContent = 'המייל נפתח. תודה!';
             msg.style.color = '#1e3a5f';
             msg.style.marginTop = '10px';
-            if (nameInput) nameInput.value = '';
-            if (emailInput) emailInput.value = '';
-            if (phoneInput) phoneInput.value = '';
-            if (messageInput) messageInput.value = '';
+            form.reset();
         });
     }
 

@@ -14,11 +14,24 @@
         .legal-page h2 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
         .legal-page p, .legal-page ul { margin-bottom: 1rem; color: #4a5568; line-height: 1.7; }
         .legal-page a { color: #1e3a5f; }
-        .legal-page .back { display: inline-block; margin-bottom: 2rem; }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.25rem;
+            background: linear-gradient(135deg, #1e3a5f, #2c5282);
+            color: white !important;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .back-link:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(30,58,95,0.4); }
     </style>
 </head>
 <body>
-    <a href="/index.html" class="back">← חזרה לדף הבית</a>
+    <a href="/index.html" class="back-link">← חזרה לדף הבית</a>
     <main class="legal-page">
         <h1>Terms & License</h1>
         <p><strong>© 2025 MP — Michael Papismedov. All rights reserved.</strong></p>
