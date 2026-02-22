@@ -178,6 +178,17 @@ footer nav ul li a:hover .footer-logo {
     transform: scale(1.15);
 }
 
+footer p {
+    color: white;
+    margin: 0.5rem 0 0;
+    font-size: 0.9rem;
+}
+
+footer p a {
+    color: white;
+    text-decoration: underline;
+}
+
 /* רספונסיבי */
 @media (max-width: 768px) {
     #projects {

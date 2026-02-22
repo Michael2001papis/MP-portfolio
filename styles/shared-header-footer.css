@@ -84,6 +84,15 @@ html, body {
     box-shadow: 0 -2px 12px rgba(0,0,0,0.15);
 }
 
+.footer p {
+    margin: 0.25rem 0;
+    color: white;
+}
+
+.footer small {
+    opacity: 0.9;
+}
+
 .site-footer a,
 .footer a,
 .bottom-menu a {

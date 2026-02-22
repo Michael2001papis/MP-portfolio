@@ -1,6 +1,10 @@
 # MP Portfolio
 
+**© 2025 MP — Michael Papismedov. All rights reserved.**
+
 פורטפוליו אישי של מיכאל פפיסמדוב – אתר תדמית המציג פרויקטים ב-HTML ו-JavaScript.
+
+העתקת קוד, עיצוב או תוכן אסורה. ראה [Terms](https://github.com/Michael2001papis/MP-portfolio/blob/main/legal.html) לפרטים.
 
 ## 🚀 אודות
 
@@ -47,4 +51,4 @@ MP-portfolio/
 
 ## 📄 רישיון
 
-ראה [LICENSE](LICENSE) לפרטים.
+כל הזכויות שמורות. ראה [LICENSE](LICENSE) ו-[Terms](legal.html) לפרטים.

@@ -1,4 +1,4 @@
-// MP Portfolio - Professional
+// MP Portfolio - Professional | © 2025 MP — Michael Papismedov | MP-PORTFOLIO-ID: 2025-MP-001
 document.addEventListener('DOMContentLoaded', function() {
 
     // Filter Projects
