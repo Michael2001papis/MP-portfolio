@@ -1,26 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pong Game</title>
+    <title>Table Tennis (Pong) – JavaScript Project</title>
+    <link rel="stylesheet" href="/styles/js-project-header.css">
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js" defer></script>    
+    <script src="./script.js" defer></script>
 </head>
-<body>
-    <nav class="project-nav">
-        <a href="/index.html">חזרה לעמוד הבית</a>
-        <a href="/pages/עמודמעבריםכללי/index.html">לפרויקטים JS</a>
-    </nav>
-    <div id="gameArea">
-        <canvas id="pong"></canvas>
-        <div class="score">
-            שחקן שמאל: <span id="leftScore">0</span> | שחקן ימין: <span id="rightScore">0</span>
+<body dir="rtl">
+    <header class="project-header">
+        <h1>Table Tennis (Pong)</h1>
+        <p class="project-desc">Two-player Pong game with score tracking</p>
+        <p class="project-tech">Technologies: HTML | CSS | JavaScript</p>
+        <nav class="project-nav">
+            <a href="/index.html">Back to Portfolio</a>
+            <a href="/pages/עמודמעבריםכללי/index.html">View All Projects</a>
+        </nav>
+    </header>
+
+    <main class="project-app">
+        <div id="gameArea">
+            <canvas id="pong"></canvas>
+            <div class="score">שחקן שמאל: <span id="leftScore">0</span> | שחקן ימין: <span id="rightScore">0</span></div>
+            <button class="button btn-project" id="startBtn">Start Game</button>
+            <button class="button btn-project" id="stopBtn">Restart</button>
         </div>
-        <button class="button" id="startBtn">Start Game</button>
-        <button class="button" id="stopBtn">Stop Game</button>
-    </div>
+    </main>
+
+    <footer class="project-footer">
+        <a href="/index.html">Back to Portfolio</a> · <a href="/pages/עמודמעבריםכללי/index.html">View All Projects</a>
+    </footer>
 </body>
 </html>
-

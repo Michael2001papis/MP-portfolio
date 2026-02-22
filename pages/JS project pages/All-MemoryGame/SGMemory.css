@@ -4,21 +4,18 @@
     padding: 0; /* הסרת ריפודים כלליים */
     box-sizing: border-box; /* הגדרת אופן חישוב גודל אלמנטים */
   }
-  /* עיצוב כללי לגוף העמוד */
   body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* גופן ברירת מחדל */
-    text-align: center; /* ישור הטקסט למרכז */
-    background: linear-gradient(135deg, #f3ec78, #af4261); /* רקע גרדיאנט צבעים */
-    margin: 0; /* הסרת רווחים חיצוניים */
-    padding: 0; /* הסרת ריפודים חיצוניים */
-    direction: rtl; /* הגדרת כיוון כתיבה מימין לשמאל */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
   }
-  /* עיצוב הכותרת */
-  h1 {
-    color: #fff;
-    font-size: 3rem;
-    margin: 20px 0;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  .score-display {
+    font-size: 1.1rem;
+    color: #1e3a5f;
+    margin-bottom: 1rem;
   }
   /* עיצוב לוח המשחק */
   .game-board {

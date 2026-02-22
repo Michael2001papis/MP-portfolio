@@ -3,48 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title> מחשבון משופר ++ </title>
-
+    <title>Calculator – JavaScript Project</title>
+    <link rel="stylesheet" href="/styles/js-project-header.css">
     <link rel="stylesheet" href="./cs.css">
-
     <script src="./js.js" defer></script>
-
 </head>
+<body dir="rtl">
+    <header class="project-header">
+        <h1>Calculator</h1>
+        <p class="project-desc">Functional calculator with basic arithmetic operations</p>
+        <p class="project-tech">Technologies: HTML | CSS | JavaScript</p>
+        <nav class="project-nav">
+            <a href="/index.html">Back to Portfolio</a>
+            <a href="/pages/עמודמעבריםכללי/index.html">View All Projects</a>
+        </nav>
+    </header>
 
-<body>
-
-    <nav class="project-nav">
-        <a href="/index.html">חזרה לעמוד הבית</a>
-        <a href="/pages/עמודמעבריםכללי/index.html">לפרויקטים JS</a>
-    </nav>
-
-    <div class="calculator">
-        <p class="value"></p>
-        <div class="AllCalculatorButtons">
-            <button id="cleanAll">CA</button>
-            <button>(</button>
-            <button>)</button>
-            <button id="percent">%</button>
-            <button>/</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>*</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>-</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>+</button>
-            <button>0</button>
-            <button>.</button>
-            <button id="Equality">=</button>
+    <main class="project-app">
+        <div class="calculator">
+            <p class="value" aria-live="polite">0</p>
+            <div class="AllCalculatorButtons">
+                <button id="cleanAll">C</button>
+                <button>(</button>
+                <button>)</button>
+                <button id="percent">%</button>
+                <button>/</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>*</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>-</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>+</button>
+                <button>0</button>
+                <button>.</button>
+                <button id="Equality">=</button>
+            </div>
         </div>
-    </div>
-    
-</body>
+    </main>
 
+    <footer class="project-footer">
+        <a href="/index.html">Back to Portfolio</a> · <a href="/pages/עמודמעבריםכללי/index.html">View All Projects</a>
+    </footer>
+</body>
 </html>

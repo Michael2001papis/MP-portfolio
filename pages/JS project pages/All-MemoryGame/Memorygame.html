@@ -3,17 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Memory game </title>
-  <link rel="stylesheet" href="./SGMemory.css">
-  <script src="./GMdata.js" defer ></script>
+    <title>Memory Game – JavaScript Project</title>
+    <link rel="stylesheet" href="/styles/js-project-header.css">
+    <link rel="stylesheet" href="./SGMemory.css">
+    <script src="./GMdata.js" defer></script>
 </head>
-<body>
-  <h1>משחק זיכרון</h1>
-  <div class="game-board"></div>
-  <footer class="bottom-menu">
-    <button class="reset-button">אפס את המשחק</button>
-    <a href="/index.html" class="home-button">חזרה לדף הבית</a>
-  </footer>
-  
+<body dir="rtl">
+    <header class="project-header">
+        <h1>Memory Game</h1>
+        <p class="project-desc">Interactive card matching game with score tracking</p>
+        <p class="project-tech">Technologies: HTML | CSS | JavaScript</p>
+        <nav class="project-nav">
+            <a href="/index.html">Back to Portfolio</a>
+            <a href="/pages/עמודמעבריםכללי/index.html">View All Projects</a>
+        </nav>
+    </header>
+
+    <main class="project-app">
+        <div class="score-display" id="score-display">Matches: 0</div>
+        <div class="game-board"></div>
+        <div id="game-over-msg" class="game-over-msg" style="display:none;"></div>
+    </main>
+
+    <footer class="project-footer">
+        <button class="reset-button btn-project">Restart Game</button>
+        <a href="/index.html" class="btn-project" style="display:inline-block;text-decoration:none;color:white;">Back to Portfolio</a>
+    </footer>
 </body>
 </html>

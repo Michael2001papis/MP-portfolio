@@ -19,30 +19,13 @@ body {
     box-sizing: border-box;
 }
 
-/* ניווט חזרה */
-.project-nav {
-    background: rgba(82, 249, 255, 0.69);
-    padding: 10px 20px;
-    text-align: center;
-}
-.project-nav a {
-    margin: 0 15px;
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-}
-.project-nav a:hover {
-    color: #1828d7;
-}
-
-/* עיצוב הבסיס */
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
-    background-color: #e5c77c;
+    background-color: #f8f9fa;
     direction: rtl;
 }
 

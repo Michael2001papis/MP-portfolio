@@ -38,6 +38,7 @@ username.addEventListener('input', (e) => {
     }
     checkFormValidity();
 });
+
 // בדיקת תקינות כתובת האימייל
 email.addEventListener('input', (e) => {
     const value = e.target.value;
@@ -54,6 +55,7 @@ email.addEventListener('input', (e) => {
     }
     checkFormValidity();
 });
+
 // בדיקת תקינות הסיסמה
 password.addEventListener('input', (e) => {
     const value = e.target.value;
@@ -71,3 +73,24 @@ password.addEventListener('input', (e) => {
     }
     checkFormValidity();
 });
+
+const form = document.getElementById('form');
+const output = document.getElementById('output');
+
+if (form && output) {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        submitButton.disabled = true;
+        output.textContent = 'Logging in...';
+        output.style.color = '#1e3a5f';
+
+        setTimeout(() => {
+            output.textContent = 'Login successful!';
+            output.style.color = '#1e3a5f';
+            form.reset();
+            checkFormValidity();
+        }, 500);
+    });
+}
+
+checkFormValidity();

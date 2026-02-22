@@ -1,29 +1,35 @@
-
 <!DOCTYPE html>
-<html lang="he">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Snake Game – JavaScript Project</title>
+    <link rel="stylesheet" href="/styles/js-project-header.css">
     <link rel="stylesheet" href="./sty.css">
-
     <script src="./scr.js" defer></script>
-
-    <title>סנייק</title>
-    
 </head>
-<body>
+<body dir="rtl">
+    <header class="project-header">
+        <h1>Snake Game</h1>
+        <p class="project-desc">Classic snake game with canvas rendering</p>
+        <p class="project-tech">Technologies: HTML | CSS | JavaScript</p>
+        <nav class="project-nav">
+            <a href="/index.html">Back to Portfolio</a>
+            <a href="/pages/עמודמעבריםכללי/index.html">View All Projects</a>
+        </nav>
+    </header>
 
-    <nav class="project-nav">
-        <a href="/index.html">חזרה לעמוד הבית</a>
-        <a href="/pages/עמודמעבריםכללי/index.html">לפרויקטים JS</a>
-    </nav>
+    <main class="project-app">
+        <div class="container">
+            <div class="score-display">Score: <span id="score">0</span></div>
+            <canvas id="gameCanvas"></canvas>
+            <div id="game-over-msg" class="game-over-msg" style="display:none;"></div>
+            <button id="restartBtn" class="btn-project">Restart Game</button>
+        </div>
+    </main>
 
-    <div class="container">
-        <h1>משחק סנייק</h1>
-        <canvas id="gameCanvas"></canvas>
-        <button id="restartBtn">חידוש משחק</button>
-    </div>
-    
+    <footer class="project-footer">
+        <a href="/index.html">Back to Portfolio</a> · <a href="/pages/עמודמעבריםכללי/index.html">View All Projects</a>
+    </footer>
 </body>
 </html>

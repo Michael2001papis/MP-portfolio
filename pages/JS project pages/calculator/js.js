@@ -31,18 +31,16 @@ function calculate() {
     }
 }
 
-// פונקציה לניקוי המסך
 function clear() {
     const valueEl = document.querySelector(".value");
-    valueEl.textContent = "";
-    console.log("המסך נוקה");
+    valueEl.textContent = "0";
 }
 
-// פונקציה לטיפול בלחיצת כפתור
 function btnClick() {
     const valueEl = document.querySelector(".value");
-    valueEl.textContent += this.textContent;
-    console.log("הכפתור שנלחץ:", this.textContent);
+    const current = valueEl.textContent;
+    if (current === "0" || current === "Error") valueEl.textContent = this.textContent;
+    else valueEl.textContent += this.textContent;
 }
 
 // פונקציה לחישוב אחוז 
@@ -52,10 +50,8 @@ function calculatePercent() {
 
     if (!isNaN(currentValue)) {
         valueEl.textContent = (currentValue / 100).toString();
-        console.log("תוצאת האחוז:", result);
     } else {
         valueEl.textContent = "Error";
-        console.log("שגיאה בחישוב האחוז");
     }
 }
 

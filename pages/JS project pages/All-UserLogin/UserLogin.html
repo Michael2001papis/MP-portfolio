@@ -1,63 +1,51 @@
 <!DOCTYPE html>
-<!-- 
-  כותרת: הגדרת מסמך HTML
-  הערה: הקוד מתחיל בהצהרת DOCTYPE לציון מסמך HTML5.
--->
 <html lang="en">
 <head>
-    <!-- כותרת: Head - הגדרות מטא וטיטל -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- כותרת: כותרת המסמך -->
-    <title>Document</title>
-
-    <!-- כותרת: קישור לקובץ CSS -->
+    <title>User Login – JavaScript Project</title>
+    <link rel="stylesheet" href="/styles/js-project-header.css">
     <link rel="stylesheet" href="./Ul.css">
-
-    <!-- כותרת: קישור לקובץ JavaScript עם defer כדי להמתין לטעינת הדף -->
     <script src="./Ul.js" defer></script>
 </head>
-<body>
-    <nav class="project-nav">
-        <a href="/index.html">חזרה לעמוד הבית</a>
-        <a href="/pages/עמודמעבריםכללי/index.html">לפרויקטים JS</a>
-    </nav>
-    <!-- כותרת: תיבה ראשית - box001 -->
-    <div id="box001">
+<body dir="rtl">
+    <header class="project-header">
+        <h1>User Login</h1>
+        <p class="project-desc">Client-side authentication interface with validation</p>
+        <p class="project-tech">Technologies: HTML | CSS | JavaScript</p>
+        <nav class="project-nav">
+            <a href="/index.html">Back to Portfolio</a>
+            <a href="/pages/עמודמעבריםכללי/index.html">View All Projects</a>
+        </nav>
+    </header>
 
-        <!-- כותרת: כותרת ראשית בדף - User Login -->
-        <h1 id="LO"> User Login </h1>
+    <main class="project-app">
+        <div id="box001">
+            <h2 id="LO">User Login</h2>
+            <form action="" id="form">
+                <div class="form-control">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" />
+                    <p id="username-helper"></p>
+                </div>
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" />
+                    <p id="email-helper"></p>
+                </div>
+                <div class="form-control">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password"/>
+                    <p id="password-helper"></p>
+                </div>
+                <input type="submit" class="btn-project" />
+            </form>
+        </div>
+        <div id="output"></div>
+    </main>
 
-        <!-- כותרת: טופס התחברות -->
-        <form action="" id="form">
-
-          <!-- כותרת: שדה Username -->
-          <div class="form-control">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" />
-            <p id="username-helper"></p>
-          </div>
-
-          <!-- כותרת: שדה Email -->
-          <div class="form-control">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" />
-            <p id="email-helper"></p>
-          </div>
-
-          <!-- כותרת: שדה Password -->
-          <div class="form-control">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password"/>
-          </div>
-
-          <!-- כותרת: כפתור שליחת טופס -->
-          <input type="submit" />
-        </form>
-    </div>
-    
-    <!-- כותרת: אלמנט להצגת פלט -->
-    <div id="output"></div>
+    <footer class="project-footer">
+        <a href="/index.html">Back to Portfolio</a> · <a href="/pages/עמודמעבריםכללי/index.html">View All Projects</a>
+    </footer>
 </body>
 </html>

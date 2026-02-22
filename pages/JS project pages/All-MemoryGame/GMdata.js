@@ -1,5 +1,6 @@
-// משתנים גלובליים
 const board = document.querySelector('.game-board');
+const scoreDisplay = document.getElementById('score-display');
+const gameOverMsg = document.getElementById('game-over-msg');
 const symbols = ['🍎', '🍊', '🍌', '🍇', '🍉', '🍒', '🍍', '🥝'];
 let cards = [...symbols, ...symbols];
 let flippedCards = [];
@@ -10,12 +11,13 @@ function shuffleCards() {
   cards.sort(() => 0.5 - Math.random()); // ערבוב אקראי של הקלפים
 };
 
-// פונקציה לאתחול המשחק
 function resetGame() {
-  board.innerHTML = ''; // ניקוי כל הקלפים בלוח
-  flippedCards = []; // איפוס המערך של הקלפים ההפוכים
-  matchedCards = 0; // איפוס ספירת הקלפים התואמים
-  shuffleCards(); // ערבוב מחדש של הקלפים
+  board.innerHTML = '';
+  flippedCards = [];
+  matchedCards = 0;
+  if (gameOverMsg) gameOverMsg.style.display = 'none';
+  if (scoreDisplay) scoreDisplay.textContent = 'Matches: 0';
+  shuffleCards();
 
   // יצירת הקלפים והצגתם מחדש
   cards.forEach(symbol => {
@@ -30,18 +32,6 @@ function resetGame() {
 // יצירת הקלפים והצגתם בהתחלה
 resetGame();
 
-// אירוע לחיצה על קלף
-board.addEventListener('click', e => {
-  const clickedCard = e.target;
-  if (!clickedCard.classList.contains('card') || clickedCard.classList.contains('flipped')) return;
-  clickedCard.classList.add('flipped');
-  flippedCards.push(clickedCard);
-  if (flippedCards.length === 2) {
-    checkMatch();
-  }
-});
-
-// אירוע לחיצה על קלף
 board.addEventListener('click', e => {
   const clickedCard = e.target;
   if (!clickedCard.classList.contains('card') || clickedCard.classList.contains('flipped')) return;
@@ -60,9 +50,12 @@ function checkMatch() {
     card1.classList.add('matched');
     card2.classList.add('matched');
     matchedCards += 2;
-    // בדיקה אם המשחק נגמר (כל הקלפים תואמים)
     if (matchedCards === cards.length) {
-      setTimeout(() => alert('ניצחתם!'), 300); // הצגת הודעת ניצחון
+      if (scoreDisplay) scoreDisplay.textContent = `Matches: ${matchedCards}`;
+      if (gameOverMsg) {
+        gameOverMsg.textContent = 'You won!';
+        gameOverMsg.style.display = 'block';
+      }
     }
   } else {
     // אם אין התאמה בין הקלפים - הפיכת הקלפים חזרה
@@ -72,7 +65,8 @@ function checkMatch() {
     }, 1000); // המתנה של שנייה לפני הפיכת הקלפים חזרה
   }
 
-  flippedCards = []; // ניקוי המערך של הקלפים שהתהפכו
+  flippedCards = [];
+  if (scoreDisplay) scoreDisplay.textContent = `Matches: ${matchedCards}`;
 }
 
 // הוספת אירוע לכפתור איפוס המשחק

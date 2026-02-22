@@ -9,7 +9,6 @@
         const resultElement = document.getElementById('result');
         const scoreElement = document.getElementById('score');
         const resetButton = document.getElementById('reset');
-        const newGameButton = document.getElementById('new-game');
 
         const questions = [
             { "question": "מהו שם מדינת האי של האי קריביים?", "answers": ["הונדורס", "ג'מייקה", "אורוגוואי", "קולומביה"], "correctAnswer": 1 },
@@ -65,13 +64,10 @@
         resetButton.addEventListener("click", function() {
             score = 0;
             currentQuestionIndex = 0;
+            resultElement.innerText = '';
             scoreElement.style.display = 'none';
             document.getElementById('question-area').style.display = 'block';
             displayQuestion();
-        });
-
-        newGameButton.addEventListener("click", function() {
-            window.location.reload();
         });
 
         displayQuestion();

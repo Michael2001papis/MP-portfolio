@@ -1,8 +1,3 @@
+import { initCountriesUI } from "./ServicesDom.js";
 
-/***********************************************************************/
-import { countries } from "./ServicesCountries.js";
-import { createCards } from "./ServicesDom.js";
-
-createCards();
-
-;/*********************************************************************/
+initCountriesUI();

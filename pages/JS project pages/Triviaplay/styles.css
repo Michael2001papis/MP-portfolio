@@ -1,20 +1,4 @@
 
-        /* ניווט חזרה */
-        .project-nav {
-            background: rgba(82, 249, 255, 0.69);
-            padding: 10px 20px;
-            text-align: center;
-        }
-        .project-nav a {
-            margin: 0 15px;
-            color: #333;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .project-nav a:hover {
-            color: #1828d7;
-        }
-
         * {
         margin: 0;
         padding: 0;
@@ -23,14 +7,14 @@
         }
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f0f4f8;
+            background-color: #f8f9fa;
             color: #333;
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             flex-direction: column;
         }
 
