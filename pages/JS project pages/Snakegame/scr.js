@@ -82,7 +82,7 @@ const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 const restartBtn = document.getElementById("restartBtn");
 
-canvas.width = 400;  // שים לב ששינית את הגודל ל-400x400
+canvas.width = 400;
 canvas.height = 400;
 
 let snake, direction, fruit, gameOver, gameInterval;

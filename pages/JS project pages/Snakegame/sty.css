@@ -11,21 +11,6 @@
     margin: auto;
 } */
 
-.project-nav {
-    background: rgba(82, 249, 255, 0.69);
-    padding: 10px 20px;
-    text-align: center;
-}
-.project-nav a {
-    margin: 0 15px;
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-}
-.project-nav a:hover {
-    color: #1828d7;
-}
-
 /* כלליים */
 * {
     margin: 0;
@@ -88,15 +73,13 @@ h1 {
 }
 
 
-/* עיצוב לקנבס */
+/* עיצוב לקנבס - 400x400 פיקסלים */
 #gameCanvas {
     background-color: #2ecc71;
     border: 5px solid #27ae60;
     border-radius: 10px;
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    aspect-ratio: 1;
+    width: min(400px, 95vw);
+    height: min(400px, 95vw);
     display: block;
     margin: 0 auto;
 }

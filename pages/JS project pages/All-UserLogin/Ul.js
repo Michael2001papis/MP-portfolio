@@ -4,12 +4,8 @@ const usernameHelper = document.getElementById('username-helper');
 const email = document.getElementById('email');
 const emailHelper = document.getElementById('email-helper');
 const password = document.getElementById('password');
+const passwordHelper = document.getElementById('password-helper');
 const submitButton = document.querySelector('input[type="submit"]');
-
-// יצירת פסקה דינאמית להודעות שגיאה עבור הסיסמה
-const passwordHelper = document.createElement('p');
-passwordHelper.id = 'password-helper';
-password.insertAdjacentElement('afterend', passwordHelper);
 
 // פונקציה שמעדכנת אם הכפתור "שלח" יהיה זמין או לא
 function checkFormValidity() {
