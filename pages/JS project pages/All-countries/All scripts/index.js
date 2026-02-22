@@ -1,6 +1,6 @@
 
 /***********************************************************************/
-import { countries } from "./ServicדCountries.JS";
+import { countries } from "./ServicesCountries.js";
 import { createCards } from "./ServicesDom.js";
 
 createCards();

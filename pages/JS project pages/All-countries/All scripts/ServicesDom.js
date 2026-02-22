@@ -1,6 +1,6 @@
 
 /***********************************************************************/
-import { countries, reset, search } from "./ServicדCountries.JS";
+import { countries, reset, search } from "./ServicesCountries.js";
 const cardsContainer = document.getElementById('cards');
 
 document.getElementById('search-input').addEventListener('input', (event) => {

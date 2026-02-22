@@ -1,4 +1,47 @@
 /* ================================
+   Skip link + Back to top
+   ================================ */
+.skip-link {
+    position: absolute;
+    top: -50px;
+    right: 10px;
+    padding: 10px 15px;
+    background: #1828d7d5;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 9999;
+    transition: top 0.3s;
+}
+.skip-link:focus {
+    top: 10px;
+    outline: 2px solid #e552ea;
+}
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #1828d7d5;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background 0.3s, transform 0.3s;
+}
+.back-to-top:hover {
+    background: #e552ea;
+    transform: scale(1.1);
+}
+.back-to-top:focus-visible {
+    outline: 2px solid #e552ea;
+}
+
+/* ================================
    סגנונות כלליים
    ================================ */
 * {
@@ -55,6 +98,12 @@ nav {
 }
 .nav-button:focus {
     outline: none;
+}
+.nav-button:focus-visible,
+.search-button:focus-visible,
+.btnbx1:focus-visible {
+    outline: 2px solid #e552ea;
+    outline-offset: 2px;
 }
 
 /* ================================
@@ -664,6 +713,13 @@ nav {
 .box:focus {
     border-color: #4CAF50;
     box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+.box:focus-visible {
+    outline: 2px solid #4CAF50;
+}
+.form-message {
+    text-align: center;
+    font-size: 1em;
 }
 
 /* כפתור שליחה */
