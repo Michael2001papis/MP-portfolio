@@ -4,18 +4,21 @@
    ============================================ */
 
 :root {
-    --site-nav-bg: rgba(82, 249, 255, 0.694);
-    --site-btn: #1828d7d5;
-    --site-btn-hover: #e552ea;
-    --site-text: #333;
+    --site-bg: #f0f4f8;
+    --site-nav-bg: #1e3a5f;
+    --site-nav-hover: rgba(255,255,255,0.2);
+    --site-btn: #1e3a5f;
+    --site-btn-hover: #2c5282;
+    --site-text: #2d3748;
+    --site-text-light: #718096;
 }
 
 /* תפריט עליון אחיד */
 .site-header,
 .top-menu {
-    background-color: var(--site-nav-bg) !important;
-    padding: 10px 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: var(--site-nav-bg) !important;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
 }
 
 .top-menu nav ul,
@@ -25,56 +28,98 @@
     align-items: center;
     list-style: none;
     margin: 0;
-    padding: 10px 0;
-    gap: 15px;
+    padding: 0;
+    gap: 1.5rem;
     flex-wrap: wrap;
 }
 
 .top-menu nav ul li a,
 .site-header nav ul li a {
-    font-size: 16px;
-    padding: 10px 20px;
-    background-color: var(--site-btn) !important;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background: transparent !important;
     color: white !important;
-    border-radius: 5px;
+    border-radius: 6px;
     text-decoration: none;
     display: inline-block;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.top-menu nav ul li a:hover,
+.site-header nav ul li a:hover {
+    background: var(--site-nav-hover) !important;
+    transform: translateY(-1px);
 }
 
 .header-button,
 .top-menu > a,
 .top-menu a.button {
-    background-color: var(--site-btn) !important;
+    background: var(--site-btn) !important;
     color: white !important;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
     text-decoration: none;
     display: inline-block;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background 0.2s, transform 0.2s;
 }
 
 .top-menu nav ul li a:hover,
 .site-header nav ul li a:hover,
 .header-button:hover,
 .top-menu a:hover {
-    background-color: var(--site-btn-hover) !important;
-    transform: scale(1.05);
+    background: var(--site-nav-hover) !important;
 }
 
 /* Footer אחיד */
 .site-footer,
 .footer,
 .bottom-menu {
-    background-color: var(--site-nav-bg) !important;
-    padding: 20px;
+    background: var(--site-nav-bg) !important;
+    padding: 1.25rem 2rem;
     text-align: center;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.15);
 }
 
 .site-footer a,
 .footer a,
 .bottom-menu a {
-    color: var(--site-text);
-    margin: 0 10px;
+    color: white;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.site-footer a:hover,
+.footer a:hover,
+.bottom-menu a:hover {
+    opacity: 0.9;
+}
+
+.bottom-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.bottom-menu ul li {
+    margin: 0;
+}
+
+.bottom-menu .action-button {
+    padding: 0.5rem 1rem;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+}
+
+.bottom-menu .action-button:hover {
+    background: rgba(255,255,255,0.3);
 }

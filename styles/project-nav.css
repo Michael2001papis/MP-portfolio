@@ -1,0 +1,31 @@
+/* ============================================
+   JS Project Pages - ניווט אחיד
+   Unified project navigation
+   ============================================ */
+
+.project-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 0.75rem 1.5rem;
+    background: #1e3a5f;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+.project-nav a {
+    padding: 0.5rem 1rem;
+    background: rgba(255,255,255,0.15);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.project-nav a:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-1px);
+}
