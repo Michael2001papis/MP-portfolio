@@ -1,0 +1,26 @@
+רשימת אייקונים נדרשים - העבר לכאן את הקבצים:
+
+myskils/
+  - html.png
+  - css-3.png
+  - java-script.png
+  - sass.png
+  - bootstrap.png
+
+IcApl/
+  - gmail.png
+  - logo.png (WhatsApp)
+  - phone-call.png
+  - instagram.png
+  - telegram.png
+  - facebook.png
+  - רובוט.img.webp
+
+שורש icon/
+  - house-chimney.png
+  - id-card.png
+  - abilities.png
+  - files.png
+  - js.png
+  - contact.png
+  - database.png

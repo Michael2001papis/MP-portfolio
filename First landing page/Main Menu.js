@@ -7,12 +7,12 @@ var sections = {
     "צור קשר": "#CU"
 };
 var projectLinks = {
-    "ברוכים הבאים לעולם הרפואה": "/pages/LandingPage/העמוד מקור להרפוא .HTML",
-    "Microsoft": "/pages/LandingPage/העמוד מקור למיינקרוסופט .HTML",
-    "אפל": "/pages/LandingPage/העמוד מקוד אפל .HTML",
-    "צהל": "/pages/LandingPage/העמוד מקור של צהל .HTML",
-    "חלל": "/pages/LandingPage/עמוד מקור לחלל .HTML",
-    "AI": "/pages/LandingPage/העמוד מקור AI.HTML",
+    "ברוכים הבאים לעולם הרפואה": "/pages/LandingPage/medical-project.html",
+    "Microsoft": "/pages/LandingPage/microsoft-project.html",
+    "אפל": "/pages/LandingPage/apple-project.html",
+    "צהל": "/pages/LandingPage/idf-project.html",
+    "חלל": "/pages/LandingPage/space-project.html",
+    "AI": "/pages/LandingPage/ai-project.html",
     "Users Mangement": "/pages/LandingPageJS/index02UsersMangement.html",
     "Countries of the world": "/pages/LandingPageJS/index01CountriesProject.html",
     "Conference": "/pages/LandingPageJS/index04UserLogin.html",

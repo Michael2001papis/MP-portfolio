@@ -1,0 +1,30 @@
+רשימת תמונות ווידאו נדרשים - העבר לכאן את הקבצים:
+
+Firstprojectphotos/
+  - Michael.img.webp
+  - soldier.png
+  - מטוס.img.webp
+  - גלים.img.webp
+  - הליכה.img.webp
+
+Nowphotos/
+  - תמונהלעולםהרפואקבלהפניםראשונה.webp
+  - תמונהלעולםמייקרוסופטקבלתפניםראשונה.webp
+  - תמונהלעולםהאפלקבלתפניםראשונה.webp
+  - תמונהלעולםצהלקבלתפנים.webp
+  - תמונהלעולםהחללקבלתפניםראשונה.webp
+  - תמונהלעולםהAIקבלתפניםראשונה.webp
+  PB/
+    - תמונתרקערפוא.webp
+    - תמונתרקעחלל.webp
+    - תמונתרקעAI.webp
+
+Secondprojectphotos/Photosfordisplayfirst/
+  - CW1.webp, WL01.webp, WL02.webp
+  - MG01.webp, MG02.jpg
+  - US01.webm, US01.mp4, US02.jpg
+  - TTTG01.webm, TTTG01.mp4, TTTG02.jpg
+  - SGN01.webm, SGN01.mp4, SGN02.jpg
+  - TTG01.webm, TTG01.mp4, TTG02.jpg
+  - TG01.webp, TG02.webp
+  - C01.jpg, C02.webp

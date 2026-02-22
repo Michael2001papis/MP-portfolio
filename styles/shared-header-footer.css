@@ -1,0 +1,80 @@
+/* ============================================
+   MP Portfolio - עיצוב אחיד Header ו-Footer
+   Shared Header & Footer Styles
+   ============================================ */
+
+:root {
+    --site-nav-bg: rgba(82, 249, 255, 0.694);
+    --site-btn: #1828d7d5;
+    --site-btn-hover: #e552ea;
+    --site-text: #333;
+}
+
+/* תפריט עליון אחיד */
+.site-header,
+.top-menu {
+    background-color: var(--site-nav-bg) !important;
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-menu nav ul,
+.site-header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.top-menu nav ul li a,
+.site-header nav ul li a {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: var(--site-btn) !important;
+    color: white !important;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.header-button,
+.top-menu > a,
+.top-menu a.button {
+    background-color: var(--site-btn) !important;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.top-menu nav ul li a:hover,
+.site-header nav ul li a:hover,
+.header-button:hover,
+.top-menu a:hover {
+    background-color: var(--site-btn-hover) !important;
+    transform: scale(1.05);
+}
+
+/* Footer אחיד */
+.site-footer,
+.footer,
+.bottom-menu {
+    background-color: var(--site-nav-bg) !important;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.site-footer a,
+.footer a,
+.bottom-menu a {
+    color: var(--site-text);
+    margin: 0 10px;
+}
