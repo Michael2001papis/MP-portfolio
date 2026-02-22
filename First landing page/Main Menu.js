@@ -30,15 +30,35 @@ document.addEventListener('DOMContentLoaded', function() {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             var msg = document.getElementById('form-message');
-            if (msg) {
-                msg.textContent = 'הטופס נקלט. תודה!';
-                msg.style.color = '#1e3a5f';
-                msg.style.marginTop = '10px';
-            }
             var nameInput = document.getElementById('contact-name');
             var emailInput = document.getElementById('contact-email');
             var phoneInput = document.getElementById('contact-phone');
             var messageInput = document.getElementById('contact-message');
+
+            // Validation before submit
+            var name = nameInput ? nameInput.value.trim() : '';
+            var email = emailInput ? emailInput.value.trim() : '';
+            var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!msg) return;
+            msg.style.color = '#c53030';
+
+            if (!name || name.length < 2) {
+                msg.textContent = 'נא להזין שם מלא (לפחות 2 תווים)';
+                return;
+            }
+            if (!email) {
+                msg.textContent = 'נא להזין כתובת אימייל';
+                return;
+            }
+            if (!emailRe.test(email)) {
+                msg.textContent = 'נא להזין אימייל תקין';
+                return;
+            }
+
+            msg.textContent = 'הטופס נקלט. תודה!';
+            msg.style.color = '#1e3a5f';
+            msg.style.marginTop = '10px';
             if (nameInput) nameInput.value = '';
             if (emailInput) emailInput.value = '';
             if (phoneInput) phoneInput.value = '';

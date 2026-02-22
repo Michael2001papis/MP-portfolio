@@ -10,6 +10,7 @@
 - Footer text: `© 2025 MP — Michael Papismedov` (footer on every page)
 - Favicon: MP logo (favicon.svg)
 - CSS/JS markers: `MP-PORTFOLIO-ID: 2025-MP-001` in portfolio-professional.css, Main Menu.js
+- Console marker: `scripts/ownership-console.js` — outputs styled message in browser DevTools
 
 ## Proof Trail
 

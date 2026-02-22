@@ -13,9 +13,10 @@
     <script src="./All scripts/index.js" defer type="module"></script>
 </head>
 <body class="bg-dark" dir="rtl">
-    <div class="alert alert-info text-center m-2" role="alert">
+    <div id="es-modules-notice" class="alert alert-info text-center m-2" role="alert" style="display:none;">
         <strong>הערה:</strong> הפרויקט משתמש ב-ES Modules. להפעלה תקינה יש להריץ עם <strong>Live Server</strong> (או שרת מקומי).
     </div>
+    <script>if(location.protocol==='file:')document.getElementById('es-modules-notice').style.display='block';</script>
     <nav class="project-nav">
         <a href="/index.html">Home</a>
         <a href="/pages/עמודמעבריםכללי/index.html">JS Projects</a>
@@ -34,6 +35,7 @@
     <footer style="text-align:center;padding:1rem;background:#1e3a5f;color:white;font-size:0.9rem;">
         <p>© 2025 MP — Michael Papismedov · <a href="/legal.html" style="color:white;">Terms</a></p>
     </footer>
+    <script src="/scripts/ownership-console.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
