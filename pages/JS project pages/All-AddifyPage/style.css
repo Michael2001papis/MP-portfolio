@@ -26,15 +26,19 @@ h1 {
   color: #333;
   margin-bottom: 20px;
 }
-/* מיכל הכללי - כל מיני טפסים */
+.addify-main {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
 .container-register, .container-login, .container-users {
-  margin: 20px auto;
-  padding: 20px;
-  width: 90%;
+  margin: 24px auto;
+  padding: 24px;
+  width: 100%;
   max-width: 800px;
-  border: 1px solid #ccc;
+  border: 1px solid #e0e0e0;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   background-color: white;
 }
 /* טפסים */

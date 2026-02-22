@@ -12,11 +12,38 @@
     padding: 0;
     direction: rtl;
   }
+  .project-nav {
+    background: rgba(255, 255, 255, 0.25);
+    padding: 12px 20px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+  }
+  .project-nav a {
+    margin: 0 15px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .project-nav a:hover {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255,255,255,0.5);
+  }
+  .game-wrapper {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
   h1 {
     color: #fff;
     font-size: 3rem;
-    margin: 20px 0;
+    margin: 20px 0 8px 0;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  .game-subtitle {
+    color: rgba(255,255,255,0.95);
+    font-size: 1.1rem;
+    margin: 0 0 20px 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
   /* עיצוב לוח המשחק */
   .game-board {
