@@ -1,0 +1,297 @@
+/* הגדרות כלליות */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+}
+a {
+    text-decoration: none;
+}
+/* תפריטים עליון ותחתון */
+.top-menu, .bottom-menu {
+    background-color: #ffffff7b;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
+/* עיצוב התמונה בתפריט העליון */
+.top-menu img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/*--*/
+/* עיצוב כפתור ההגדרה בתפריט העליון */
+.top-menu .header-button {
+    position: absolute;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #4eedffaf;
+    border: 2px solid #dc3545;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transform: translateY(+49%);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.top-menu .header-button:hover {
+    background-color: greenyellow;
+    color: blue;
+    border-color: yellow;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+/* תוכן מרכזי */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+/*--*/
+/* קונטיינרים */
+.container-30, .container-70 {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+/* קונטיינר 30% */
+.container-30 {
+    background-color: #f8f9fa00;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-30 h2 {
+    font-size: 32px;
+    margin: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+/* עיצוב קבוצת הכפתורים */
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+/* עיצוב הכפתורים */
+.action-button {
+    padding: 10px 20px;
+    background-color: #4eedffaf;
+    border: 2px solid #dc3545;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; 
+}
+.action-button:hover {
+    background-color: greenyellow;
+    color: blue;
+    border-color: yellow;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    border: 2px solid yellow;
+}
+/*--*/
+/* סגנון לקונטיינר 70% */
+.container-70 {
+    background-color: #e9ecef00;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* עיצוב חלון התצוגה */
+.display-window {
+    width: 80%;
+    height: 80%;
+    border: 2px solid #333;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+/*--*/
+/* מבנה התפריט התחתון */
+.bottom-menu {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+.bottom-menu ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+/*--*/
+.bottom-menu li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bottom-menu .action-button {
+    background-color: #4eedffaf;
+    border: 2px solid #dc3545;
+    color: black;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.bottom-menu .action-button:hover {
+    background-color: greenyellow;
+    color: blue;
+    border-color: yellow;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+/*--*/
+/* עבור מסכים ברוחב של עד 600 פיקסלים */
+@media (max-width: 600px) {
+    .bottom-menu {
+        justify-content: center;
+    }
+
+    .bottom-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* עבור מסכים ברוחב של בין 769 ל-1024 פיקסלים */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .main-content {
+        flex-direction: row;
+    }
+
+    .container-30, .container-70 {
+        height: 100%;
+    }
+
+    .container-30 h2 {
+        font-size: 24px;
+    }
+
+    .action-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+/**/
+/*-עובד ניתן להמשיך-*/
+/*-1-*/
+#Drbody {
+    background-image: url('/images/Nowphotos/PB/תמונתרקערפוא.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*-1-*/
+#LPq1 {
+    background-image: url('/images/Nowphotos/תמונהלעולםהרפואקבלהפניםראשונה.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*-עובד ניתן להמשיך-*/
+/*-2-*/
+#MIbody {
+    background-image: url('/images/Nowphotos/PB/תמונתרקעמיינקרוסופט.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*-2-*/
+#LPq2 {
+    background-image: url('/images/Firstprojectphotos/מינקרוסופט.img.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*-עובד ניתן להמשיך-*/
+/*-3-*/
+#Abody {
+    background-image: url('/images/Nowphotos/PB/תמונתרקעאפל2.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*-3-*/
+#LPq3 {
+    background-image: url('/images/Nowphotos/תמונהלעולםהאפלקבלתפניםראשונה.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*-עובד ניתן להמשיך-*/
+/*-4-*/
+#MTKbody {
+    background-image: url('/images/Nowphotos/PB/תמונתרקעצהל.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*-4-*/
+#LPq4 {
+    background-image: url('/images/Nowphotos/תמונהלעולםצהלקבלתפנים.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*-עובד ניתן להמשיך-*/
+/*-5-*/
+#JKKbody {
+    background-image: url('/images/Nowphotos/PB/תמונתרקעחלל.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*-5-*/
+#LPq5 {
+    background-image: url('/images/Firstprojectphotos/כדורהארץ.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#AIbody {
+    background-image: url('/images/Nowphotos/PB/תמונהקרעAI2.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#LPq6 {
+    background-image: url('/images/Firstprojectphotos/תמונת\ פרוייקט\ 06.wedp.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+

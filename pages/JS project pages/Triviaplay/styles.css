@@ -1,0 +1,106 @@
+
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'montserrat', sans-serif;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 1.8em;
+            color: #4caf50;
+            margin-bottom: 20px;
+        }
+
+        #question-area {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+
+        button {
+            background-color: #4caf50;
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            margin: 10px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            max-width: 200px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:active {
+            background-color: #388e3c;
+        }
+
+        .correct {
+            background-color: #4caf50;
+        }
+
+        .incorrect {
+            background-color: #f44336;
+        }
+
+        #result {
+            font-size: 1.2em;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        #score {
+            font-size: 1.5em;
+            color: #2196f3;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            button {
+                width: 90%;
+            }
+
+            #question-area {
+                padding: 15px;
+            }
+
+            #score {
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 1.4em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+        }

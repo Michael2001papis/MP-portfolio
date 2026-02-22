@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Final Project Model JS Version 2.4 </title>
+
+    <link rel="stylesheet" href="/First landing page/Main Menu.css">
+
+    <link rel="stylesheet" href="/First landing page/CSS.CSS">
+
+    <script src="./First landing page/Main Menu.js" defer></script>
+    
+</head>
+
+<body>
+
+    <!-- / תפריט עליון / -->
+    <nav>
+        <ul id="ulhdr">
+            <li><a href="#skis" ><button class="nav-button"> היכולות שלי </button></a></li>
+            <li><a href="#shesh"><button class="nav-button"> הפרוייקטים שלי ב-html </button></a></li>
+            <li><a href="#shesh-additional"><button class="nav-button">  הפרוייקטים שלי ב-js </button></a></li>
+            <li><a href="#CU"><button class="nav-button">צור קשר</button></a></li>
+
+            <!-- שדה חיפוש -->
+            <li>
+                <div class="search-container">
+                    <input type="text" id="search" class="search-box" placeholder="חפש כאן...">
+                    <button class="search-button" onclick="searchFunction()">חפש</button>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!--/ כרטיס ביקור /-->
+    <section class="details" id="main">
+
+        <div class="too-details">
+
+            <h1> Michael Papismedov </h1>
+
+            <p class="hero-text">
+
+                היי, שמי מיכאל. אני בן 24 ומתגורר במרכז ישראל. החיים שלי מלאים באתגרים, חוויות והזדמנויות חדשות. אני אדם ספורטיבי, משקיע באימונים על בסיס קבוע—אירובי ומשקל כבד, ושומר על אורח חיים בריא ומאוזן.  
+
+                מעבר לספורט, אני מתעניין מאוד בשוק ההון והשקעות, חוקר מניות ובוחן מגמות כלכליות. אני גם עוסק בעיצוב ובפיתוח אתרים, נהנה ליצור ולשפר חוויות משתמש.  
+
+                אם תרצה להכיר יותר, מוזמן ליצור קשר! 😃
+            
+            </p>
+            <a href="/pages/LandingPage/עמודפרוייקטים.html" target="_blank"><button class="btnbx1"> לצפיה בפרוייקטים בנושא-HTML </button></a>
+            
+            <a href="/pages/עמודמעבריםכללי/index.html" target="_blank"><button class="btnbx1"> לצפיה בפרוייקטים בנושא-JS </button></a>
+
+            <a href="/pages/LandingPage/צור קשר.HTML" target="_blank"><button class="btnbx1"> צור קשר </button></a>
+        </div>
+    </section>
+
+    <!--/ היכולות שלי /-->
+    <div class="skills-container" id="skis">
+    <h2> היכולות שלי </h2>
+    <div id="box">
+
+            <!-- HTML Skill -->
+            <a href="https://www.w3schools.com/html/default.asp" target="_blank"><img src="/icon/myskils/html.png" alt=""></a>
+              <div class="xbx">
+                <p class="percentage"> 85% </p>
+                <div class="progress-bar"> <span style="width: 85%;"></span></div>
+              </div>
+
+            <!-- CSS Skill -->
+            <a href="https://www.w3schools.com/css/default.asp" target="_blank"><img src="/icon/myskils/css-3.png" alt=""></a>
+              <div class="xbx">
+                <p class="percentage"> 75% </p>
+                <div class="progress-bar"><span style="width: 75%;"></span></div>
+              </div>
+
+            <!-- JavaScript Skill -->
+            <a href="https://www.w3schools.com/js/default.asp" target="_blank"><img src="/icon/myskils/java-script.png" alt=""></a>
+              <div class="xbx">
+                <p class="percentage"> 65% </p>
+                <div class="progress-bar"><span style="width: 65%;"></span></div>
+              </div>
+
+            <!-- SASS Skill -->
+            <a href="https://www.w3schools.com/sass/default.php" target="_blank"><img src="/icon/myskils/sass.png" alt=""></a>
+              <div class="xbx">
+                <p class="percentage"> 45% </p>
+                <div class="progress-bar"><span style="width: 45%;"></span></div>
+              </div>
+
+            <!-- Bootstrap Skill -->
+            <a href="https://www.w3schools.com/bootstrap/default.asp" target="_blank"><img src="/icon/myskils/bootstrap.png" alt=""></a>
+              <div class="xbx">
+                <p class="percentage"> 40% </p>
+                <div class="progress-bar"><span style="width: 40%;"></span></div>
+              </div>
+
+    </div>
+    </div>
+
+    <!--/ 6 הפרוייקטים /-->
+    <section id="shesh" class="projects">
+        <h2> הפרוייקטים שלי (HTML) </h2>
+        <div class="projects-container">
+
+            <div class="project-card" id="Q1">
+
+                <a href="/pages/LandingPage/העמוד מקור להרפוא .HTML" target="_blank">
+                <h3> ברוכים הבאים לעולם הרפואה </h3>
+
+                <p> המקום שבו כל צעד משנה חיים. הצטרפו אלינו ותהנו ממידע עדכני, חוויות מעשירות והזדמנויות ללמוד ולהתפתח! </p></a>
+            </div>
+            <div class="project-card" id="Q2">
+                <a href="/pages/LandingPage/העמוד מקור למיינקרוסופט .HTML" target="_blank">
+                <h3> Microsoft </h3>
+                <p> הצטרפו אלינו לעתיד דיגיטלי ומתקדם עם Microsoft – מקום שבו כל רעיון הופך למציאות! </p></a>
+            </div>
+            <div class="project-card" id="Q3">
+                <a href="/pages/LandingPage/העמוד מקוד אפל .HTML" target="_blank">
+                <h3> Apple </h3>
+                <p> כשתבחר ב-Apple, תיהנה מהחדשנות המובילה והטכנולוגיה הכי מתקדמת. הצטרף אלינו ותחווה חוויית משתמש בלתי נשכחת! </p></a>
+            </div>
+            <div class="project-card" id="Q4">
+                <a href="/pages/LandingPage/העמוד מקור של צהל .HTML" target="_blank">
+                <h3> צה"ל </h3>
+                <p> מצטרפים לחוויה של אתגר, משמעות וחברות לכל החיים – בואו להיות חלק מהטובים ביותר! </p></a>
+            </div>
+            <div class="project-card" id="Q5">
+                <a href="/pages/LandingPage/עמוד מקור לחלל .HTML" target="_blank">
+                <h3> חלל </h3>
+                <p> החלל הוא אינסופי ומסתורי, מלא בכוכבים, גלקסיות וחידות שטרם פוצחו. בכל פעם שאנו מביטים לשמיים, אנחנו נזכרים כמה קטן עולמנו וכמה עוד יש לגלות.  </p></a>
+            </div>
+            <div class="project-card" id="Q6">
+                <a href="/pages/LandingPage/העמוד מקור AI.HTML" target="_blank">
+                <h3> העולם של AI מחכה לך! </h3>
+                <p> הצטרף אלינו היום והיכנס לעולם המרתק של אינטליגנציה מלאכותית, שם כל יום טומן בחובו הזדמנויות חדשות ללמוד, לגלות וליצור! </p>
+                </a>
+            </div>
+        </div>
+        <a href="/pages/LandingPage/עמודפרוייקטים.html" target="_blank"> לעמוד הפרוייקטים עצמו </a>
+    </section>
+
+    <!--/ 9 הפרוייקטים /-->
+    <section id="shesh-additional" class="projects">
+
+        <h2>  (JS) הפרוייקטים שלי </h2>
+
+        <!-- פרויקטים מוצגים בהתחלה (6 קונטיינרים) -->
+        <div class="projects-container" id="project-list">
+
+            <div class="project-card" id="QP1">
+
+                <a href="/pages/LandingPageJS/index01CountriesProject.html" target="_blank">
+                <h3> Countries of the world </h3>
+                <p> Were you looking for a country? </p></a>
+
+            </div>
+
+            <div class="project-card" id="QP2">
+
+                <a href="/pages/LandingPageJS/index02UsersMangement.html" target="_blank">
+                    <h3> Users Mangement </h3>
+    
+                    <p> Want to get on our list? </p></a>
+
+            </div>
+
+            <div class="project-card" id="QP3">
+
+                <a href="/pages/LandingPageJS/index03MemoryGame.html" target="_blank">
+                    <h3> Memory Game </h3>
+    
+                    <p> Do you remember? </p></a>
+
+            </div>
+
+            <div class="project-card" id="QP4">
+                
+                <video autoplay loop muted class="background-video">
+                    <source src="/images/Secondprojectphotos/Photosfordisplayfirst/US01.webm" type="video/webm">
+                    <source src="/images/Secondprojectphotos/Photosfordisplayfirst/US01.mp4" type="video/mp4">
+                    הדפדפן שלך אינו תומך בתגית וידאו.
+                </video>
+                
+
+                <a href="/pages/LandingPageJS/index04UserLogin.html" target="_blank">
+                    <h3> Conference </h3>
+    
+                    <p> Stay secret </p></a>
+
+            </div>
+
+            <div class="project-card" id="QP5">
+                
+
+                <a href="/pages/LandingPageJS/index05Triviaplay.html" target="_blank">
+                    <h3> Trivia play </h3>
+    
+                    <p> How much do you know? </p></a>
+
+            </div>
+
+            <div class="project-card" id="QP6">
+
+                <video autoplay loop muted class="background-video">
+                    <source src="/images/Secondprojectphotos/Photosfordisplayfirst/TTTG01.webm" type="video/webm">
+                    <source src="/images/Secondprojectphotos/Photosfordisplayfirst/TTTG01.mp4" type="video/mp4">
+                </video>
+
+                <a href="/pages/LandingPageJS/index06tic-tac-toe.html" target="_blank">
+                    <h3> Tic-Tac-Toe </h3>
+    
+                    <p> Who will be next? </p></a>
+
+            </div>
+
+        </div>
+
+        <!-- כפתור להציג את שלושת הפרויקטים הנוספים -->
+        <button id="show-more" class="btnbx1">הצג עוד פרויקטים</button>
+
+        <!-- פרויקטים נוספים (מוסתרים בהתחלה) -->
+        <div class="additional-projects projects-container" id="additional-projects">
+
+            <div class="project-card" id="QP7">
+
+                <video autoplay loop muted class="background-video">
+                    <source src="/images/Secondprojectphotos/Photosfordisplayfirst/SGN01.webm" type="video/webm">
+                    <source src="/images/Secondprojectphotos/Photosfordisplayfirst/SGN01.mp4" type="video/mp4">
+                </video>
+
+                <a href="/pages/LandingPageJS/index07Snakegame.html" target="_blank">
+                    <h3> Snakegame Nokia 6110 </h3>
+    
+                    <p> Did you eat everything? </p></a>
+            </div>
+
+            <div class="project-card" id="QP8">
+
+                <video autoplay loop muted class="background-video">
+                    <source src="/images/Secondprojectphotos/Photosfordisplayfirst/TTG01.webm" type="video/webm">
+                    <source src="/images/Secondprojectphotos/Photosfordisplayfirst/TTG01.mp4" type="video/mp4">
+                </video>
+
+                <a href="/pages/LandingPageJS/index08TableTennis.html" target="_blank">
+                    <h3> Table Tennis </h3>
+    
+                    <p> Haven't you won yet? </p></a>
+            </div>
+
+            <div class="project-card" id="QP9">
+                <a href="/pages/LandingPageJS/index09calculator.html" target="_blank">
+                    <h3> Calculator </h3>
+    
+                    <p> How much? </p></a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--/ צור קשר /-->
+    <section id="CU" class="contact">
+
+            <h2>צור קשר</h2>
+            
+            <form action="" class="form">
+
+                <input type="text" placeholder="שם מלא" class="box">
+
+                <input type="email" placeholder="אימייל" class="box">
+
+                <input type="tel" placeholder="טלפון" class="box">
+
+                <input type="submit" value="שלח">
+
+            </form>
+
+    </section>
+
+    <!--/ תפריט נייד /-->
+    <nav class="mobile">
+
+            <h2> תפריט נייד </h2>
+
+            <ul>
+
+                <li><a href="#main"> <img src="/icon/house-chimney.png" alt=""></a></li>
+
+                <li><a href="#main"> <img src="/icon/id-card.png" alt=""> </a></li>
+
+                <li><a href="#skis"> <img src="/icon/abilities.png" alt=""></a></li>
+
+                <li><a href="#shesh"> <img src="/icon/files.png" alt=""> </a></li>
+
+                <li><a href="#shesh-additional"> <img src="/icon/js.png" alt=""> </a></li>
+
+                <li><a href="#CU"> <img src="/icon/contact.png" alt=""></a></li>
+
+            </ul>
+
+    </nav>
+
+    <!--/ סיכום וקישורים למידע /-->
+    <div >
+
+            <footer class="footer">
+
+                <div class="section">
+
+                    <h3> אתרי מידע </h3>
+
+                    <ul class="web-list">
+
+                        <li class="libdr"><a href="https://www.w3schools.com/html/default.asp" target="_blank"> <img src="/icon/myskils/html.png" alt=""> </a></li>
+
+                        <li class="libdr"><a href="https://www.w3schools.com/css/default.asp" target="_blank"> <img src="/icon/myskils/css-3.png" alt=""> </a></li>
+
+                        <li class="libdr"><a href="https://www.w3schools.com/js/default.asp" target="_blank"> <img src="/icon/myskils/java-script.png" alt=""> </a></li>
+
+                        <li class="libdr"><a href="https://www.w3schools.com/bootstrap/default.asp" target="_blank"> <img src="/icon/myskils/bootstrap.png" alt=""> </a></li>
+
+                        <li class="libdr"><a href="https://www.w3schools.com/sass/default.php" target="_blank"> <img src="/icon/myskils/sass.png" alt=""> </a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="section">
+
+                    <h3> מכווין עמוד </h3>
+
+                    <ul class="web-list">
+
+                        <li class="libdr"><a href="#ulhdr"> <img src="/icon/house-chimney.png" alt=""></a></li>
+
+                        <li class="libdr"><a href="#main"> <img src="/icon/id-card.png" alt=""></a></li>
+
+                        <li class="libdr"><a href="#skis"> <img src="/icon/abilities.png" alt=""></a></li>
+
+                        <li class="libdr"><a href="#shesh"> <img src="/icon/database.png" alt=""></a></li>
+
+                        <li class="libdr"><a href="/pages/LandingPage/צור קשר.HTML" target="_blank"> <img src="/icon/contact.png" alt=""></a></li>
+
+                    </ul>
+
+                </div>
+
+            </footer>
+
+    </div>
+
+</body>
+</html>

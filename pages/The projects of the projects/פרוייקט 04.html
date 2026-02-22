@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> העמוד מקור של צהל  </title>
+    <link rel="stylesheet" href="/styles/Pj1/פרוייקט 04.css">
+</head>
+<body>
+
+    <!-- תפריט עליון -->
+<header class="header">
+    <div class="profile">
+        <img src="/images/Firstprojectphotos/soldier.png" alt="User Profile" class="profile-img">
+    </div>
+    <h1> הצטרפו לצה"ל </h1>
+    <p class="description">התחילו את המסע שלכם בשירות הצבאי!</p>
+</header>
+
+<!-- סמלים -->
+<section class="icons-section">
+    <div class="icon-container">
+        <a href="https://www.idf.il/אתרי-יחידות/חיל-האוויר/" target="_blank"><div class="icon">
+            <img src="/images/Firstprojectphotos/מטוס.img.webp" alt="חייל האוויר">
+            <p>חייל האוויר</p>
+        </div></a>
+        <a href="https://navy.idf.il/HomePage" target="_blank"><div class="icon">
+            <img src="/images/Firstprojectphotos/גלים.img.webp" alt="חייל הים">
+            <p>חייל הים</p>
+        </div></a>
+        <a href="https://www.idf.il/אתרי-יחידות/זרוע-היבשה/" target="_blank"><div class="icon">
+            <img src="/images/Firstprojectphotos/הליכה.img.webp" alt="חייל היבשה">
+            <p>חייל היבשה</p>
+        </div></a>
+        
+    </div>
+</section>
+
+<!-- Form Section -->
+<section class="form-section" id="btr">
+    <div class="form-container">
+        <h3>הצטרפו עכשיו להתנדבות בצה"ל</h3> <!-- כותרת חדשה -->
+        <p>השאירו פרטים להתנדבות שלכם, אנחנו כאן לעזור!</p>
+        <form>
+            <label for="first-name">שם פרטי</label>
+            <input type="text" id="first-name" name="first-name" placeholder="הכניסו את שמכם הפרטי" required>
+    
+            <label for="last-name">שם משפחה</label>
+            <input type="text" id="last-name" name="last-name" placeholder="הכניסו את שם המשפחה שלכם" required>
+    
+            <label for="dob">תאריך לידה</label>
+            <input type="date" id="dob" name="dob" required>
+    
+            <label for="volunteer-type">בחרו סוג התנדבות צה"לית</label>
+            <select id="volunteer-type" name="volunteer-type" required>
+                <option value="" disabled selected>בחרו אפשרות</option>
+                <option value="חייל אוויר">חייל אוויר</option>
+                <option value="חייל ים">חייל ים</option>
+                <option value="חייל יבשה">חייל יבשה</option>
+                <option value="אחר">אחר</option>
+            </select>
+    
+            <label for="what-to-be">מה הייתם רוצים להיות בצבא?</label>
+            <textarea id="what-to-be" name="what-to-be" placeholder="תארו מה אתם רוצים להיות בצבא" rows="4" required></textarea>
+            
+                <a href="/pages/LandingPage/תודה.HTML" target="_blank" class="submit-btn"> הירשם </a>
+        </form>
+    </div>
+</section>
+
+<!-- תפריט תחתון  -->
+<footer class="footer">
+    <div class="footer-content">
+        <ul class="footer-menu">
+            <li><a href="/index.html" target="_blank"> לעמוד הבית </a></li>
+            <li><a href="/pages/LandingPage/עמודפרוייקטים.html" target="_blank"> לפרוייקטים HTML </a></li>
+            <li><a href="/pages/עמודמעבריםכללי/index.html" target="_blank"> לפרוייקטים JS</a></li>
+            <li><a href="/pages/LandingPage/צור קשר.HTML" target="_blank">צור קשר</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>

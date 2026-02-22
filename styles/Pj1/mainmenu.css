@@ -1,0 +1,653 @@
+
+/*----------------------------*/
+/*   הגדרות האובייקטים כללי   */
+/*----------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl; /* מגדיר את כיוון ה-RTL */
+}
+/*------------------------------------*/
+/*        הגדרות העמוד              */
+/*------------------------------------*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 10px;
+    font-size: 16px; 
+    line-height: 1.5; 
+}
+/*------------------------------------*/
+/*     הגדרות כלליות ל-HTML         */
+/*------------------------------------*/
+html {
+    scroll-behavior: smooth; /* אפשר גלילה חלקה לכל העמוד */
+    overflow-x: hidden;
+}
+/*------------------------------------*/
+/*       הגדרות כלליות למגבלות      */
+/*------------------------------------*/
+.container {
+    border: 1px solid #ccc;
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+/*------------------------------------*/
+/*           טיפוגרפיה              */
+/*------------------------------------*/
+h1, h2, h3 {
+    margin: 10px 0; 
+}
+h1 {
+    font-size: 2em; 
+} 
+/*------------------------------------*/
+/*           כותרות כלליות          */
+/*------------------------------------*/
+h2 {
+    font-size: 1.5em; 
+    color: darkslategray; 
+}
+h3 {
+    font-size: 1.2em; 
+    color: dimgray; 
+} 
+/*------------------------------*/
+/*   תפריט ניווט עליון ראשי   */
+/*------------------------------*/
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: #3498db;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+/*---------------------------*/
+/*     לחצני מעבר           */
+/*---------------------------*/
+.lihdr {
+    display: inline-block;
+    margin: 10px 20px;
+    font-size: 18px; 
+}
+/*---------------------------*/
+/*    תמונת ההדהר שלי      */
+/*---------------------------*/
+#imghdr {
+    width: 70px; /* הגדלת התמונה */
+    height: 70px; /* הגדלת התמונה */
+    border-radius: 25px;
+    margin-left: 20px;
+    border: 1px solid blanchedalmond;
+    transition: 0.5s;
+}
+#imghdr:hover {
+    border: 1px solid rgb(255, 0, 255);
+    transform: scale(1.05);
+}
+/*---------------------------*/
+/*   כפתור ההדהר שלי       */
+/*---------------------------*/
+.button {
+    font-size: 16px; /* הגדלת גודל הטקסט בכפתור */
+    color: black;
+    background-color: rgba(255, 235, 205, 0.541);
+    width: 100px; /* הגדלת רוחב הכפתור */
+    height: 60px; /* הגדלת גובה הכפתור */
+    font-weight: 700;
+    border-radius: 20px;
+    border: 1px solid darkturquoise;
+    margin-right: 20px;
+}
+.button:hover {
+    color: rgb(255, 0, 255);
+    font-size: 16px; /* הגדלת גודל הטקסט במעבר עכבר */
+    background-color: rgba(192, 192, 192, 0.322);
+    border: 1px solid blanchedalmond;
+    transition: .5s;
+}
+/**/
+
+
+/*---------------------------*/
+/*     כרטיס ביקור שלי      */
+/*---------------------------*/
+.details {
+    display: flex; /* שימוש במבנה גמיש */
+    flex-direction: row; /* תצוגת שורה */
+    flex-wrap: wrap; /* אריזת שורות במידת הצורך */
+    width: 100%; /* רוחב מלא */
+    height: 380px; /* גובה קבוע */
+    background-color: rgba(192, 192, 192, 0.322); /* צבע רקע שקוף */
+    justify-content: center; /* ישור מרכזי */
+    align-items: center; /* ישור מרכזי על ציר ה-Y */
+}
+
+/*---------------------------*/
+/*     קונטיינר נוסף       */
+/*---------------------------*/
+.too-details {
+    width: 100%; /* רוחב מלא */
+    height: 300px; /* גובה קבוע */
+    text-align: center; /* ישור טקסט למרכז */
+    display: flex; /* מבנה גמיש */
+    flex-direction: row; /* תצוגת שורה */
+    flex-wrap: wrap; /* אריזת שורות */
+    justify-content: center; /* ישור מרכזי */
+    align-items: center; /* ישור מרכזי על ציר ה-Y */
+    align-content: center;
+    gap: 5%; /* רווח בין אלמנטים */
+}
+/*---------------------------*/
+/*         הטקסט           */
+/*---------------------------*/
+.hero-text {
+    font-size: 16px; /* גודל טקסט */
+    padding: 10px 20px; /* ריווח פנימי */
+    width: 100%; /* רוחב מלא */
+}
+/*---------------------------*/
+/*     כפתורי פרטים         */
+/*---------------------------*/
+button, input {  
+    font-size: 14px; /* גודל טקסט */
+    color: black; /* צבע טקסט */
+    background-color: blanchedalmond; /* צבע רקע */
+    width: 150px; /* רוחב כפתור */
+    height: 50px; /* גובה כפתור */
+    border-radius: 20px; /* עיגול הפינות */
+    border: 1px solid darkturquoise; /* גבול סביב הכפתור */
+}
+/*---------------------------*/
+/*  שינוי בעת ריחוף על כפתורי הקונטיינר  */
+/*---------------------------*/
+button:hover, input:hover {
+    color: rgb(255, 0, 255); /* שינוי צבע הטקסט */
+    background-color: rgba(192, 192, 192, 0.322); /* שינוי צבע הרקע */
+    border: 1px solid rgb(0, 0, 0); /* שינוי גבול */
+    transition: .5s; /* אנימציה לשינוי */
+}
+/*---------------------------*/
+/*    היכולות שלי - עיצוב כללי  */
+/*---------------------------*/
+.sk {
+    text-align: right; /* ישור טקסט לימין */
+    padding: 10px 10px; /* ריווח פנימי */
+    color: #fff; /* צבע טקסט */
+}
+/*---------------------------*/
+/*   כותרת ראשית - צור קשר   */
+/*---------------------------*/
+#contact-title {
+    text-align: center; /* ישור למרכז */
+    font-size: 42px; /* הגדלתי את גודל הכותרת */
+    margin-bottom: 40px; /* ריווח גדול יותר */
+    color: #2c3e50; /* צבע כהה לכותרת */
+    text-transform: uppercase; /* אותיות גדולות */
+    letter-spacing: 2px; /* ריווח בין אותיות */
+    padding: 15px 30px; /* ריווח פנימי גדול יותר */
+    border-bottom: 4px solid #3498db; /* גבול תחתון מודגש */
+    background-color: #ecf0f1; /* רקע בהיר */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* צל מרשים יותר */
+    transition: background-color 0.3s ease; /* אנימציה לשינוי צבע */
+}
+#contact-title:hover {
+    background-color: #2980b9; /* שינוי צבע רקע בזמן ריחוף */
+    color: #fff; /* שינוי צבע טקסט בזמן ריחוף */
+}
+/*---------------------------*/
+/*   כותרת ראשית - היכולות שלי  */
+/*---------------------------*/
+#skill-title {
+    text-align: center; /* ישור למרכז */
+    font-size: 42px; /* גודל הכותרת */
+    margin-bottom: 40px; /* ריווח תחתון */
+    color: #2c3e50; /* צבע כהה לכותרת */
+    text-transform: uppercase; /* אותיות גדולות */
+    letter-spacing: 2px; /* ריווח בין אותיות */
+    padding: 15px 30px; /* ריווח פנימי */
+    border-bottom: 4px solid #3498db; /* גבול תחתון מודגש */
+    background-color: #ecf0f1; /* רקע בהיר */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* צל */
+    transition: background-color 0.3s ease; /* אנימציה לשינוי צבע */
+}
+#skill-title:hover {
+    background-color: #2980b9; /* שינוי צבע רקע בעת ריחוף */
+    color: #fff; /* שינוי צבע טקסט בעת ריחוף */
+}
+/*---------------------------*/
+/*     כותרות משנה         */
+/*---------------------------*/
+.skill-title {
+    margin-left: 20px; /* ריווח שמאלי */
+    font-size: 26px; /* גודל הכותרת */
+    font-weight: bold; /* טקסט מודגש */
+    color: #333; /* צבע טקסט כהה יותר */
+    text-transform: uppercase; /* שינוי האותיות לאותיות גדולות */
+    letter-spacing: 1px; /* ריווח בין אותיות */
+    padding: 10px 20px; /* ריווח פנימי */
+    border-left: 5px solid #f39c12; /* גבול שמאלי בולט */
+    background-color: #f0f0f0; /* רקע בהיר לכותרת */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* הוספת צל */
+    transition: background-color 0.3s ease; /* אנימציה לשינוי צבע */
+}
+.skill-title:hover {
+    background-color: #e67e22; /* שינוי צבע רקע בזמן ריחוף */
+    color: #fff; /* שינוי צבע טקסט בזמן ריחוף */
+}
+/* היכולות שלי - CSS */
+.css {
+    width: 70%;
+    background-color: silver;
+    margin: 10px;
+    border-radius: 50px;
+}
+/* היכולות שלי - JavaScript */
+.js {
+    width: 60%;
+    background-color: rgb(18, 228, 130);
+    margin: 10px;
+    border-radius: 50px;
+}
+/* היכולות שלי - HTML */
+.html {
+    width: 90%;
+    background-color: orange;
+    margin: 10px;
+    border-radius: 50px;
+}
+/* היכולות שלי - Bootstrap */
+.BR {
+    width: 25%;
+    background-color: rgb(85, 82, 245);
+    margin: 10px;
+    border-radius: 50px;
+}
+/* היכולות שלי - SASS */
+.SASS {
+    width: 20%;
+    background-color: rgb(5, 122, 77);
+    margin: 10px;
+    border-radius: 50px;
+}
+/*---------------------------*/
+/*     קונטיינר ראשי       */
+/*---------------------------*/
+#shesh {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/*---------------------------*/
+/*  כותרת שש הפרוייקטים שלי */
+/*---------------------------*/
+#tatelshesh {
+    width: 100%;
+}
+/*---------------------------*/
+/*     קונטיינר מישני      */
+/*---------------------------*/
+.Main_container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: silver;
+    gap: 15px;
+    padding: 4% 4%;
+}
+/*---------------------------*/
+/*    כרטיסים לחודים      */
+/*---------------------------*/
+.card {
+    display: flex; 
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 31%;
+    height: 300px;
+    border-radius: 25px;
+    box-shadow: 2px 3px 20px #000 inset, 5px 5px 5px blue;
+    text-align: center;
+    transition: 1s;
+} 
+.card:hover {
+    transform: scale(1.03);
+}
+/*---------------------------*/
+/* דיוו לטקסט + תמונת רקע  */
+/*---------------------------*/
+.content {
+    display: flex;
+    position: absolute;
+    align-self: flex-end!important;
+    bottom: 0px;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    height: 45%;
+    width: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;  
+}
+/*---------------------------*/
+/*         כרטיס 1         */
+/*---------------------------*/
+#card1 {
+    background-image: url('/images/Nowphotos/תמונה\ לעולם\ הרפוא\ קבלה\ פנים\ ראשונה.webp');
+    background-size: cover;
+    background-position: center center;
+}  
+/*---------------------------*/
+/*         כרטיס 2         */
+/*---------------------------*/
+#card2 {
+    background-image: url('/images/Nowphotos/תמונה\ לעולם\ מייקרוסופט\ קבלת\ פנים\ ראשונה.webp');
+    background-size: cover;
+    background-position: center center;
+}
+/*---------------------------*/
+/*         כרטיס 3         */
+/*---------------------------*/
+#card3 {
+    background-image: url('/images/Nowphotos/תמונה\ לעולם\ האפל\ קבלת\ פנים\ ראשונה.webp');
+    background-size: cover;
+    background-position: center center;
+}
+/*---------------------------*/
+/*         כרטיס 4         */
+/*---------------------------*/
+#card4 {
+    background-image: url('/images/Nowphotos/תמונה\ לעולם\ צהל\ קבלת\ פנים.webp');
+    background-size: cover;
+    background-position: center center;
+}
+/*---------------------------*/
+/*         כרטיס 5         */
+/*---------------------------*/
+#card5 {
+    background-image: url('/images/Nowphotos/תמונה\ לעולם\ החלל\ קבלת\ פנים\ ראשונה.webp');
+    background-size: cover;
+    background-position: center center;
+}
+/*---------------------------*/
+/*         כרטיס 6         */
+/*---------------------------*/
+#card6 {
+    background-image: url('/images/Nowphotos/תמונה\ לעולם\ הAI\ קבלת\ פנים\ ראשונה.webp');
+    background-size: cover;
+    background-position: center center;
+}
+/**/
+
+
+
+
+/*---------------------------*/
+/*        צור קשר          */
+/*---------------------------*/
+.contact {
+    display: flex; /* שימוש ב-flexbox לסידור */
+    height: 400px; /* גובה קבוע עבור המקטע */
+    padding: 0; /* רפוד פנימי אפס */
+    background-color: antiquewhite; /* צבע רקע בהיר */
+}
+/*---------------------------*/
+/*          טופס קשר        */
+/*---------------------------*/
+.form {
+    display: flex; /* שימוש ב-flexbox */
+    flex-direction: column; /* סידור טופס בעמודה */
+    width: 55%; /* רוחב הטופס */
+    padding: 20px 25px; /* רפוד פנימי סביב הטופס */
+    justify-content: center; /* ממרכז את התוכן בתוך הטופס */
+}
+/*---------------------------*/
+/*         תיבת טקסט        */
+/*---------------------------*/
+.box {
+    width: 100%; /* רוחב מלא */
+    padding: 10px 12px; /* רפוד פנימי */
+    margin: 5px 0; /* רווח בין התיבות */
+    transition: background-color 0.3s; /* אפקט רך לשינוי צבע */
+}
+.box:hover {
+    background-color: lightgray; /* שינוי צבע ברקע בעת ריחוף */
+}
+/*---------------------------*/
+/*         צד טופס          */
+/*---------------------------*/
+.side {
+    width: 45%; /* רוחב הצד */
+    background-image: url('/i'); /* תמונת רקע */
+    background-size: cover; /* התאם את התמונה לרוחב המקטע */
+    background-position: center center; /* מיקום התמונה במרכז */
+}
+/**/
+
+
+/*---------------------------*/
+/*     תפריט ניווט תחתון    */
+/*---------------------------*/
+.footer {
+    display: flex; /* שימוש ב-flexbox לעיצוב התפריט */
+    justify-content: center; /* מרכז את התפריט */
+    align-items: center; /* ממרכז את הפריטים בתפריט */
+    text-align: center; /* ממרכז את הטקסט */
+    background-color: skyblue; /* צבע רקע לתפריט */
+    height: auto; /* גובה אוטומטי כדי לאפשר גובה משתנה */
+    padding: 20px; /* הוספת ריפוד סביב התפריט */
+}
+/*---------------------------*/
+/*        סעיפים בתפריט     */
+/*---------------------------*/
+.section {
+    display: flex; /* שימוש ב-flexbox לסידור סעיפים */
+    flex-direction: column; /* סידור הסעיפים בעמודה */
+    padding: 20px 25px; /* רווח פנימי סביב הסעיף */
+    width: 200px; /* רוחב קבוע של הסעיף */
+    text-align: left; /* יישור הטקסט לשמאל */
+}
+/*---------------------------*/
+/*          רשימת אתרים      */
+/*---------------------------*/
+.web-list {
+    list-style-type: none; /* הסרת תבליטים מרשימה */
+    margin: 5px 0; /* רווח עליון ותחתון לרשימה */
+}
+/*---------------------------*/
+/*        פריטי רשימה       */
+/*---------------------------*/
+.web-list li {
+    padding: 5px 0; /* רווח פנימי עליון ותחתון בין פריטי הרשימה */
+}
+/**/
+
+/*---------------------------*/
+/*        תפריט נייד       */
+/*---------------------------*/
+.mobile {
+    display: flex; /* שימוש ב-flexbox לעיצוב התפריט */
+    background-color: #ecf0f1; /* רקע בהיר כמו בתפריט העליון */
+    color: #2c3e50; /* צבע כהה כמו בתפריט העליון */
+    justify-content: center; /* מרכז את התפריט */
+    align-items: center; /* ממרכז את הפריטים בתפריט */
+    padding: 10px; /* רווח פנימי */
+    position: sticky; /* מקבע את התפריט למטה */
+    bottom: 0; /* מיקום בתחתית */
+    gap: 10px; /* רווח בין הפריטים */
+    display: none; /* מוסתר כברירת מחדל */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* הוספת צל לתפריט */
+}
+/*---------------------------*/
+/*       פריטי תפריט       */
+/*---------------------------*/
+.mobile li {
+    display: inline-block; /* סידור פריטים באופק */
+    font-size: 22px; /* גודל טקסט */
+    padding: 10px 20px; /* ריווח פנימי גדול יותר */
+    background-color: #3498db; /* רקע בהיר יותר כמו בתפריט העליון */
+    color: #fff; /* צבע טקסט לבן */
+    margin: 0 10px; /* רווח בין הפריטים */
+    cursor: pointer; /* מצביע שפריטים הם לחיצים */
+    border-radius: 5px; /* פינות מעוגלות */
+    transition: background-color 0.3s ease; /* אנימציה לשינוי צבע */
+}
+/*---------------------------*/
+/*       אפקט ריחוף       */
+/*---------------------------*/
+.mobile li:hover {
+    background-color: #2980b9; /* שינוי צבע רקע בזמן ריחוף */
+}
+/*---------------------------*/
+/*         קישורים          */
+/*---------------------------*/
+.link {
+    color: #fff; /* צבע טקסט לבן */
+    text-decoration: none; /* מסיר קו תחתון מקישורים */
+}
+/**/
+
+/**/
+/*- חלק עליון -*/
+/*-   header רספונסיביות  - */
+/* @media (max-width: 768px) {
+    .header {
+        flex-direction: column; 
+        height: auto; 
+    }
+    #imghdr {
+        width: 50px;
+        height: 50px;
+    }
+    #btnhdr {
+        width: 80px; 
+        font-size: 14px; 
+    }
+    .lihdr {
+        margin: 5px 10px; 
+    }
+} */
+/**/
+
+/*- חלק 5 -*/
+/*- צור קשר -*/
+/* @media(max-width:780px) {
+    .contact {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto!important;
+    }
+    .form {
+        width: 100%;
+        background-color: aqua;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 7px;
+    }
+    .side {
+        width: 100%;
+        height: 250px;
+        background-color: blue;
+    }
+} */
+/*- חלק אחרון -*/
+/*- תפריט לנייד -*/
+/*- מדיה קווריז -*/
+/* @media (max-width: 780px) {
+    .mobile {
+        display: flex; 
+        justify-content: center !important;
+    }
+} */
+/*- פוטאר -*/
+/* מדיה קווריז עבור טלפונים וטאבלטים */
+/* @media (max-width: 768px) {
+    .footer {
+        flex-direction: column; 
+        height: auto;
+    }
+
+    .section {
+        width: 100%; 
+        text-align: center; 
+    }
+} */
+/*------------------------------------------------------------------------------------------*/
+       /* עיצוב כללי */
+/* רספונסיביות עבור טלפונים */
+/* רספונסיביות עבור טאבלטים */
+/* @media (min-width: 600px) and (max-width: 1024px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #imghdr {
+        width: 55px;
+        height: 55px;
+    }
+
+    #btnhdr {
+        width: 80px;
+        height: 45px;
+    }
+
+    .details {
+        flex-direction: row;
+        height: auto;
+        padding: 15px;
+    }
+
+    .card {
+        width: 45%;
+        height: 270px;
+    }
+
+    .skill img {
+        width: 90px;
+        height: 90px;
+    }
+} */
+/* רספונסיביות עבור מחשבים */
+/* @media (min-width: 1024px) {
+    .header {
+        flex-direction: row;
+    }
+
+    #imghdr {
+        width: 60px;
+        height: 60px;
+    }
+
+    #btnhdr {
+        width: 85px;
+        height: 50px;
+    }
+
+    .details {
+        flex-direction: row;
+        height: auto;
+    }
+
+    .card {
+        width: 31%;
+        height: 300px;
+    }
+
+    .skill img {
+        width: 100px;
+        height: 100px;
+    }
+} */
+/**/
+
+a {
+    text-decoration: none;
+}

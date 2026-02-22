@@ -1,0 +1,82 @@
+
+html {
+    direction: rtl;
+}
+/* עיצוב הקונטיינר הראשי */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9; /* רקע בהיר */
+    border: 2px solid #ddd; /* מסגרת עדינה */
+    border-radius: 14px;
+    width: 90%;
+    max-width: 1200px; /* מגבלת רוחב */
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* צל עדין */
+}
+
+/* עיצוב הכותרת */
+.main-container h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* עיצוב תיבת הכפתורים */
+.button-container {
+    display: flex;
+    flex-wrap: wrap; /* עטיפה אוטומטית למסכים קטנים */
+    justify-content: center;
+    gap: 15px; /* מרווחים בין הכפתורים */
+    width: 100%;
+}
+
+/* עיצוב הכפתורים */
+.button-container .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 8px;
+    width: calc(33.33% - 30px); /* שלושה כפתורים בשורה במסכים גדולים */
+    max-width: 200px;
+    height: 60px;
+    background-color: #0078d4;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+/* מעבר עכבר על הכפתורים */
+.button-container .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* מדיה קוורי למסכים בינוניים */
+@media screen and (max-width: 768px) {
+    .button-container .btn {
+        width: calc(50% - 20px); /* שני כפתורים בשורה במסכים בינוניים */
+    }
+}
+
+/* מדיה קוורי למסכים קטנים */
+@media screen and (max-width: 480px) {
+    .button-container .btn {
+        width: 100%; /* כפתור מלא ברוחב במסכים קטנים */
+    }
+
+    .main-container h1 {
+        font-size: 28px; /* הקטנת הכותרת במסכים קטנים */
+    }
+}

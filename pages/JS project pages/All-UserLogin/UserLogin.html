@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- 
+  כותרת: הגדרת מסמך HTML
+  הערה: הקוד מתחיל בהצהרת DOCTYPE לציון מסמך HTML5.
+-->
+<html lang="en">
+<head>
+    <!-- כותרת: Head - הגדרות מטא וטיטל -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- כותרת: כותרת המסמך -->
+    <title>Document</title>
+
+    <!-- כותרת: קישור לקובץ CSS -->
+    <link rel="stylesheet" href="./Ul.css">
+
+    <!-- כותרת: קישור לקובץ JavaScript עם defer כדי להמתין לטעינת הדף -->
+    <script src="./Ul.js" defer></script>
+</head>
+<body>
+    <!-- כותרת: תיבה ראשית - box001 -->
+    <div id="box001">
+
+        <!-- כותרת: כותרת ראשית בדף - User Login -->
+        <h1 id="LO"> User Login </h1>
+
+        <!-- כותרת: טופס התחברות -->
+        <form action="" id="form">
+
+          <!-- כותרת: שדה Username -->
+          <div class="form-control">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" />
+            <p id="username-helper"></p>
+          </div>
+
+          <!-- כותרת: שדה Email -->
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" />
+            <p id="email-helper"></p>
+          </div>
+
+          <!-- כותרת: שדה Password -->
+          <div class="form-control">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password"/>
+          </div>
+
+          <!-- כותרת: כפתור שליחת טופס -->
+          <input type="submit" />
+        </form>
+    </div>
+    
+    <!-- כותרת: אלמנט להצגת פלט -->
+    <div id="output"></div>
+</body>
+</html>

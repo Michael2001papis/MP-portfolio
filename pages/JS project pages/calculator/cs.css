@@ -1,0 +1,132 @@
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e5c77c;
+} */
+
+/* איפוס גלובלי */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* עיצוב הבסיס */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e5c77c;
+    direction: rtl;
+}
+
+/* - קונטיינר ראשי למחשבון -
+.calculator {
+    padding: 5px;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    border-radius: 10px;
+
+}
+.calculator p {
+    font-size: xx-large;
+    height: 40px;
+    color: white;
+    width: 100%;
+} */
+
+/* קונטיינר ראשי למחשבון */
+.calculator {
+    padding: 10px;
+    width: 90%;
+    max-width: 300px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.calculator p {
+    font-size: xx-large;
+    height: 50px;
+    color: white;
+    text-align: right;
+    padding: 5px;
+    background-color: #222;
+    border-radius: 5px;
+}
+/* - קונטיינר כפתורי המחשבון -
+.AllCalculatorButtons {
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(100% - 40px);
+} */
+/* - כפתורי המחשבון -
+.calculator .AllCalculatorButtons button { 
+    width: 25%;
+    font-size: larger;
+    background-color: white;
+    border-radius: 8px;
+} */
+/*- מעבר עכבר על הכפתורים -
+.calculator .AllCalculatorButtons button:hover {
+    width: 25%;
+    background-color: silver;
+    color: greenyellow;
+} */
+
+/* קונטיינר כפתורים */
+.AllCalculatorButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+/* כפתורי המחשבון */
+.calculator .AllCalculatorButtons button { 
+    width: calc(25% - 5px);
+    font-size: larger;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* אפקט מעבר עכבר */
+.calculator .AllCalculatorButtons button:hover {
+    background-color: silver;
+    color: greenyellow;
+}
+
+/* אפקט לחיצה */
+.calculator .AllCalculatorButtons button:active {
+    transform: scale(0.95);
+    background-color: #dcdcdc;
+}
+
+/* התאמה למסכים קטנים */
+@media (max-width: 500px) {
+    .calculator {
+        width: 90%;
+    }
+    .calculator p {
+        font-size: large;
+    }
+    .calculator .AllCalculatorButtons button {
+        font-size: medium;
+    }
+}
+
+
+

@@ -1,0 +1,191 @@
+/* עיצוב כללי עבור כל האלמנטים */
+* {
+    margin: 0; /* הסרת רווחים כלליים */
+    padding: 0; /* הסרת ריפודים כלליים */
+    box-sizing: border-box; /* הגדרת אופן חישוב גודל אלמנטים */
+  }
+  /* עיצוב כללי לגוף העמוד */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* גופן ברירת מחדל */
+    text-align: center; /* ישור הטקסט למרכז */
+    background: linear-gradient(135deg, #f3ec78, #af4261); /* רקע גרדיאנט צבעים */
+    margin: 0; /* הסרת רווחים חיצוניים */
+    padding: 0; /* הסרת ריפודים חיצוניים */
+    direction: rtl; /* הגדרת כיוון כתיבה מימין לשמאל */
+  }
+  /* עיצוב הכותרת */
+  h1 {
+    color: #fff;
+    font-size: 3rem;
+    margin: 20px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  /* עיצוב לוח המשחק */
+  .game-board {
+    display: grid; /* הגדרת לוח המשחק כרשת */
+    grid-template-columns: repeat(4, 120px); /* 4 עמודות בגודל 120px כל אחת */
+    grid-gap: 15px; /* רווחים בין הקלפים */
+    justify-content: center; /* ישור הרשת למרכז */
+    align-items: center; /* יישור אוטומטי של כל פריט במרכזו */
+    margin: 20px auto; /* רווחים סביב הלוח */
+    padding: 10px; /* ריפוד פנימי סביב הלוח */
+    background-color: rgba(255, 255, 255, 0.8); /* צבע רקע בהיר עם שקיפות */
+    border-radius: 10px; /* קצוות מעוגלים לרקע */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* הוספת צללית רכה */
+  }
+  /* עיצוב קלפים */
+  .card {
+    width: 120px; /* גודל הכרטיס */
+    height: 120px; /* גובה הכרטיס */
+    background: #ffffff; /* צבע רקע בהיר לכרטיס */
+    border: 2px solid #ddd; /* גבול רך בצבע אפור בהיר */
+    border-radius: 15px; /* קצוות מעוגלים */
+    cursor: pointer; /* סמן עכבר מצביע */
+    display: flex; /* הצגת תוכן הכרטיס במרכז */
+    align-items: center; /* ישור אנכי */
+    justify-content: center; /* ישור אופקי */
+    font-size: 32px; /* גודל טקסט */
+    color: transparent; /* טקסט מוסתר בהתחלה */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* הוספת צללית רכה לכרטיס */
+    transition: transform 0.5s, background-color 0.3s, box-shadow 0.3s; /* אפקטים חלקים */
+    position: relative; /* מיקום יחסית לצורך אפקטים */
+  }
+  /* שינוי כאשר הכרטיס הפוך */
+  .card.flipped {
+    color: #333; /* הצגת הטקסט בצבע כהה כאשר הכרטיס הפוך */
+    background-color: #f4f4f4; /* רקע בהיר כאשר הכרטיס הפוך */
+    transform: rotateY(180deg); /* סיבוב הכרטיס כאשר הוא הפוך */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* הצללה ברגע שהכרטיס הפוך */
+  }
+  /* מצב קלף תואם */
+  .card.matched {
+    background: #1dd1a1;
+    color: #fff;
+    cursor: default;
+    animation: pulse 1s infinite alternate;
+  }
+  /* אפקטים בריחוף (hover) */
+  .card:hover {
+    transform: scale(1.1); /* הגדלת הכרטיס מעט בריחוף */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* הצללה מוחשית יותר בריחוף */
+    background-color: #f0f0f0; /* שינוי צבע הרקע בזמן ריחוף */
+  }
+  /* אפקטים בזמן לחיצה */
+  .card:active {
+    transform: scale(0.95); /* הקטנת הכרטיס בזמן לחיצה */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* הצללה חזקה יותר בזמן לחיצה */
+  }
+  /* תפריט תחתון */
+  .bottom-menu {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .bottom-menu p {
+    margin: 0;
+    font-size: 14px;
+  }
+  /* אנימציית פועם לקלפים תואמים */
+  @keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+  }
+  /* התאמות למובייל */
+  @media (max-width: 600px) {
+    .game-board {
+        grid-template-columns: repeat(3, 100px); /* 3 עמודות */
+        grid-gap: 10px;
+    }
+    .card {
+        width: 100px;
+        height: 100px;
+        font-size: 24px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+  }
+  @media (max-width: 600px) {
+    .game-board {
+      grid-template-columns: repeat(3, 100px);
+    }
+  }
+
+  /* עיצוב כפתור חזרה לדף הבית */
+.home-button {
+  display: inline-block; /* הצגת הכפתור כאלמנט ברוחב משתנה */
+  padding: 10px 20px; /* ריפוד פנימי */
+  background-color: #4CAF50; /* צבע רקע ירוק */
+  color: white; /* צבע טקסט לבן */
+  font-size: 1rem; /* גודל גופן */
+  text-decoration: none; /* הסרת קו תחתון */
+  border-radius: 25px; /* קצוות מעוגלים */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* צללית רכה */
+  transition: background-color 0.3s, transform 0.3s; /* אפקטים חלקים */
+  margin-top: 15px; /* רווח מעל הכפתור */
+}
+
+/* שינוי צבע רקע כשהכפתור מקבל פוקוס */
+.home-button:hover {
+  background-color: #45a049; /* צבע רקע כהה יותר בריחוף */
+  transform: scale(1.05); /* הגדלה קלה של הכפתור */
+}
+
+/* שינוי צבע רקע כשעושים עליו קליק */
+.home-button:active {
+  background-color: #388e3c; /* צבע רקע כהה עוד יותר */
+  transform: scale(0.95); /* הקטנה קלה של הכפתור */
+}
+
+/* התאמות למובייל */
+@media (max-width: 600px) {
+  .home-button {
+    font-size: 0.9rem; /* גודל גופן קטן יותר */
+    padding: 8px 16px; /* ריפוד קטן יותר */
+  }
+}
+
+/* עיצוב כפתור איפוס */
+.reset-button {
+  padding: 10px 20px; /* ריפוד פנימי */
+  background-color: #f44336; /* צבע רקע אדום */
+  color: white; /* צבע טקסט לבן */
+  font-size: 1rem; /* גודל גופן */
+  border: none; /* אין גבול */
+  border-radius: 25px; /* קצוות מעוגלים */
+  cursor: pointer; /* סמן מצביע */
+  transition: background-color 0.3s, transform 0.3s; /* אפקטים חלקים */
+  margin-top: 15px; /* רווח מעל הכפתור */
+  margin-left: 20px; /* רווח בין כפתור האיפוס לכפתור חזרה */
+}
+
+/* שינוי צבע רקע כשהכפתור מקבל פוקוס */
+.reset-button:hover {
+  background-color: #e53935; /* צבע רקע כהה יותר בריחוף */
+  transform: scale(1.05); /* הגדלה קלה של הכפתור */
+}
+
+/* שינוי צבע רקע כשעושים עליו קליק */
+.reset-button:active {
+  background-color: #d32f2f; /* צבע רקע כהה עוד יותר */
+  transform: scale(0.95); /* הקטנה קלה של הכפתור */
+}
+
+/* התאמות למובייל */
+@media (max-width: 600px) {
+  .reset-button {
+    font-size: 0.9rem; /* גודל גופן קטן יותר */
+    padding: 8px 16px; /* ריפוד קטן יותר */
+  }
+}
+
+  
+  

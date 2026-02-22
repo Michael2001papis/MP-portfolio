@@ -1,0 +1,152 @@
+/**/
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    direction: rtl;
+}
+/*--*/
+/*-/ תפריט הלעיון /-*/
+.top-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 20px;
+    background-color: #0077b6;
+}
+.top-menu img {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: auto 0 auto;
+    
+}
+.top-menu a button {
+    background-color: #f07aff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.top-menu a button:hover {
+    background-color: #d856e1;
+}
+/*--*/
+
+/* עיצוב הקונטיינר הראשי */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px 30px;
+}
+/* כותרת ראשית */
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+/*--*/
+
+/* עיצוב אזורי הטופס */
+.form-section {
+    margin-bottom: 25px;
+}
+/* כותרת משנה לכל אזור */
+.form-section h2 {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    color: #555;
+}
+/* עיצוב תוויות */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+}
+/*--*/
+
+/*--*/
+/* עיצוב שדות קלט ובחירה */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+/*--*/
+/* עיצוב כפתור השליחה */
+.button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #0077b6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+.button:hover {
+    background-color: #005f94;
+}
+/*--*/
+
+/*--*/
+/* אזור כפתורים */
+.button, button { /* תיקון "buttom" ל-"button" */
+    padding: 10px; /* ריפוד אחיד */
+    background-color: #d4edda;
+    color: black;
+    border: 1px solid #dc3545;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+    margin: auto; /* השאר את זה, זה נכון */
+}
+.button:hover, button:hover {
+    background-color: #343a40;
+    color: greenyellow;
+    border-color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.637);
+    border: 2px solid yellow;
+}
+/*--*/
+
+/*--*/
+/* רספונסיביות: במכשירים עם רוחב עד 600px */
+@media screen and (max-width: 600px) {
+    .top-menu {
+      flex-direction: column;
+    }
+  }
+/* רספונסיביות - התאמה למסכים קטנים */
+@media screen and (max-width: 600px) {
+    .container {
+      margin: 20px;
+      padding: 15px;
+    }
+  }
+/*--*/
+  

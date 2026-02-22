@@ -1,0 +1,297 @@
+/**/
+body {
+    font-family: Arial, sans-serif; /* גופן קריא ונעים לעין */
+    background-image: url('/images/Nowphotos/PB/תמונתרקעאפל.webp');
+    background-size: cover;
+    background-position: center center; /* ממו��ד התמו��ה ברקע */
+    
+    margin: 0; /* ביטול רווחים סביב */
+    padding: 0; /* ביטול רווחים פנימיים */
+    direction: rtl;
+}
+/**/
+
+/**/
+/* עיצוב התפריט העליון */
+.header {
+    background-color: #333; /* צבע רקע כהה */
+    padding: 10px 0; /* רווח פנימי למעלה ולמטה */
+    color: white; /* צבע טקסט לבן */
+    text-align: center; /* מרכז את הטקסט */
+}
+/* עיצוב התפריט העליון - רשימה */
+.top-nav ul {
+    list-style: none; /* מבטל את הסימונים ברשימה */
+    padding: 0; /* מבטל רווח פנימי */
+    margin: 0; /* מבטל רווח חיצוני */
+    display: flex; /* שימוש ב-Flexbox */
+    justify-content: center; /* מרכז את הפריטים */
+}
+/* עיצוב פריטי התפריט */
+.top-nav ul li {
+    margin: 0 15px; /* רווח בין פריטי התפריט */
+}
+/* עיצוב הקישורים בתפריט */
+.top-nav ul li a {
+    color: white; /* צבע טקסט לבן */
+    text-decoration: none; /* מבטל קו תחתון */
+    padding: 8px 16px; /* רווח פנימי סביב הקישור */
+    border-radius: 5px; /* פינות מעוגלות */
+    transition: background-color 0.3s; /* מעבר רך על צבע הרקע */
+}
+/* עיצוב ההקישור במעבר עכבר */
+.top-nav ul li a:hover {
+    background-color: #555; /* שינוי צבע רקע בעת החזקה */
+}
+/**/
+
+
+/**/
+/* עיצוב ה-wrapper - מבנה יסודי */
+.wrapper {
+    display: flex; /* שימוש ב-flexbox לסידור נוח */
+    justify-content: space-between; /* רווח שווה בין התוכן לתמונה */
+    align-items: center; /* מרכז את התוכן בצורה אנכית */
+    padding: 20px; /* רווח פנימי לא נעים */
+    background-color: #ffe0e0; /* רקע ורדרד עדין */
+    border-radius: 15px; /* פינות מעוגלות להרגשה רכה */
+    margin: 20px; /* רווח חיצוני */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* הוספת צללה לעומק */
+}
+.content {
+    text-align: center; /* מרכז את כל התוכן */
+    max-width: 60%; /* מקסימום רוחב לתוכן */
+    margin: 0 auto; /* מוודא שהמקטע במרכז */
+    margin-right: 20px; /* רווח בין התוכן לתמונה */
+}
+/* עיצוב אזור הסושיאל */
+.social {
+    margin: 20px 0; /* רווח מעל ומתחת */
+}
+/* עיצוב טקסט הסושיאל */
+.social p {
+    font-size: 18px; /* גודל טקסט */
+    color: #333; /* צבע טקסט */
+}
+/* עיצוב סמלוני הסושיאל */
+.social-icons {
+    display: flex; 
+    justify-content: center; 
+    margin-top: auto; 
+}
+/* עיצוב כל סמל */
+.social-icon {
+    width: 32px;
+    height: 32px;
+    margin: 1%; 
+    transition: transform 0.3s; /* מעבר רך בעת החזקה */
+}
+/* אפקט ריחוף על הסמלים */
+.social-icon:hover {
+    transform: scale(1.1); /* הגדלה קלה בעת החזקה */
+}
+/**/
+
+
+/**/
+/* עיצוב כותרת ראשית */
+h1 {
+    color: #333; /* צבע כהה לכותרת */
+    font-size: 24px; /* גודל גופן ברור לכותרת */
+    margin-bottom: 10px; /* רווח מתחת לכותרת */
+}
+/* עיצוב טקסט כללי */
+p {
+    color: #555; /* צבע בינוני לטקסט */
+    line-height: 1.6; /* מרווח בין השורות לשיפור הקריאות */
+}
+/* עיצוב התמונה - שמירה על יחס מידות */
+.side {
+    max-width: 30%; /* מגביל את רוחב התמונה */
+}
+/* עיצוב התמונה עם פינות מעוגלות */
+.ani {
+    width: 100%; /* תמונה תתאים לרוחב הקונטיינר */
+    border-radius: 10px; /* פינות מעוגלות לתמונה */
+    object-fit: cover; /* שמירה על יחס המידות של התמונה */
+}
+/**/
+
+
+/**/
+/* עיצוב טופס ההרשמה */
+.form {
+    background-color: #ffffff; /* צבע רקע לבן */
+    padding: 30px; /* רווח פנימי */
+    border-radius: 15px; /* מעתף מעוגל */
+    margin: 20px auto; /* רווח עליון ותחתון, אוטומטי בצדדים */
+    max-width: 400px; /* מגביל את רוחב הטופס */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* צל רך לעומק נוסף */
+    transition: transform 0.3s, box-shadow 0.3s; /* אפקט חציצה גם עבור הצל */
+}
+.form:hover {
+    transform: translateY(-5px); /* תזוזה קלה כלפי מעלה בהעברת עכבר */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* צל חזק יותר בעת ריחוף */
+}
+h2 {
+    color: #333; /* צבע כהה לכותרת */
+    text-align: center; /* ממרכז את הכותרת */
+    font-size: 26px; /* גודל כותרת גדול יותר */
+    margin-bottom: 20px; /* רווח תחתון לכותרת */
+    font-weight: 600; /* בולטות גבוהה יותר */
+}
+.details {
+    display: flex;
+    flex-direction: column; /* מציג את האלמנטים בטור */
+}
+label {
+    margin-bottom: 5px; /* רווח בין תווית לשדה */
+    color: #555; /* צבע תווית */
+    font-weight: 600; /* בולטות לתווית */
+}
+.box {
+    margin-bottom: 15px; /* רווח בין השדות */
+    padding: 10px; /* רווח פנימי */
+    border: 1px solid #ccc; /* גבול */
+    border-radius: 10px; /* מעתף מעוגל לשדות */
+    transition: border-color 0.3s, box-shadow 0.3s; /* אפקט חציצה */
+}
+.box:focus {
+    border-color: #007bff; /* צבע גבול כאשר השדה פעיל */
+    outline: none; /* מסיר את קו המתאר */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* הוספת צללה קלה לשדה הממוקד */
+}
+/* עיצוב כפתור */
+.btn , button , .details a {
+    background-color: #007bff; /* צבע רקע לכפתור */
+    color: white; /* צבע טקסט */
+    padding: 10px 20px; /* רווח פנימי */
+    border: none; /* ללא גבול */
+    border-radius: 5px; /* פינות מעוגלות */
+    cursor: pointer; /* הופך את העכבר לאצבע */
+    font-size: 16px; /* גודל טקסט */
+    text-align: center; /* מרכז את הטקסט */
+    text-decoration: none; /* מסיר קו תחתון מהקישור */
+    transition: background-color 0.3s, transform 0.3s; /* אפקט חציצה */
+}
+
+.btn:hover , button:hover {
+    background-color: #0056b3; /* צבע רקע כשמרחפים על הכפתור */
+    transform: translateY(-2px); /* תזוזה קלה כלפי מעלה בעת ריחוף */
+}
+
+.btn:active , button:active {
+    transform: translateY(0); /* תזוזה חזרה בעת לחיצה */
+}
+/**/
+
+
+/**/
+/* עיצוב עוטף - Flexbox */
+.wrapper {
+    display: flex; /* מאפשר סידור בשורה */
+    flex-direction: row; /* סדר את התוכן בשורה */
+    align-items: center; /* ממרכז את התוכן במאונך */
+}
+/* עיצוב תוכן */
+.content {
+    flex: 1; /* קובע שהתוכן יתפוס את השטח הפנוי */
+    text-align: center; /* מרכז את כל התוכן במרכז */
+    margin: 20px; /* רווח סביב התוכן */
+}
+/* עיצוב צד - תמונה */
+.side {
+    flex: 1; /* קובע שהתמונה תתפוס את השטח הפנוי */
+    text-align: center; /* מרכז את התמונה */
+}
+/* עיצוב התמונה */
+.ani {
+    max-width: 100%; /* מבטיח שהתמונה תתאים לרוחב הקונטיינר */
+    height: auto; /* שומר על פרופורציות התמונה */
+}
+/**/
+
+
+/**/
+.social {
+    text-align: center; /* מרכז את הטקסט */
+    margin: 20px 0; /* רווח מעל ומתחת */
+}
+/* עיצוב טקסט החברתי */
+.social p {
+    font-size: 18px; /* גודל טקסט */
+    color: #333; /* צבע טקסט */
+}
+/* עיצוב אייקוני המדיה החברתית */
+.social-icons {
+    display: flex; /* שימוש ב-flexbox */
+    justify-content: center; /* מרכז את הסמלים */
+    margin-top: 10px; /* רווח מעל הסמלים */
+}
+/* עיצוב פרטי האייקונים */
+.social-icon {
+    width: 40px; /* רוחב הסמלים */
+    height: 40px; /* גובה הסמלים */
+    margin: 0 10px; /* רווח בין הסמלים */
+    transition: transform 0.3s; /* מעבר רך בעת החזקה */
+}
+/* אפקט ריחוף על האייקונים */
+.social-icon:hover {
+    transform: scale(1.1); /* הגדלה קלה בעת החזקה */
+}
+/**/
+
+
+/**/
+/* עיצוב התפריט התחתון */
+.footer {
+    background-color: #333; /* צבע רקע כהה */
+    padding: 10px 0; /* רווח פנימי */
+    color: white; /* צבע טקסט */
+    text-align: center; /* טקסט ממורכז */
+    position: fixed; /* תפריט בתחתית המסך */
+    width: 100%; /* תופס את כל רוחב המסך */
+    bottom: 0; /* ממוקם בתחתית */
+}
+.bottom-nav {
+    /* הוספת מעט רווח בין התפריט התחתון לכותרת */
+    margin-top: 10px;
+}
+.bottom-nav ul {
+    list-style: none; /* ביטול רשימת תבלינים */
+    padding: 0; /* ביטול רווחים פנימיים */
+    margin: 0; /* ביטול רווחים חיצוניים */
+    display: flex; /* סידור האלמנטים בשורה */
+    justify-content: center; /* מרכז את התפריט */
+}
+.bottom-nav ul li {
+    margin: 0 15px; /* רווח בין הפריטים */
+}
+.bottom-nav ul li a {
+    color: white; /* צבע טקסט */
+    text-decoration: none; /* ביטול קו תחתון */
+    padding: 8px 16px; /* רווח פנימי */
+    border-radius: 5px; /* פינות מעוגלות */
+    transition: background-color 0.3s; /* מעבר חלק לצבע הרקע */
+}
+/**/
+
+
+/**/
+/* עיצוב למסכים קטנים - התאמה חכמה */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column; /* סידור בעמודה למסכים קטנים */
+        align-items: center; /* מרכז את התוכן במרכז */
+        padding: 20px; /* רווח פנימי לטובת נוחות */
+    }
+
+    .content, .side {
+        max-width: 100%; /* כל אלמנט תופס את כל רוחב המסך */
+        margin: 0; /* ביטול רווחים */
+    }
+
+    .side {
+        margin-top: 20px; /* רווח מעל התמונה */
+    }
+}

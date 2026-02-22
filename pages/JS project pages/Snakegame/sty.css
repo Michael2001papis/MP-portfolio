@@ -1,0 +1,98 @@
+/* body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+#gameCanvas {
+    background-color: green;
+    display: block;
+    margin: auto;
+} */
+
+/* כלליים */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #f39c12;
+    margin-bottom: 20px;
+}
+
+/* כפתור חידוש משחק */
+#restartBtn {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+#restartBtn:hover {
+    background-color: #e67e22;
+}
+
+#restartBtn:active {
+    background-color: #d35400;
+}
+
+
+/* עיצוב לקנבס */
+#gameCanvas {
+    background-color: #2ecc71;
+    border: 5px solid #27ae60;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    aspect-ratio: 1;
+    display: block;
+    margin: 0 auto;
+}
+
+/* רספונסיביות */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    #gameCanvas {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+}
+

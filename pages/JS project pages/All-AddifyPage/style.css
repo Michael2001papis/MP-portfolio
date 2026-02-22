@@ -1,0 +1,154 @@
+/* הגדרות בסיסיות */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  background-color: #f4f4f4;
+}
+/* כותרת */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+/* מיכל הכללי - כל מיני טפסים */
+.container-register, .container-login, .container-users {
+  margin: 20px auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+/* טפסים */
+.register-form, .login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+/* שדות קלט בכדי שיהיו במראה טוב יותר */
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+.form-control label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #555;
+}
+.form-control input, .form-control button {
+  padding: 12px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.form-control input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.form-control input[type="submit"]:hover {
+  background-color: #45a049;
+}
+button[type="submit"] {
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button[type="submit"]:hover {
+  background-color: #007bb5;
+}
+/* טבלה של משתמשים */
+#users-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+#users-table th, #users-table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+#users-table th {
+  background-color: #f2f2f2;
+}
+#users-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+#users-table tr:hover {
+  background-color: #f1f1f1;
+}
+/* כפתורים בטבלה */
+button {
+  padding: 8px 12px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button.logout-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+button.logout-btn:hover {
+  background-color: #45a049;
+}
+button.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+button.delete-btn:hover {
+  background-color: #e53935;
+}
+button.edit-btn {
+  background-color: #008CBA;
+  color: white;
+}
+button.edit-btn:hover {
+  background-color: #007bb5;
+}
+/* עיצוב רספונסיבי */
+@media (max-width: 768px) {
+  .container-register, .container-login, .container-users {
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-control input, .form-control button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  #users-table {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .form-control input, .form-control button {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  #users-table {
+    font-size: 0.85rem;
+  }
+
+  button {
+    font-size: 0.85rem;
+  }
+}

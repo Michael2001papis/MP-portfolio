@@ -1,0 +1,180 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    direction: rtl;
+    text-decoration: none;
+}
+
+/* עיצוב כללי */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+h1, h2 {
+    text-align: center;
+}
+
+/* תפריט עליון */
+header {
+    background-image: url('/images/Firstprojectphotos/Michael.img.webp');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    padding: 20px 0;
+    z-index: 1000; 
+}
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover {
+    color: #FF6347;
+}
+
+/* עיצוב קונטיינר פרויקטים */
+#projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff9d;
+    height: auto;
+    width: 80%; /* שינוי לגודל 80% */
+    margin: 0 auto;
+}
+.project-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+/* עיצוב פרויקט */
+.project {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+.project:hover {
+    transform: scale(1.05);
+}
+
+/* עיצוב תמונה בפרויקט */
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+/* עיצוב כפתורים */
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* כפתור טקסט */
+.btn {
+    font-size: 16px;
+}
+/* עיצוב כפתור הורדה */
+.download {
+    background-color: #4CAF50;
+    color: white;
+}
+/* עיצוב כפתור צפיה */
+.view {
+    background-color: #2196F3;
+    color: white;
+}
+/* אפקט ריחוף על כפתורים */
+button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* תפריט תחתון קבוע */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+}
+footer nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+footer nav ul li {
+    display: inline-block;
+}
+footer nav ul li a {
+    text-decoration: none;
+    display: inline-block;
+}
+.footer-logo {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+footer nav ul li a:hover .footer-logo {
+    transform: scale(1.2);
+}
+.footer-logo {
+    transition: filter 0.3s ease; /* הוספת אנימציה רכה */
+}
+.footer-logo:hover {
+    filter: brightness(0) invert(1); /* משנה צבע ללבן */
+}
+/* כפתור עיצוב בסיסי */
+.BTNppcp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(221, 255, 0);
+    background-color: #0059ffa7;
+    border-radius: 30px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+/* אפקט ריחוף */
+.BTNppcp:hover {
+    background-color: #575757a3;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

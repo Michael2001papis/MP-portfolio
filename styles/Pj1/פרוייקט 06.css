@@ -1,0 +1,290 @@
+/* הגדרות כלליות למיסמך */
+* {
+    direction: rtl;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: greenyellow;
+    background-color: black;
+    height: 100vh;
+    direction: rtl;
+}
+html {
+    background-image: url('/images/Nowphotos/PB/תמונהקרעAI2.webp'); /* Add your image URL here */
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the background image */
+    background-attachment: fixed;
+}
+/* אזור עליון */
+#container-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 40%;
+    margin: 10px 10px 4px 10px;
+    background-color: rgba(192, 192, 192, 0.651);
+    border: 2px solid wheat;
+    border-radius: 20px;
+}
+.Login-image {
+    width: 300px;
+    height: 90%;
+    margin: 20px 20px 20px 0px;
+    background-image: url('/images/Firstprojectphotos/תמונת\ פרוייקט\ 06.wedp.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#POT-Li {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.Lian {
+    width: 6px;
+    height: 100%;
+    background-color: greenyellow;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+.Lian:hover {
+    background-color: red;
+    border: 1px solid greenyellow;
+}
+.writing-area {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: black;
+    background-image: url('/images/Nowphotos/PB/תמונהקרעAI2.webp'); /* Add your image URL here */
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the background image */
+    background-attachment: fixed; /* Makes the background stay in place while scrolling */
+    margin: 20px 0px 20px 20px;
+    height: 90%;
+    width: 100%;
+    font-size: 300px;
+    flex-direction: row;
+    text-align: center;
+}
+.fseparation {
+    background-color: greenyellow;
+    border: 2px solid red;
+    height: 6px;
+    width: 100%;
+    border-radius: 5px;
+}
+.fseparation:hover {
+    background-color: red;
+    border: 2px solid greenyellow;
+}
+/*--*/
+/* אזור מרכז */
+#center-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40%;
+    margin: 4px 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid wheat;
+    border-radius: 20px;
+    text-align: center;
+    color: greenyellow;
+    background-image: url('/images/Nowphotos/PB/תמונתרקעAI.webp'); /* Add your image URL here */
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the background image */
+    background-attachment: fixed; 
+}
+#center-area h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+#center-area h3 {
+    font-size: 1.5em;
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+#center-area p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+#center-area ul {
+    display: flex;
+    list-style-type: disc;
+    margin: 10px 0;
+    padding-left: 20px;
+    text-align: left;
+    max-width: 100%;
+}
+#center-area li {
+    margin-bottom: 5px;
+    margin-right: 20px;
+}
+/*-*/
+/* אזור תחתון */
+#bottom-area {
+    padding: 20px;
+    background-color: rgba(192, 192, 192, 0.651);
+    background-image: url('/images/Nowphotos/PB/תמונתרקעAI.webp');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid red;
+    border-radius: 10px;
+    margin: 10px;
+}
+#bottom-area h2 {
+    font-size: 2em;
+    color: greenyellow;
+    text-align: center;
+}
+#bottom-area p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+/* עיצוב הטופס */
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+form label {
+    display: block;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+form input[type="text"],
+form input[type="email"],
+form select {
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid red;
+    padding: 5px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+.bottom-btn {
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: greenyellow;
+    border: 2px solid red;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.bottom-btn:hover {
+    background-color: red;
+    color: greenyellow;
+}
+/*--*/
+/* מדיה רספונסיבית */
+@media (max-width: 768px) {
+    #bottom-area h2 {
+        font-size: 1.5em; /* מתאים את גודל הגופן */
+    }
+
+    #bottom-area p {
+        font-size: 1em; /* מתאים את גודל הפסקאות */
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form select {
+        font-size: 14px;
+        height: 30px;
+        padding: 8px; /* מוסיף ריפוד לשדות */
+    }
+
+    .bottom-btn {
+        font-size: 14px;
+        height: 35px;
+        width: 100%; /* כפתור ברוחב מלא */
+        padding: 10px; /* ריפוד בכפתור */
+    }
+
+    #bottom-main {
+        flex-direction: column; /* סידור הכפתורים בעמודה */
+    }
+
+    form {
+        flex-direction: column; /* סידור השדות בעמודה */
+        align-items: center; /* מרכז את השדות */
+    }
+
+    #bottom-area {
+        flex-direction: column;
+        height: auto;
+        padding: 15px; /* ריפוד פנימי */
+    }
+}
+/* מדיה רספונסיבית */
+@media (max-width: 480px) {
+    #bottom-area {
+        padding: 10px; /* ריפוד פנימי קטן יותר */
+    }
+
+    #bottom-area h2 {
+        font-size: 1.2em; /* גודל גופן קטן יותר */
+    }
+
+    #bottom-area p {
+        font-size: 0.9em; /* גודל גופן קטן יותר */
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form select {
+        font-size: 12px;
+        height: 25px;
+        padding: 5px; /* ריפוד קטן לשדות */
+    }
+    
+
+    .bottom-btn {
+        font-size: 12px;
+        height: 30px;
+        padding: 8px; /* ריפוד קטן לכפתור */
+    }
+   
+}
+/* מדיה קווזים לטאבלטים */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #center-area {
+        height: 50%; /* גובה אזור מרכזי בטאבלט */
+    }
+
+    #center-area h2,
+    #center-area h3,
+    #center-area p {
+        font-size: 1.8em; /* גודל גופן מעט גדול יותר */
+    }
+
+    #center-area ul {
+        padding-left: 20px; /* ריפוד שמאלי בטאבלט */
+    }
+
+    #center-area li {
+        margin-bottom: 15px; /* רווח בין פריטים */
+    }
+    
+}
+
+@media (max-width: 780px) {
+    #center-area p, #center-area h3, #center-area ul li {
+        display: none;
+        
+    }
+}
