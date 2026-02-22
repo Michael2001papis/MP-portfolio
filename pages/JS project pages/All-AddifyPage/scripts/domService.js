@@ -65,38 +65,12 @@ const drawTableRows = (users) => {
                 user.lastName = lastNameInput.value;
                 user.email = emailInput.value;
                 user.password = passwordInput.value;
-
-                // עדכון התצוגה
-                tableBody.innerHTML = ''; // לנקות את התוכן הקודם בטבלה
-                users.forEach((user) => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                    <td>${user.firstName}</td>
-                    <td>${user.lastName}</td>
-                    <td>${user.email}</td>
-                    <td>${user.password}</td>
-                    <td>${user.isLogedIn ? 'מחובר' : 'מנותק'}</td>
-                    `;
-                    row.appendChild(logoutBtn);
-                    row.appendChild(deleteBtn);
-                    row.appendChild(editButton);
-                    tableBody.appendChild(row);
-                });
+                drawTableRows(User.usersList);
             });
 
             // ביטול העריכות כאשר לוחצים על כפתור 'ביטול'
             cancelButton.addEventListener('click', () => {
-                // פשוט מחזירים את השורה למצב הקודם שלה
-                row.innerHTML = `
-                <td>${user.firstName}</td>
-                <td>${user.lastName}</td>
-                <td>${user.email}</td>
-                <td>${user.password}</td>
-                <td>${user.isLogedIn ? 'מחובר' : 'מנותק'}</td>
-                `;
-                row.appendChild(logoutBtn);
-                row.appendChild(deleteBtn);
-                row.appendChild(editButton);
+                drawTableRows(User.usersList);
             });
         });
 

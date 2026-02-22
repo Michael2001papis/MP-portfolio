@@ -424,7 +424,7 @@ button:hover, input:hover {
 /*---------------------------*/
 .side {
     width: 45%; /* רוחב הצד */
-    background-image: url('/i'); /* תמונת רקע */
+    background-image: url('/images/Nowphotos/PB/תמונתרקערפוא.webp'); /* תמונת רקע */
     background-size: cover; /* התאם את התמונה לרוחב המקטע */
     background-position: center center; /* מיקום התמונה במרכז */
 }

@@ -14,7 +14,6 @@
 
     <a href="#projects" class="skip-link">דלג לתוכן</a>
 
-    <!-- Header -->
     <header class="portfolio-header">
         <nav>
             <a href="#hero">Home</a>
@@ -24,120 +23,233 @@
         </nav>
     </header>
 
-    <!-- Hero -->
+    <!-- Hero - הצגת האדם -->
     <section class="hero" id="hero">
         <h1>Michael Papismedov</h1>
         <p class="role">Frontend Developer</p>
-        <p class="tagline">JavaScript developer focused on interactive web applications and responsive design</p>
-        <a href="#projects" class="btn-primary">View Projects</a>
+        <p class="tagline">מפתח ווב המתמחה באפליקציות אינטראקטיביות ועיצוב רספונסיבי</p>
+        <a href="#projects" class="btn-primary">צפה בפרויקטים</a>
     </section>
 
-    <!-- Projects Section -->
+    <!-- About קצר -->
+    <section class="about-section">
+        <div class="about-inner">
+            <h2>About</h2>
+            <p>מתמחה ב-HTML, CSS ו-JavaScript. בונה אפליקציות ווב רספונסיביות וממוקדות משתמש. הפרויקטים כוללים משחקים, כלים אינטראקטיביים ודפי נחיתה.</p>
+        </div>
+    </section>
+
+    <!-- Projects Wide - פריסה רחבה -->
     <section class="projects-section" id="projects">
         <h2>Projects</h2>
 
         <div class="filter-buttons">
             <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="html">HTML</button>
             <button class="filter-btn" data-filter="js">JavaScript</button>
+            <button class="filter-btn" data-filter="html">HTML</button>
         </div>
 
+        <!-- JavaScript Projects (9) -->
+        <h3 class="projects-subtitle">JavaScript Projects</h3>
         <div class="projects-grid">
-            <!-- Countries -->
             <article class="project-card-pro" data-type="js">
                 <div class="card-image" style="background-image: url('/images/Secondprojectphotos/Photosfordisplayfirst/CW1.webp');"></div>
                 <div class="card-content">
                     <h3>Countries of the World</h3>
-                    <p class="card-desc">Country explorer using REST API with dynamic search and filter</p>
+                    <p class="card-desc">Country explorer using REST API with dynamic search</p>
                     <p class="card-tech">HTML · CSS · JavaScript · REST API</p>
                     <div class="card-buttons">
-                        <a href="/pages/JS project pages/All-countries/Countriesworld.html" class="btn-demo">Live Demo</a>
+                        <a href="/pages/JS project pages/All-countries/Countriesworld.html" class="btn-demo">Open Project</a>
                         <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
                     </div>
                 </div>
             </article>
 
-            <!-- Memory Game -->
             <article class="project-card-pro" data-type="js">
                 <div class="card-image" style="background-image: url('/images/Secondprojectphotos/Photosfordisplayfirst/MG01.webp');"></div>
                 <div class="card-content">
                     <h3>Memory Game</h3>
-                    <p class="card-desc">Interactive memory game using JavaScript with card matching logic</p>
-                    <p class="card-tech">HTML, CSS, JavaScript</p>
+                    <p class="card-desc">Interactive card matching game with score tracking</p>
+                    <p class="card-tech">HTML · CSS · JavaScript</p>
                     <div class="card-buttons">
-                        <a href="/pages/JS project pages/All-MemoryGame/Memorygame.html" class="btn-demo">Live Demo</a>
+                        <a href="/pages/JS project pages/All-MemoryGame/Memorygame.html" class="btn-demo">Open Project</a>
                         <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
                     </div>
                 </div>
             </article>
 
-            <!-- Users Management -->
             <article class="project-card-pro" data-type="js">
                 <div class="card-image" style="background-image: url('/images/Secondprojectphotos/Photosfordisplayfirst/WL01.webp');"></div>
                 <div class="card-content">
                     <h3>Users Management</h3>
                     <p class="card-desc">User registration and login system with form validation</p>
-                    <p class="card-tech">HTML, CSS, JavaScript, ES Modules</p>
+                    <p class="card-tech">HTML · CSS · JavaScript · ES Modules</p>
                     <div class="card-buttons">
-                        <a href="/pages/JS project pages/All-AddifyPage/index.html" class="btn-demo">Live Demo</a>
+                        <a href="/pages/JS project pages/All-AddifyPage/index.html" class="btn-demo">Open Project</a>
                         <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
                     </div>
                 </div>
             </article>
 
-            <!-- Tic-Tac-Toe -->
+            <article class="project-card-pro" data-type="js">
+                <div class="card-image" style="background-image: url('/images/Secondprojectphotos/Photosfordisplayfirst/US02.jpg');"></div>
+                <div class="card-content">
+                    <h3>User Login</h3>
+                    <p class="card-desc">Client-side authentication interface with validation</p>
+                    <p class="card-tech">HTML · CSS · JavaScript</p>
+                    <div class="card-buttons">
+                        <a href="/pages/JS project pages/All-UserLogin/UserLogin.html" class="btn-demo">Open Project</a>
+                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                    </div>
+                </div>
+            </article>
+
             <article class="project-card-pro" data-type="js">
                 <div class="card-image" style="background-image: url('/images/Secondprojectphotos/Photosfordisplayfirst/TTTG02.jpg');"></div>
                 <div class="card-content">
                     <h3>Tic-Tac-Toe</h3>
                     <p class="card-desc">Classic tic-tac-toe game with win detection and restart</p>
-                    <p class="card-tech">HTML, CSS, JavaScript</p>
+                    <p class="card-tech">HTML · CSS · JavaScript</p>
                     <div class="card-buttons">
-                        <a href="/pages/JS project pages/tic-tac-toe/h.html" class="btn-demo">Live Demo</a>
+                        <a href="/pages/JS project pages/tic-tac-toe/h.html" class="btn-demo">Open Project</a>
                         <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
                     </div>
                 </div>
             </article>
 
-            <!-- Calculator -->
             <article class="project-card-pro" data-type="js">
                 <div class="card-image" style="background-image: url('/images/Secondprojectphotos/Photosfordisplayfirst/C01.jpg');"></div>
                 <div class="card-content">
                     <h3>Calculator</h3>
                     <p class="card-desc">Functional calculator with basic arithmetic operations</p>
-                    <p class="card-tech">HTML, CSS, JavaScript</p>
+                    <p class="card-tech">HTML · CSS · JavaScript</p>
                     <div class="card-buttons">
-                        <a href="/pages/JS project pages/calculator/ht.html" class="btn-demo">Live Demo</a>
+                        <a href="/pages/JS project pages/calculator/ht.html" class="btn-demo">Open Project</a>
                         <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
                     </div>
                 </div>
             </article>
 
-            <!-- Medical Landing -->
+            <article class="project-card-pro" data-type="js">
+                <div class="card-image" style="background-image: url('/images/Secondprojectphotos/Photosfordisplayfirst/SGN02.jpg');"></div>
+                <div class="card-content">
+                    <h3>Snake Game</h3>
+                    <p class="card-desc">Classic snake game with canvas rendering</p>
+                    <p class="card-tech">HTML · CSS · JavaScript</p>
+                    <div class="card-buttons">
+                        <a href="/pages/JS project pages/Snakegame/index.html" class="btn-demo">Open Project</a>
+                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card-pro" data-type="js">
+                <div class="card-image" style="background-image: url('/images/Secondprojectphotos/Photosfordisplayfirst/TG01.webp');"></div>
+                <div class="card-content">
+                    <h3>Trivia Quiz</h3>
+                    <p class="card-desc">Interactive trivia quiz with multiple choice</p>
+                    <p class="card-tech">HTML · CSS · JavaScript</p>
+                    <div class="card-buttons">
+                        <a href="/pages/JS project pages/Triviaplay/index.html" class="btn-demo">Open Project</a>
+                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card-pro" data-type="js">
+                <div class="card-image" style="background-image: url('/images/Secondprojectphotos/Photosfordisplayfirst/TTG02.jpg');"></div>
+                <div class="card-content">
+                    <h3>Table Tennis (Pong)</h3>
+                    <p class="card-desc">Two-player Pong game with score tracking</p>
+                    <p class="card-tech">HTML · CSS · JavaScript</p>
+                    <div class="card-buttons">
+                        <a href="/pages/JS project pages/TableTennis/index.html" class="btn-demo">Open Project</a>
+                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- HTML Projects (6) -->
+        <h3 class="projects-subtitle">HTML Projects</h3>
+        <div class="projects-grid projects-grid-html">
             <article class="project-card-pro" data-type="html">
                 <div class="card-image" style="background-image: url('/images/Nowphotos/תמונהלעולםהרפואקבלהפניםראשונה.webp');"></div>
                 <div class="card-content">
                     <h3>Medical Landing Page</h3>
                     <p class="card-desc">Responsive landing page for medical services</p>
-                    <p class="card-tech">HTML, CSS</p>
+                    <p class="card-tech">HTML · CSS</p>
                     <div class="card-buttons">
-                        <a href="/pages/LandingPage/medical-project.html" class="btn-demo">Live Demo</a>
+                        <a href="/pages/LandingPage/medical-project.html" class="btn-demo">Open Project</a>
                         <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
                     </div>
                 </div>
             </article>
-        </div>
 
-        <div class="view-all">
-            <a href="/pages/עמודמעבריםכללי/index.html">View All Projects →</a>
-        </div>
-    </section>
+            <article class="project-card-pro" data-type="html">
+                <div class="card-image" style="background-image: url('/images/Nowphotos/תמונהלעולםמייקרוסופטקבלתפניםראשונה.webp');"></div>
+                <div class="card-content">
+                    <h3>Microsoft Landing</h3>
+                    <p class="card-desc">Landing page inspired by Microsoft style</p>
+                    <p class="card-tech">HTML · CSS</p>
+                    <div class="card-buttons">
+                        <a href="/pages/LandingPage/microsoft-project.html" class="btn-demo">Open Project</a>
+                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                    </div>
+                </div>
+            </article>
 
-    <!-- About (Short) -->
-    <section class="about-section">
-        <div class="about-inner">
-            <h2>About</h2>
-            <p>Frontend developer specializing in HTML, CSS, and JavaScript. Building responsive, user-focused web applications.</p>
+            <article class="project-card-pro" data-type="html">
+                <div class="card-image" style="background-image: url('/images/Nowphotos/תמונהלעולםהאפלקבלתפניםראשונה.webp');"></div>
+                <div class="card-content">
+                    <h3>Apple Landing</h3>
+                    <p class="card-desc">Landing page inspired by Apple design</p>
+                    <p class="card-tech">HTML · CSS</p>
+                    <div class="card-buttons">
+                        <a href="/pages/LandingPage/apple-project.html" class="btn-demo">Open Project</a>
+                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card-pro" data-type="html">
+                <div class="card-image" style="background-image: url('/images/Nowphotos/תמונהלעולםצהלקבלתפנים.webp');"></div>
+                <div class="card-content">
+                    <h3>IDF Landing</h3>
+                    <p class="card-desc">Landing page for IDF theme</p>
+                    <p class="card-tech">HTML · CSS</p>
+                    <div class="card-buttons">
+                        <a href="/pages/LandingPage/idf-project.html" class="btn-demo">Open Project</a>
+                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card-pro" data-type="html">
+                <div class="card-image" style="background-image: url('/images/Nowphotos/PB/תמונתרקעחלל.webp');"></div>
+                <div class="card-content">
+                    <h3>Space Landing</h3>
+                    <p class="card-desc">Space-themed landing page</p>
+                    <p class="card-tech">HTML · CSS</p>
+                    <div class="card-buttons">
+                        <a href="/pages/LandingPage/space-project.html" class="btn-demo">Open Project</a>
+                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card-pro" data-type="html">
+                <div class="card-image" style="background-image: url('/images/Nowphotos/PB/תמונתרקעAI.webp');"></div>
+                <div class="card-content">
+                    <h3>AI Landing</h3>
+                    <p class="card-desc">AI-themed landing page</p>
+                    <p class="card-tech">HTML · CSS</p>
+                    <div class="card-buttons">
+                        <a href="/pages/LandingPage/ai-project.html" class="btn-demo">Open Project</a>
+                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                    </div>
+                </div>
+            </article>
         </div>
     </section>
 
@@ -148,12 +260,13 @@
             <input type="text" placeholder="שם מלא" id="contact-name" name="name" required>
             <input type="email" placeholder="אימייל" id="contact-email" name="email" required>
             <input type="tel" placeholder="טלפון" id="contact-phone" name="phone">
+            <textarea placeholder="הודעה" id="contact-message" name="message" rows="4"></textarea>
             <input type="submit" value="שלח">
         </form>
         <p id="form-message" class="form-message" aria-live="polite"></p>
+        <p class="form-demo-notice">This form is for demo purposes. No data is sent to a server.</p>
     </section>
 
-    <!-- Footer -->
     <footer class="portfolio-footer">
         <p>© 2025 Michael Papismedov · <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener">GitHub</a></p>
     </footer>

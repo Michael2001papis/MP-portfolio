@@ -20,15 +20,52 @@ Equality.addEventListener("click", calculate);
 const Percent = document.querySelector("#percent");
 Percent.addEventListener("click", calculatePercent);
 
-// פונקציה לחישוב תוצאה
+// פונקציה לחישוב תוצאה (ללא eval - חישוב בטוח)
+function safeCalculate(expr) {
+    expr = expr.replace(/\s/g, '');
+    if (!/^[\d.+\-*/()\s]+$/.test(expr)) return null;
+    try {
+        const tokens = expr.match(/(\d+\.?\d*|[+\-*/()])/g) || [];
+        let i = 0;
+        function parseExpr() {
+            let left = parseTerm();
+            while (tokens[i] === '+' || tokens[i] === '-') {
+                const op = tokens[i++];
+                const right = parseTerm();
+                left = op === '+' ? left + right : left - right;
+            }
+            return left;
+        }
+        function parseTerm() {
+            let left = parseFactor();
+            while (tokens[i] === '*' || tokens[i] === '/') {
+                const op = tokens[i++];
+                const right = parseFactor();
+                left = op === '*' ? left * right : left / right;
+            }
+            return left;
+        }
+        function parseFactor() {
+            if (i >= tokens.length) return 0;
+            if (tokens[i] === '(') {
+                i++;
+                const val = parseExpr();
+                if (tokens[i] === ')') i++;
+                return val;
+            }
+            const n = parseFloat(tokens[i++]);
+            return isNaN(n) ? 0 : n;
+        }
+        return parseExpr();
+    } catch {
+        return null;
+    }
+}
+
 function calculate() {
     const valueEl = document.querySelector(".value");
-    
-    try {
-        valueEl.textContent = eval(valueEl.textContent) || "0";
-    } catch {
-        valueEl.textContent = "Error";
-    }
+    const result = safeCalculate(valueEl.textContent);
+    valueEl.textContent = (result !== null && !isNaN(result)) ? String(result) : "Error";
 }
 
 function clear() {

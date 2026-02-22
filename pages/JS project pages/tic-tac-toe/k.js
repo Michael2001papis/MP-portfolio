@@ -14,7 +14,7 @@ function btnClick(){
   else this.textContent = "0";
 
     // בדיקת ניצחון
-    let obj = cheeckWin()
+    let obj = checkWin()
     if(obj.win){
       let btns = document.querySelectorAll(".btn")
       btns[obj.pos[0]].style.color = "red"
@@ -47,7 +47,7 @@ function reset(){
   })
 };
 
-  function cheeckWin(){
+  function checkWin(){
     let btns = document.querySelectorAll(".btn")
     let obj = {win:false, isTie:false, pos:[]}
     if(btns[0].textContent == btns[1].textContent && btns[1].textContent == btns[2].textContent && btns[2].textContent != "")

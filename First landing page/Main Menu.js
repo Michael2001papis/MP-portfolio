@@ -38,9 +38,11 @@ document.addEventListener('DOMContentLoaded', function() {
             var nameInput = document.getElementById('contact-name');
             var emailInput = document.getElementById('contact-email');
             var phoneInput = document.getElementById('contact-phone');
+            var messageInput = document.getElementById('contact-message');
             if (nameInput) nameInput.value = '';
             if (emailInput) emailInput.value = '';
             if (phoneInput) phoneInput.value = '';
+            if (messageInput) messageInput.value = '';
         });
     }
 
