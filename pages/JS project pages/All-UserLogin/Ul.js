@@ -74,23 +74,5 @@ password.addEventListener('input', (e) => {
     checkFormValidity();
 });
 
-const form = document.getElementById('form');
-const output = document.getElementById('output');
-
-if (form && output) {
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        submitButton.disabled = true;
-        output.textContent = 'Logging in...';
-        output.style.color = '#1e3a5f';
-
-        setTimeout(() => {
-            output.textContent = 'Login successful!';
-            output.style.color = '#1e3a5f';
-            form.reset();
-            checkFormValidity();
-        }, 500);
-    });
-}
-
+document.getElementById('form').addEventListener('submit', (e) => e.preventDefault());
 checkFormValidity();

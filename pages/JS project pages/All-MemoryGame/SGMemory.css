@@ -7,15 +7,16 @@
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    background: #f8f9fa;
+    background: linear-gradient(135deg, #f3ec78, #af4261);
     margin: 0;
     padding: 0;
     direction: rtl;
   }
-  .score-display {
-    font-size: 1.1rem;
-    color: #1e3a5f;
-    margin-bottom: 1rem;
+  h1 {
+    color: #fff;
+    font-size: 3rem;
+    margin: 20px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   }
   /* עיצוב לוח המשחק */
   .game-board {

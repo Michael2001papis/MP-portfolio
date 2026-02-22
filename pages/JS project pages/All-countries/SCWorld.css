@@ -6,10 +6,19 @@
 }
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
-    color: #2d3748;
+    background-color: #343a40;
+    color: #fff;
     line-height: 1.6;
     direction: rtl;
+}
+.bg-primary {
+    background-color: #007bff !important;
+    padding: 20px 0;
+}
+.bg-primary h1 {
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
 }
 #search-input {
     width: 100%; 

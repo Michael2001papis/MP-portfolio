@@ -1,6 +1,4 @@
 const board = document.querySelector('.game-board');
-const scoreDisplay = document.getElementById('score-display');
-const gameOverMsg = document.getElementById('game-over-msg');
 const symbols = ['🍎', '🍊', '🍌', '🍇', '🍉', '🍒', '🍍', '🥝'];
 let cards = [...symbols, ...symbols];
 let flippedCards = [];
@@ -15,8 +13,6 @@ function resetGame() {
   board.innerHTML = '';
   flippedCards = [];
   matchedCards = 0;
-  if (gameOverMsg) gameOverMsg.style.display = 'none';
-  if (scoreDisplay) scoreDisplay.textContent = 'Matches: 0';
   shuffleCards();
 
   // יצירת הקלפים והצגתם מחדש
@@ -51,11 +47,7 @@ function checkMatch() {
     card2.classList.add('matched');
     matchedCards += 2;
     if (matchedCards === cards.length) {
-      if (scoreDisplay) scoreDisplay.textContent = `Matches: ${matchedCards}`;
-      if (gameOverMsg) {
-        gameOverMsg.textContent = 'You won!';
-        gameOverMsg.style.display = 'block';
-      }
+      setTimeout(() => alert('ניצחתם!'), 300);
     }
   } else {
     // אם אין התאמה בין הקלפים - הפיכת הקלפים חזרה
@@ -66,7 +58,6 @@ function checkMatch() {
   }
 
   flippedCards = [];
-  if (scoreDisplay) scoreDisplay.textContent = `Matches: ${matchedCards}`;
 }
 
 // הוספת אירוע לכפתור איפוס המשחק

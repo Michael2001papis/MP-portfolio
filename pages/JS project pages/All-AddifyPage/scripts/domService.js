@@ -2,19 +2,7 @@ import { User } from './User.js';
 
 const drawTableRows = (users) => {
     const tableBody = document.querySelector('#users-table-body');
-    const emptyTableMsg = document.getElementById('empty-table-msg');
-    const usersTable = document.getElementById('users-table');
-
     tableBody.innerHTML = '';
-
-    if (!users || users.length === 0) {
-        if (emptyTableMsg) emptyTableMsg.style.display = 'block';
-        if (usersTable) usersTable.style.display = 'none';
-        return;
-    }
-
-    if (emptyTableMsg) emptyTableMsg.style.display = 'none';
-    if (usersTable) usersTable.style.display = 'table';
 
     users.forEach((user) => {
         const row = document.createElement('tr');
@@ -34,9 +22,7 @@ const drawTableRows = (users) => {
         const deleteBtn = document.createElement('button');
         deleteBtn.textContent = 'מחיקה';
         deleteBtn.addEventListener('click', () => {
-            if (confirm(`למחוק את המשתמש ${user.firstName} ${user.lastName}?`)) {
-                User.removeUser(user.id);
-            }
+            User.removeUser(user.id);
         });
 
         /*-/ כפתור עריכת משתמש /-*/
@@ -140,7 +126,6 @@ registerForm.addEventListener('submit', (e) => {
     }
     new User(firstName, lastName, email, password);
     e.target.reset();
-    showMessage('ההרשמה בוצעה בהצלחה');
 });
 
 const loginForm = document.querySelector('.login-form');
@@ -154,25 +139,10 @@ loginForm.addEventListener('submit', (e) => {
     if (user && user.password === password) {
         User.login(user.id);
         e.target.reset();
-        showMessage('התחברת בהצלחה');
     } else {
         alert('שם משתמש או סיסמה לא נכונים');
     }
 });
-
-function showMessage(text) {
-    const msg = document.createElement('p');
-    msg.className = 'success-message';
-    msg.textContent = text;
-    msg.style.cssText = 'color:#1e3a5f;margin:10px 0;font-weight:500;';
-    const container = document.querySelector('.container-users');
-    if (container) {
-        const existing = container.querySelector('.success-message');
-        if (existing) existing.remove();
-        container.insertBefore(msg, container.firstChild);
-        setTimeout(() => msg.remove(), 3000);
-    }
-}
 
 drawTableRows(User.usersList);
 

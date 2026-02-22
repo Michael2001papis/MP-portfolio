@@ -1,35 +1,33 @@
 export const getCountries = async () => {
     try {
         const res = await fetch('https://restcountries.com/v3.1/all');
-        if (!res.ok) throw new Error('API request failed');
-        return await res.json();
+        const data = await res.json();
+        return Array.isArray(data) ? data : [];
     } catch (error) {
-        return null;
+        return [];
     }
 };
 
 let countriesFull = [];
 let countries = [];
 
-const initCountries = async () => {
+const init = async () => {
     const data = await getCountries();
-    if (data && Array.isArray(data)) {
-        countriesFull = data;
-        countries = [...data];
-        return true;
-    }
-    return false;
+    countriesFull = data || [];
+    countries = [...countriesFull];
 };
+
+await init();
 
 const reset = () => {
     countries = [...countriesFull];
 };
 
 const search = (word) => {
-    const formattedWord = word.toLowerCase();
+    const formattedWord = (word || '').toLowerCase();
     countries = countriesFull.filter((country) => {
         const searchAgainst = [
-            country.name.common,
+            country.name?.common,
             country.cca2,
             country.cca3
         ].map(x => (x || '').toLowerCase());
@@ -37,4 +35,4 @@ const search = (word) => {
     });
 };
 
-export { countries, reset, search, initCountries };
+export { countries, reset, search };

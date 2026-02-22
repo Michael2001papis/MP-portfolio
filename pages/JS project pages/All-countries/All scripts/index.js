@@ -1,3 +1,1 @@
-import { initCountriesUI } from "./ServicesDom.js";
-
-initCountriesUI();
+import "./ServicesDom.js";

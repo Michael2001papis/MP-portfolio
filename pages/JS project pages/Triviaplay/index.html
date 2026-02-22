@@ -3,40 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trivia Quiz – JavaScript Project</title>
-    <link rel="stylesheet" href="/styles/js-project-header.css">
+    <title>Trivia play</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="./script.js" defer></script>
 </head>
 <body dir="rtl">
-    <header class="project-header">
-        <h1>Trivia Quiz</h1>
-        <p class="project-desc">Interactive trivia quiz with multiple choice</p>
-        <p class="project-tech">Technologies: HTML | CSS | JavaScript</p>
-        <nav class="project-nav">
-            <a href="/index.html">Back to Portfolio</a>
-            <a href="/pages/עמודמעבריםכללי/index.html">View All Projects</a>
-        </nav>
-    </header>
-
-    <main class="project-app">
-        <div id="question-area">
-            <h2>טריוויה</h2>
-            <p id="question"></p>
-            <button id="answer-1" type="button" class="btn-project"></button>
-            <button id="answer-2" type="button" class="btn-project"></button>
-            <button id="answer-3" type="button" class="btn-project"></button>
-            <button id="answer-4" type="button" class="btn-project"></button>
-        </div>
-        <div id="score-area">
-            <p id="result"></p>
-            <p id="score">Score: 0</p>
-        </div>
-        <button id="reset" class="btn-project">Restart Game</button>
-    </main>
-
-    <footer class="project-footer">
-        <a href="/index.html">Back to Portfolio</a> · <a href="/pages/עמודמעבריםכללי/index.html">View All Projects</a>
-    </footer>
+    <nav class="project-nav">
+        <a href="/index.html">חזרה לעמוד הבית</a>
+        <a href="/pages/עמודמעבריםכללי/index.html">לפרויקטים JS</a>
+    </nav>
+    <div id="question-area">
+        <h1>טריוויה</h1>
+        <p id="question"></p>
+        <button id="answer-1" type="button" title="תשובה 1"></button>
+        <button id="answer-2" type="button" title="תשובה 2"></button>
+        <button id="answer-3" type="button" title="תשובה 3"></button>
+        <button id="answer-4" type="button" title="תשובה 4"></button>
+    </div>
+    <div id="score-area">
+        <p id="result"></p>
+        <p id="score"></p>
+    </div>
+    <button id="reset">התחל מחדש</button>
+    <button id="new-game">התחל משחק חדש</button>
 </body>
 </html>

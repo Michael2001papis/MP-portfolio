@@ -8,10 +8,10 @@ b.addEventListener("click", btnClick)
 });
 
 function btnClick(){
-  if(this.textContent != "") 
-    return btnClicked++ 
-  if(turn) this.textContent = "X"
-    else this.textContent = "0"
+  if (this.textContent != "") return;
+  btnClicked++;
+  if (turn) this.textContent = "X";
+  else this.textContent = "0";
 
     // בדיקת ניצחון
     let obj = cheeckWin()
@@ -67,10 +67,9 @@ function reset(){
     else if (btns[2].textContent == btns[4].textContent && btns[4].textContent == btns[6].textContent && btns[6].textContent != "")
       obj = {win:true, isTie:false, pos:[2,4,6]}
     else if (btnClicked == 9)
+      obj.isTie = true;
 
-      obj.isTie = true
-
-      return obj
+    return obj
   };
   document.getElementById("homeButton").addEventListener("click", function() {
     window.location.href = "/index.html";

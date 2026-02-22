@@ -3,82 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Users Management – JavaScript Project</title>
-    <link rel="stylesheet" href="/styles/js-project-header.css">
+    <title>Users Management</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./scripts/index.js" type="module" defer></script>
 </head>
 <body dir="rtl">
-    <header class="project-header">
-        <h1>Users Management</h1>
-        <p class="project-desc">User registration and login system with form validation</p>
-        <p class="project-tech">Technologies: HTML | CSS | JavaScript | ES Modules</p>
-        <nav class="project-nav">
-            <a href="/index.html">Back to Portfolio</a>
-            <a href="/pages/עמודמעבריםכללי/index.html">View All Projects</a>
-        </nav>
-    </header>
+    <nav class="project-nav">
+        <a href="/index.html">חזרה לעמוד הבית</a>
+        <a href="/pages/עמודמעבריםכללי/index.html">לפרויקטים JS</a>
+    </nav>
+    <div class="container-register">
+        <h1>הרשמה</h1>
+        <form class="register-form">
+            <div class="form-control">
+                <label for="firstName">שם פרטי</label>
+                <input type="text" name="firstName" id="firstName" />
+            </div>
+            <div class="form-control">
+                <label for="lastName">שם משפחה</label>
+                <input type="text" name="lastName" id="lastName" />
+            </div>
+            <div class="form-control">
+                <label for="register-email">אימייל</label>
+                <input type="email" name="email" id="register-email" />
+            </div>
+            <div class="form-control">
+                <label for="register-password">סיסמא</label>
+                <input type="password" name="password" id="register-password" />
+            </div>
+            <input type="submit" value="הרשם" />
+        </form>
+    </div>
 
-    <main class="project-app">
-        <div class="container-register">
-            <h2>הרשמה</h2>
-            <form class="register-form">
-                <div class="form-control">
-                    <label for="firstName">שם פרטי</label>
-                    <input type="text" name="firstName" id="firstName" />
-                </div>
-                <div class="form-control">
-                    <label for="lastName">שם משפחה</label>
-                    <input type="text" name="lastName" id="lastName" />
-                </div>
-                <div class="form-control">
-                    <label for="register-email">אימייל</label>
-                    <input type="email" name="email" id="register-email" />
-                </div>
-                <div class="form-control">
-                    <label for="register-password">סיסמא</label>
-                    <input type="password" name="password" id="register-password" />
-                </div>
-                <input type="submit" value="הרשם" class="btn-project" />
-            </form>
-        </div>
+    <div class="container-login">
+        <h1>התחברות</h1>
+        <form class="login-form">
+            <div class="form-control">
+                <label for="login-email">אימייל</label>
+                <input type="email" name="email" id="login-email" />
+            </div>
+            <div class="form-control">
+                <label for="login-password">סיסמא</label>
+                <input type="password" name="password" id="login-password" />
+            </div>
+            <button type="submit">התחבר</button>
+        </form>
+    </div>
 
-        <div class="container-login">
-            <h2>התחברות</h2>
-            <form class="login-form">
-                <div class="form-control">
-                    <label for="login-email">אימייל</label>
-                    <input type="email" name="email" id="login-email" />
-                </div>
-                <div class="form-control">
-                    <label for="login-password">סיסמא</label>
-                    <input type="password" name="password" id="login-password" />
-                </div>
-                <button type="submit" class="btn-project">התחבר</button>
-            </form>
-        </div>
-
-        <div class="container-users">
-            <h2>משתמשים</h2>
-            <div id="empty-table-msg" class="empty-state" style="display:none;">אין משתמשים במערכת</div>
-            <table id="users-table">
-                <thead>
-                    <tr>
-                        <th>שם פרטי</th>
-                        <th>שם משפחה</th>
-                        <th>אימייל</th>
-                        <th>סיסמא</th>
-                        <th>סטטוס</th>
-                        <th>פעולות</th>
-                    </tr>
-                </thead>
-                <tbody id="users-table-body"></tbody>
-            </table>
-        </div>
-    </main>
-
-    <footer class="project-footer">
-        <a href="/index.html">Back to Portfolio</a> · <a href="/pages/עמודמעבריםכללי/index.html">View All Projects</a>
-    </footer>
+    <div class="container-users">
+        <h1>משתמשים</h1>
+        <table id="users-table">
+            <thead>
+                <tr>
+                    <th>שם פרטי</th>
+                    <th>שם משפחה</th>
+                    <th>אימייל</th>
+                    <th>סיסמא</th>
+                    <th>סטטוס</th>
+                    <th>פעולות</th>
+                </tr>
+            </thead>
+            <tbody id="users-table-body"></tbody>
+        </table>
+    </div>
 </body>
 </html>

@@ -33,14 +33,12 @@ function calculate() {
 
 function clear() {
     const valueEl = document.querySelector(".value");
-    valueEl.textContent = "0";
+    valueEl.textContent = "";
 }
 
 function btnClick() {
     const valueEl = document.querySelector(".value");
-    const current = valueEl.textContent;
-    if (current === "0" || current === "Error") valueEl.textContent = this.textContent;
-    else valueEl.textContent += this.textContent;
+    valueEl.textContent += this.textContent;
 }
 
 // פונקציה לחישוב אחוז 
