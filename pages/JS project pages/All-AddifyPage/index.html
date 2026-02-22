@@ -1,73 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Users Management</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>User Management | Addify</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="/styles/project-nav.css">
+    <link rel="stylesheet" href="./style.css">
     <script src="./scripts/index.js" type="module" defer></script>
 </head>
 <body dir="rtl">
     <nav class="project-nav">
         <a href="/index.html">חזרה לעמוד הבית</a>
         <a href="/pages/עמודמעבריםכללי/index.html">לכל הפרויקטים</a>
+        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener">GitHub</a>
     </nav>
+
+    <header class="addify-project-header">
+        <h1>User Management</h1>
+        <p class="addify-tagline">Register, Login, and manage users locally (Demo)</p>
+        <p class="addify-demo-notice">This is a client-side demo using localStorage</p>
+    </header>
+
     <main class="addify-main">
-    <div class="container-register">
-        <h1>הרשמה</h1>
-        <form class="register-form">
-            <div class="form-control">
-                <label for="firstName">שם פרטי</label>
-                <input type="text" name="firstName" id="firstName" />
+        <section class="addify-forms-section">
+            <div class="addify-card addify-register-card">
+                <h2>Create your account</h2>
+                <p class="addify-subtitle">Takes less than 30 seconds</p>
+                <form class="register-form">
+                    <div class="form-row">
+                        <div class="form-control">
+                            <label for="firstName">שם פרטי</label>
+                            <input type="text" name="firstName" id="firstName" placeholder="ישראל" required>
+                            <span class="field-error" id="firstName-error"></span>
+                        </div>
+                        <div class="form-control">
+                            <label for="lastName">שם משפחה</label>
+                            <input type="text" name="lastName" id="lastName" placeholder="ישראלי" required>
+                            <span class="field-error" id="lastName-error"></span>
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <label for="register-email">אימייל</label>
+                        <input type="email" name="email" id="register-email" placeholder="email@example.com" required>
+                        <span class="field-error" id="register-email-error"></span>
+                    </div>
+                    <div class="form-control">
+                        <label for="register-password">סיסמא</label>
+                        <input type="password" name="password" id="register-password" placeholder="מינימום 8 תווים" minlength="8" required>
+                        <span class="field-hint">מינימום 8 תווים</span>
+                        <span class="field-error" id="register-password-error"></span>
+                    </div>
+                    <button type="submit" class="btn-primary" id="register-submit">הרשם</button>
+                    <p class="form-footer-text">By registering, you agree to the demo policy</p>
+                </form>
+                <div class="success-message" id="register-success"></div>
             </div>
-            <div class="form-control">
-                <label for="lastName">שם משפחה</label>
-                <input type="text" name="lastName" id="lastName" />
-            </div>
-            <div class="form-control">
-                <label for="register-email">אימייל</label>
-                <input type="email" name="email" id="register-email" />
-            </div>
-            <div class="form-control">
-                <label for="register-password">סיסמא</label>
-                <input type="password" name="password" id="register-password" />
-            </div>
-            <input type="submit" value="הרשם" />
-        </form>
-    </div>
 
-    <div class="container-login">
-        <h1>התחברות</h1>
-        <form class="login-form">
-            <div class="form-control">
-                <label for="login-email">אימייל</label>
-                <input type="email" name="email" id="login-email" />
+            <div class="addify-card addify-login-card">
+                <h2>התחברות</h2>
+                <form class="login-form">
+                    <div class="form-control">
+                        <label for="login-email">אימייל</label>
+                        <input type="email" name="email" id="login-email" placeholder="email@example.com" required>
+                        <span class="field-error" id="login-email-error"></span>
+                    </div>
+                    <div class="form-control">
+                        <label for="login-password">סיסמא</label>
+                        <input type="password" name="password" id="login-password" required>
+                        <span class="field-error" id="login-password-error"></span>
+                    </div>
+                    <button type="submit" class="btn-primary" id="login-submit">התחבר</button>
+                </form>
             </div>
-            <div class="form-control">
-                <label for="login-password">סיסמא</label>
-                <input type="password" name="password" id="login-password" />
-            </div>
-            <button type="submit">התחבר</button>
-        </form>
-    </div>
+        </section>
 
-    <div class="container-users">
-        <h1>משתמשים</h1>
-        <table id="users-table">
-            <thead>
-                <tr>
-                    <th>שם פרטי</th>
-                    <th>שם משפחה</th>
-                    <th>אימייל</th>
-                    <th>סיסמא</th>
-                    <th>סטטוס</th>
-                    <th>פעולות</th>
-                </tr>
-            </thead>
-            <tbody id="users-table-body"></tbody>
-        </table>
-    </div>
+        <section class="addify-users-section">
+            <h2>משתמשים</h2>
+            <div class="table-wrapper">
+                <table id="users-table">
+                    <thead>
+                        <tr>
+                            <th>שם פרטי</th>
+                            <th>שם משפחה</th>
+                            <th>אימייל</th>
+                            <th>סטטוס</th>
+                            <th>פעולות</th>
+                        </tr>
+                    </thead>
+                    <tbody id="users-table-body"></tbody>
+                </table>
+            </div>
+            <div id="users-cards" class="users-cards"></div>
+        </section>
     </main>
 </body>
 </html>

@@ -3,6 +3,19 @@ import { countries, reset, search } from "./ServicesCountries.js";
 const cardsContainer = document.getElementById('cards');
 const searchInput = document.getElementById('search-input');
 
+const showError = (msg) => {
+    if (!cardsContainer) return;
+    cardsContainer.innerHTML = `
+        <div class="countries-error" style="text-align:center;padding:2rem;color:#718096;">
+            <p>${msg}</p>
+            <button class="countries-retry" style="margin-top:1rem;padding:0.5rem 1rem;background:#1e3a5f;color:white;border:none;border-radius:6px;cursor:pointer;">נסה שוב</button>
+        </div>
+    `;
+    cardsContainer.querySelector('.countries-retry')?.addEventListener('click', () => {
+        window.location.reload();
+    });
+};
+
 const generateCard = (country) => {
     const card = document.createElement('div');
     card.className = "card m-2 col-sm-12 col-md-3";
@@ -50,6 +63,10 @@ const generateCard = (country) => {
 const createCards = () => {
     if (!cardsContainer) return;
     cardsContainer.innerHTML = '';
+    if (countries.length === 0) {
+        showError('Countries service is temporarily unavailable. Please try again later.');
+        return;
+    }
     for (const country of countries) {
         generateCard(country);
     }

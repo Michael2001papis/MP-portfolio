@@ -1,6 +1,9 @@
+const API_URL = 'https://restcountries.com/v3.1/all?fields=name,flags,cca2,cca3,region,population';
+
 export const getCountries = async () => {
     try {
-        const res = await fetch('https://restcountries.com/v3.1/all');
+        const res = await fetch(API_URL);
+        if (!res.ok) throw new Error('API error');
         const data = await res.json();
         return Array.isArray(data) ? data : [];
     } catch (error) {
