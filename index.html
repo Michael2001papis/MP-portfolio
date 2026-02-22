@@ -2,361 +2,161 @@
 <html lang="he">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="פורטפוליו של מיכאל פפיסמדוב - פיתוח אתרים, פרויקטי HTML ו-JavaScript">
-    <title> Final Project Model JS Version 2.4 </title>
-
-    <link rel="stylesheet" href="/First landing page/Main Menu.css">
-
-    <link rel="stylesheet" href="/First landing page/CSS.CSS">
-
+    <meta name="description" content="Michael Papismedov - Frontend Developer. פורטפוליו פרויקטים ב-HTML, CSS, JavaScript">
+    <title>Michael Papismedov | Portfolio</title>
+    <link rel="stylesheet" href="/First landing page/portfolio-professional.css">
     <script src="./First landing page/Main Menu.js" defer></script>
-    
 </head>
 
 <body>
 
-    <a href="#main" class="skip-link">דלג לתוכן</a>
+    <a href="#projects" class="skip-link">דלג לתוכן</a>
 
-    <!-- / תפריט עליון / -->
-    <nav>
-        <ul id="ulhdr">
-            <li><a href="#skis" ><button class="nav-button"> היכולות שלי </button></a></li>
-            <li><a href="#shesh"><button class="nav-button"> הפרוייקטים שלי ב-html </button></a></li>
-            <li><a href="#shesh-additional"><button class="nav-button">  הפרוייקטים שלי ב-js </button></a></li>
-            <li><a href="#CU"><button class="nav-button">צור קשר</button></a></li>
+    <!-- Header -->
+    <header class="portfolio-header">
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+    </header>
 
-            <!-- שדה חיפוש -->
-            <li>
-                <div class="search-container">
-                    <input type="text" id="search" class="search-box" placeholder="חפש כאן...">
-                    <button class="search-button" onclick="searchFunction()">חפש</button>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <h1>Michael Papismedov</h1>
+        <p class="role">Frontend Developer</p>
+        <p class="tagline">JavaScript developer focused on interactive web applications and responsive design</p>
+        <a href="#projects" class="btn-primary">View Projects</a>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+        <h2>Projects</h2>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="html">HTML</button>
+            <button class="filter-btn" data-filter="js">JavaScript</button>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Countries -->
+            <article class="project-card-pro" data-type="js">
+                <div class="card-image" style="background-image: url('/images/Secondprojectphotos/Photosfordisplayfirst/CW1.webp');"></div>
+                <div class="card-content">
+                    <h3>Countries of the World</h3>
+                    <p class="card-desc">Interactive country search using REST API with filter and cards display</p>
+                    <p class="card-tech">HTML, CSS, JavaScript, REST API</p>
+                    <div class="card-buttons">
+                        <a href="/pages/JS project pages/All-countries/Countriesworld.html" class="btn-demo">Live Demo</a>
+                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                    </div>
                 </div>
-            </li>
-        </ul>
-    </nav>
-
-    <!--/ כרטיס ביקור /-->
-    <section class="details" id="main">
-
-        <div class="too-details">
-
-            <h1> Michael Papismedov </h1>
-
-            <p class="hero-text">
-
-                היי, שמי מיכאל. אני בן 24 ומתגורר במרכז ישראל. החיים שלי מלאים באתגרים, חוויות והזדמנויות חדשות. אני אדם ספורטיבי, משקיע באימונים על בסיס קבוע—אירובי ומשקל כבד, ושומר על אורח חיים בריא ומאוזן.  
-
-                מעבר לספורט, אני מתעניין מאוד בשוק ההון והשקעות, חוקר מניות ובוחן מגמות כלכליות. אני גם עוסק בעיצוב ובפיתוח אתרים, נהנה ליצור ולשפר חוויות משתמש.  
-
-                אם תרצה להכיר יותר, מוזמן ליצור קשר! 😃
-            
-            </p>
-            <a href="/pages/LandingPage/עמודפרוייקטים.html"><button class="btnbx1"> לצפיה בפרוייקטים בנושא-HTML </button></a>
-            
-            <a href="/pages/עמודמעבריםכללי/index.html"><button class="btnbx1"> לצפיה בפרוייקטים בנושא-JS </button></a>
-
-            <a href="/pages/LandingPage/צור קשר.HTML"><button class="btnbx1"> צור קשר </button></a>
-        </div>
-    </section>
-
-    <!--/ היכולות שלי /-->
-    <div class="skills-container" id="skis">
-    <h2> היכולות שלי </h2>
-    <div id="box">
-
-            <!-- HTML Skill -->
-            <a href="https://www.w3schools.com/html/default.asp" target="_blank"><img src="/icon/myskils/html.png" alt="HTML"></a>
-              <div class="xbx">
-                <p class="percentage"> 85% </p>
-                <div class="progress-bar"> <span style="width: 85%;"></span></div>
-              </div>
-
-            <!-- CSS Skill -->
-            <a href="https://www.w3schools.com/css/default.asp" target="_blank"><img src="/icon/myskils/css-3.png" alt="CSS"></a>
-              <div class="xbx">
-                <p class="percentage"> 75% </p>
-                <div class="progress-bar"><span style="width: 75%;"></span></div>
-              </div>
-
-            <!-- JavaScript Skill -->
-            <a href="https://www.w3schools.com/js/default.asp" target="_blank"><img src="/icon/myskils/java-script.png" alt="JavaScript"></a>
-              <div class="xbx">
-                <p class="percentage"> 65% </p>
-                <div class="progress-bar"><span style="width: 65%;"></span></div>
-              </div>
-
-            <!-- SASS Skill -->
-            <a href="https://www.w3schools.com/sass/default.php" target="_blank"><img src="/icon/myskils/sass.png" alt="SASS"></a>
-              <div class="xbx">
-                <p class="percentage"> 45% </p>
-                <div class="progress-bar"><span style="width: 45%;"></span></div>
-              </div>
-
-            <!-- Bootstrap Skill -->
-            <a href="https://www.w3schools.com/bootstrap/default.asp" target="_blank"><img src="/icon/myskils/bootstrap.png" alt="Bootstrap"></a>
-              <div class="xbx">
-                <p class="percentage"> 40% </p>
-                <div class="progress-bar"><span style="width: 40%;"></span></div>
-              </div>
-
-    </div>
-    </div>
-
-    <!--/ 6 הפרוייקטים /-->
-    <section id="shesh" class="projects">
-        <h2> הפרוייקטים שלי (HTML) </h2>
-        <div class="projects-container">
-
-            <div class="project-card" id="Q1">
-
-                <a href="/pages/LandingPage/medical-project.html">
-                <h3> ברוכים הבאים לעולם הרפואה </h3>
-
-                <p> המקום שבו כל צעד משנה חיים. הצטרפו אלינו ותהנו ממידע עדכני, חוויות מעשירות והזדמנויות ללמוד ולהתפתח! </p></a>
-            </div>
-            <div class="project-card" id="Q2">
-                <a href="/pages/LandingPage/microsoft-project.html">
-                <h3> Microsoft </h3>
-                <p> הצטרפו אלינו לעתיד דיגיטלי ומתקדם עם Microsoft – מקום שבו כל רעיון הופך למציאות! </p></a>
-            </div>
-            <div class="project-card" id="Q3">
-                <a href="/pages/LandingPage/apple-project.html">
-                <h3> Apple </h3>
-                <p> כשתבחר ב-Apple, תיהנה מהחדשנות המובילה והטכנולוגיה הכי מתקדמת. הצטרף אלינו ותחווה חוויית משתמש בלתי נשכחת! </p></a>
-            </div>
-            <div class="project-card" id="Q4">
-                <a href="/pages/LandingPage/idf-project.html">
-                <h3> צה"ל </h3>
-                <p> מצטרפים לחוויה של אתגר, משמעות וחברות לכל החיים – בואו להיות חלק מהטובים ביותר! </p></a>
-            </div>
-            <div class="project-card" id="Q5">
-                <a href="/pages/LandingPage/space-project.html">
-                <h3> חלל </h3>
-                <p> החלל הוא אינסופי ומסתורי, מלא בכוכבים, גלקסיות וחידות שטרם פוצחו. בכל פעם שאנו מביטים לשמיים, אנחנו נזכרים כמה קטן עולמנו וכמה עוד יש לגלות.  </p></a>
-            </div>
-            <div class="project-card" id="Q6">
-                <a href="/pages/LandingPage/ai-project.html">
-                <h3> העולם של AI מחכה לך! </h3>
-                <p> הצטרף אלינו היום והיכנס לעולם המרתק של אינטליגנציה מלאכותית, שם כל יום טומן בחובו הזדמנויות חדשות ללמוד, לגלות וליצור! </p>
-                </a>
-            </div>
-        </div>
-        <a href="/pages/LandingPage/עמודפרוייקטים.html"> לעמוד הפרוייקטים עצמו </a>
-    </section>
-
-    <!--/ 9 הפרוייקטים /-->
-    <section id="shesh-additional" class="projects">
-
-        <h2>  (JS) הפרוייקטים שלי </h2>
-
-        <!-- פרויקטים מוצגים בהתחלה (6 קונטיינרים) -->
-        <div class="projects-container" id="project-list">
-
-            <div class="project-card" id="QP1">
-
-                <a href="/pages/LandingPageJS/index01CountriesProject.html">
-                <h3> Countries of the world </h3>
-                <p> Were you looking for a country? </p></a>
-
-            </div>
-
-            <div class="project-card" id="QP2">
-
-                <a href="/pages/LandingPageJS/index02UsersMangement.html">
-                    <h3> Users Mangement </h3>
-    
-                    <p> Want to get on our list? </p></a>
-
-            </div>
-
-            <div class="project-card" id="QP3">
-
-                <a href="/pages/LandingPageJS/index03MemoryGame.html">
-                    <h3> Memory Game </h3>
-    
-                    <p> Do you remember? </p></a>
-
-            </div>
-
-            <div class="project-card" id="QP4">
-                
-                <video autoplay loop muted class="background-video" preload="metadata" poster="/images/Secondprojectphotos/Photosfordisplayfirst/US02.jpg">
-                    <source src="/images/Secondprojectphotos/Photosfordisplayfirst/US01.webm" type="video/webm">
-                    <source src="/images/Secondprojectphotos/Photosfordisplayfirst/US01.mp4" type="video/mp4">
-                    הדפדפן שלך אינו תומך בתגית וידאו.
-                </video>
-                
-
-                <a href="/pages/LandingPageJS/index04UserLogin.html">
-                    <h3> Conference </h3>
-    
-                    <p> Stay secret </p></a>
-
-            </div>
-
-            <div class="project-card" id="QP5">
-                
-
-                <a href="/pages/LandingPageJS/index05Triviaplay.html">
-                    <h3> Trivia play </h3>
-    
-                    <p> How much do you know? </p></a>
-
-            </div>
-
-            <div class="project-card" id="QP6">
-
-                <video autoplay loop muted class="background-video" preload="metadata" poster="/images/Secondprojectphotos/Photosfordisplayfirst/TTTG02.jpg">
-                    <source src="/images/Secondprojectphotos/Photosfordisplayfirst/TTTG01.webm" type="video/webm">
-                    <source src="/images/Secondprojectphotos/Photosfordisplayfirst/TTTG01.mp4" type="video/mp4">
-                </video>
-
-                <a href="/pages/LandingPageJS/index06tic-tac-toe.html">
-                    <h3> Tic-Tac-Toe </h3>
-    
-                    <p> Who will be next? </p></a>
-
-            </div>
-
-        </div>
-
-        <!-- כפתור להציג את שלושת הפרויקטים הנוספים -->
-        <button id="show-more" class="btnbx1">הצג עוד פרויקטים</button>
-
-        <!-- פרויקטים נוספים (מוסתרים בהתחלה) -->
-        <div class="additional-projects projects-container" id="additional-projects">
-
-            <div class="project-card" id="QP7">
-
-                <video autoplay loop muted class="background-video" preload="metadata" poster="/images/Secondprojectphotos/Photosfordisplayfirst/SGN02.jpg">
-                    <source src="/images/Secondprojectphotos/Photosfordisplayfirst/SGN01.webm" type="video/webm">
-                    <source src="/images/Secondprojectphotos/Photosfordisplayfirst/SGN01.mp4" type="video/mp4">
-                </video>
-
-                <a href="/pages/LandingPageJS/index07Snakegame.html">
-                    <h3> Snakegame Nokia 6110 </h3>
-    
-                    <p> Did you eat everything? </p></a>
-            </div>
-
-            <div class="project-card" id="QP8">
-
-                <video autoplay loop muted class="background-video" preload="metadata" poster="/images/Secondprojectphotos/Photosfordisplayfirst/TTG02.jpg">
-                    <source src="/images/Secondprojectphotos/Photosfordisplayfirst/TTG01.webm" type="video/webm">
-                    <source src="/images/Secondprojectphotos/Photosfordisplayfirst/TTG01.mp4" type="video/mp4">
-                </video>
-
-                <a href="/pages/LandingPageJS/index08TableTennis.html">
-                    <h3> Table Tennis </h3>
-    
-                    <p> Haven't you won yet? </p></a>
-            </div>
-
-            <div class="project-card" id="QP9">
-                <a href="/pages/LandingPageJS/index09calculator.html">
-                    <h3> Calculator </h3>
-    
-                    <p> How much? </p></a>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!--/ צור קשר /-->
-    <section id="CU" class="contact">
-
-            <h2>צור קשר</h2>
-            
-            <form action="" class="form" id="contact-form">
-
-                <input type="text" placeholder="שם מלא" class="box" id="contact-name" name="name">
-
-                <input type="email" placeholder="אימייל" class="box" id="contact-email" name="email">
-
-                <input type="tel" placeholder="טלפון" class="box" id="contact-phone" name="phone">
-
-                <input type="submit" value="שלח">
-
-            </form>
-            <p id="form-message" class="form-message" aria-live="polite"></p>
-
-    </section>
-
-    <!--/ תפריט נייד /-->
-    <nav class="mobile">
-
-            <h2> תפריט נייד </h2>
-
-            <ul>
-
-                <li><a href="#main" aria-label="עמוד הבית"> <img src="/icon/house-chimney.png" alt="בית"></a></li>
-
-                <li><a href="#main" aria-label="כרטיס ביקור"> <img src="/icon/id-card.png" alt="כרטיס ביקור"> </a></li>
-
-                <li><a href="#skis" aria-label="היכולות שלי"> <img src="/icon/abilities.png" alt="היכולות"></a></li>
-
-                <li><a href="#shesh" aria-label="פרויקטי HTML"> <img src="/icon/files.png" alt="פרויקטים"> </a></li>
-
-                <li><a href="#shesh-additional" aria-label="פרויקטי JS"> <img src="/icon/js.png" alt="JavaScript"> </a></li>
-
-                <li><a href="#CU" aria-label="צור קשר"> <img src="/icon/contact.png" alt="צור קשר"></a></li>
-
-            </ul>
-
-    </nav>
-
-    <!--/ סיכום וקישורים למידע /-->
-    <div >
-
-            <footer class="footer">
-
-                <div class="section">
-
-                    <h3> אתרי מידע </h3>
-
-                    <ul class="web-list">
-
-                        <li class="libdr"><a href="https://www.w3schools.com/html/default.asp" target="_blank"> <img src="/icon/myskils/html.png" alt="HTML" loading="lazy"> </a></li>
-
-                        <li class="libdr"><a href="https://www.w3schools.com/css/default.asp" target="_blank"> <img src="/icon/myskils/css-3.png" alt="CSS" loading="lazy"> </a></li>
-
-                        <li class="libdr"><a href="https://www.w3schools.com/js/default.asp" target="_blank"> <img src="/icon/myskils/java-script.png" alt="JavaScript" loading="lazy"> </a></li>
-
-                        <li class="libdr"><a href="https://www.w3schools.com/bootstrap/default.asp" target="_blank"> <img src="/icon/myskils/bootstrap.png" alt="Bootstrap" loading="lazy"> </a></li>
-
-                        <li class="libdr"><a href="https://www.w3schools.com/sass/default.php" target="_blank"> <img src="/icon/myskils/sass.png" alt="SASS" loading="lazy"> </a></li>
-
-                    </ul>
-
+            </article>
+
+            <!-- Memory Game -->
+            <article class="project-card-pro" data-type="js">
+                <div class="card-image" style="background-image: url('/images/Secondprojectphotos/Photosfordisplayfirst/MG01.webp');"></div>
+                <div class="card-content">
+                    <h3>Memory Game</h3>
+                    <p class="card-desc">Interactive memory game using JavaScript with card matching logic</p>
+                    <p class="card-tech">HTML, CSS, JavaScript</p>
+                    <div class="card-buttons">
+                        <a href="/pages/JS project pages/All-MemoryGame/Memorygame.html" class="btn-demo">Live Demo</a>
+                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                    </div>
                 </div>
+            </article>
 
-                <div class="section">
-
-                    <h3> מכווין עמוד </h3>
-
-                    <ul class="web-list">
-
-                        <li class="libdr"><a href="#ulhdr"> <img src="/icon/house-chimney.png" alt="תפריט" loading="lazy"></a></li>
-
-                        <li class="libdr"><a href="#main"> <img src="/icon/id-card.png" alt="כרטיס ביקור" loading="lazy"></a></li>
-
-                        <li class="libdr"><a href="#skis"> <img src="/icon/abilities.png" alt="היכולות" loading="lazy"></a></li>
-
-                        <li class="libdr"><a href="#shesh"> <img src="/icon/database.png" alt="פרויקטים" loading="lazy"></a></li>
-
-                        <li class="libdr"><a href="/pages/LandingPage/צור קשר.HTML"> <img src="/icon/contact.png" alt="צור קשר" loading="lazy"></a></li>
-
-                    </ul>
-
+            <!-- Users Management -->
+            <article class="project-card-pro" data-type="js">
+                <div class="card-image" style="background-image: url('/images/Secondprojectphotos/Photosfordisplayfirst/WL01.webp');"></div>
+                <div class="card-content">
+                    <h3>Users Management</h3>
+                    <p class="card-desc">User registration and login system with form validation</p>
+                    <p class="card-tech">HTML, CSS, JavaScript, ES Modules</p>
+                    <div class="card-buttons">
+                        <a href="/pages/JS project pages/All-AddifyPage/index.html" class="btn-demo">Live Demo</a>
+                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                    </div>
                 </div>
+            </article>
 
-            </footer>
+            <!-- Tic-Tac-Toe -->
+            <article class="project-card-pro" data-type="js">
+                <div class="card-image" style="background-image: url('/images/Secondprojectphotos/Photosfordisplayfirst/TTTG02.jpg');"></div>
+                <div class="card-content">
+                    <h3>Tic-Tac-Toe</h3>
+                    <p class="card-desc">Classic tic-tac-toe game with win detection and restart</p>
+                    <p class="card-tech">HTML, CSS, JavaScript</p>
+                    <div class="card-buttons">
+                        <a href="/pages/JS project pages/tic-tac-toe/h.html" class="btn-demo">Live Demo</a>
+                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                    </div>
+                </div>
+            </article>
 
-    </div>
+            <!-- Calculator -->
+            <article class="project-card-pro" data-type="js">
+                <div class="card-image" style="background-image: url('/images/Secondprojectphotos/Photosfordisplayfirst/C01.jpg');"></div>
+                <div class="card-content">
+                    <h3>Calculator</h3>
+                    <p class="card-desc">Functional calculator with basic arithmetic operations</p>
+                    <p class="card-tech">HTML, CSS, JavaScript</p>
+                    <div class="card-buttons">
+                        <a href="/pages/JS project pages/calculator/ht.html" class="btn-demo">Live Demo</a>
+                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Medical Landing -->
+            <article class="project-card-pro" data-type="html">
+                <div class="card-image" style="background-image: url('/images/Nowphotos/תמונהלעולםהרפואקבלהפניםראשונה.webp');"></div>
+                <div class="card-content">
+                    <h3>Medical Landing Page</h3>
+                    <p class="card-desc">Responsive landing page for medical services</p>
+                    <p class="card-tech">HTML, CSS</p>
+                    <div class="card-buttons">
+                        <a href="/pages/LandingPage/medical-project.html" class="btn-demo">Live Demo</a>
+                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="view-all">
+            <a href="/pages/עמודמעבריםכללי/index.html">View All Projects →</a>
+        </div>
+    </section>
+
+    <!-- About (Short) -->
+    <section class="about-section">
+        <div class="about-inner">
+            <h2>About</h2>
+            <p>Frontend developer specializing in HTML, CSS, and JavaScript. Building responsive, user-focused web applications.</p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section" id="contact">
+        <h2>Contact</h2>
+        <form action="" class="form" id="contact-form">
+            <input type="text" placeholder="שם מלא" id="contact-name" name="name" required>
+            <input type="email" placeholder="אימייל" id="contact-email" name="email" required>
+            <input type="tel" placeholder="טלפון" id="contact-phone" name="phone">
+            <input type="submit" value="שלח">
+        </form>
+        <p id="form-message" class="form-message" aria-live="polite"></p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="portfolio-footer">
+        <p>© 2025 Michael Papismedov · <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener">GitHub</a></p>
+    </footer>
 
     <button id="back-to-top" class="back-to-top" aria-label="חזרה למעלה">↑</button>
 
