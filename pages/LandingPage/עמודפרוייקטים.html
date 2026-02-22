@@ -15,9 +15,8 @@
 <body>
     
     <div class="top-menu">
-
+        <button class="nav-toggle" aria-label="תפריט" aria-expanded="false"><span></span><span></span><span></span></button>
         <nav>
-
             <ul>
 
                 <li><a href="/index.html">בחזרה לעמוד הבית</a></li>
@@ -64,5 +63,12 @@
         <p><small>Unauthorized copying or redistribution is prohibited.</small></p>
     </footer>
     <script src="/scripts/ownership-console.js"></script>
+    <script>
+        (function(){
+            var t=document.querySelector('.top-menu .nav-toggle');
+            var n=document.querySelector('.top-menu nav');
+            if(t&&n){t.addEventListener('click',function(){t.classList.toggle('open');t.setAttribute('aria-expanded',t.classList.contains('open'));n.classList.toggle('open');});}
+        })();
+    </script>
 </body>
 </html>

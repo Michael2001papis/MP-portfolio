@@ -1,6 +1,17 @@
 // MP Portfolio - Professional | © 2025 MP — Michael Papismedov | MP-PORTFOLIO-ID: 2025-MP-001
 document.addEventListener('DOMContentLoaded', function() {
 
+    // Hamburger menu
+    var hamburger = document.querySelector('.portfolio-header .hamburger');
+    var nav = document.querySelector('.portfolio-header nav');
+    if (hamburger && nav) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('open');
+            hamburger.setAttribute('aria-expanded', hamburger.classList.contains('open'));
+            nav.classList.toggle('open');
+        });
+    }
+
     // Filter Projects
     var filterBtns = document.querySelectorAll('.filter-btn');
     var projectCards = document.querySelectorAll('.project-card-pro');

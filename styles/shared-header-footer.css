@@ -136,3 +136,40 @@ html, body {
 .bottom-menu .action-button:hover {
     background: rgba(255,255,255,0.3);
 }
+
+/* מובייל - footer קומפקטי */
+@media (max-width: 480px) {
+    .bottom-menu ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+    .bottom-menu ul li {
+        width: 100%;
+    }
+    .bottom-menu .action-button {
+        width: 100%;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+    }
+    .top-menu {
+        flex-wrap: wrap;
+        padding: 0.75rem 1rem;
+        gap: 0.5rem;
+    }
+    .top-menu img {
+        max-height: 40px;
+        width: auto;
+    }
+    .top-menu h1 {
+        font-size: 1.1rem;
+        order: 3;
+        width: 100%;
+        text-align: center;
+    }
+    .top-menu .header-button,
+    .top-menu > a {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.9rem;
+    }
+}

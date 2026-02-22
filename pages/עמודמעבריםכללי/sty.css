@@ -34,6 +34,14 @@ body {
     background: var(--mp-primary);
     padding: 1rem 2rem;
     box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.top-menu .nav-toggle {
+    display: none;
 }
 
 .top-menu nav ul {
@@ -152,5 +160,40 @@ body {
     }
     .button-container .btn {
         min-height: 100px;
+    }
+}
+/* המבורגר למובייל */
+@media (max-width: 768px) {
+    .top-menu {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .top-menu .nav-toggle {
+        display: flex;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .top-menu .nav-toggle span {
+        display: block;
+        width: 24px;
+        height: 3px;
+        background: white;
+        border-radius: 2px;
+    }
+    .top-menu nav {
+        display: none;
+        width: 100%;
+        order: 3;
+    }
+    .top-menu nav.open {
+        display: block;
+    }
+    .top-menu nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
     }
 }

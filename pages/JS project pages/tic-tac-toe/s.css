@@ -6,16 +6,17 @@
 
 html, body {
     overflow-x: hidden;
-    height: 100%;
-    background-color: rgb(255, 187, 0);
+    min-height: 100%;
+    background: linear-gradient(135deg, #ffbb00 0%, #ff9500 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .project-nav {
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(0, 0, 0, 0.2);
     padding: 12px 20px;
     text-align: center;
 }
@@ -33,40 +34,58 @@ html, body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
 }
 .game-container h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 16px;
     color: #333;
+    text-shadow: 0 1px 2px rgba(255,255,255,0.8);
 }
 .game-buttons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 12px;
-    margin-top: 24px;
+    margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .tictactoe {
-    background-color: black;
-    width: min(90vw, 300px);
-    height: min(90vw, 300px);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    border-radius: 11px;
-    box-shadow: 4px 4px 10px 2px black;
+    background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+    width: min(90vw, 320px);
+    height: min(90vw, 320px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 6px;
+    padding: 8px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
 }
 .tictactoe .btn {
-    background-color: white;
-    width: calc(33% - 6px);
-    height: calc(33% - 6px);
-    margin: 3px;
-    border-radius: 11px;
-    font-size: 75px;
-    font-weight: 750;
+    background: linear-gradient(145deg, #f5f5f5, #e8e8e8);
+    border: none;
+    border-radius: 12px;
+    font-size: clamp(2.5rem, 12vw, 4rem);
+    font-weight: 700;
     text-align: center;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.tictactoe .btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.tictactoe .btn:active {
+    transform: scale(0.98);
 }
 
 #homeButton, #restartButton {
