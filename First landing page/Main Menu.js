@@ -35,56 +35,46 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Contact Form - mailto
+    // Contact Form - FormSubmit.co (שליחה ישירה לאימייל)
     var form = document.getElementById('contact-form');
     if (form) {
+        var nextInput = document.getElementById('contact-next');
+        if (nextInput) nextInput.value = window.location.origin + (window.location.pathname || '/index.html') + '?sent=1#contact';
+
         form.addEventListener('submit', function(e) {
-            e.preventDefault();
             var msg = document.getElementById('form-message');
             var nameInput = document.getElementById('contact-name');
             var emailInput = document.getElementById('contact-email');
-            var phoneInput = document.getElementById('contact-phone');
-            var reasonInput = document.getElementById('contact-reason');
-            var locationInput = document.getElementById('contact-location');
-            var messageInput = document.getElementById('contact-message');
-
+            var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             var name = nameInput ? nameInput.value.trim() : '';
             var email = emailInput ? emailInput.value.trim() : '';
-            var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
             if (!msg) return;
             msg.style.color = '#c53030';
-
             if (!name || name.length < 2) {
+                e.preventDefault();
                 msg.textContent = 'נא להזין שם מלא (לפחות 2 תווים)';
                 return;
             }
             if (!email) {
+                e.preventDefault();
                 msg.textContent = 'נא להזין כתובת אימייל';
                 return;
             }
             if (!emailRe.test(email)) {
+                e.preventDefault();
                 msg.textContent = 'נא להזין אימייל תקין';
                 return;
             }
-
-            if (!confirm('לשלוח את המייל? ייפתח דוא"ל עם הפרטים. ישלחו משם.')) return;
-
-            var phone = phoneInput ? phoneInput.value.trim() : '';
-            var reason = reasonInput ? reasonInput.options[reasonInput.selectedIndex].text : '';
-            var location = locationInput ? locationInput.value.trim() : '';
-            var message = messageInput ? messageInput.value.trim() : '';
-
-            var body = 'שם: ' + name + '\nאימייל: ' + email + '\nטלפון: ' + phone + '\nסיבה: ' + reason + '\nמיקום: ' + location + '\n\nהודעה:\n' + message;
-            var subject = 'פנייה מ-MP Portfolio - ' + name;
-            var mailto = 'mailto:dvnka2@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-            window.location.href = mailto;
-
-            msg.textContent = 'המייל נפתח. תודה!';
-            msg.style.color = '#1e3a5f';
-            msg.style.marginTop = '10px';
-            form.reset();
         });
+
+        if (window.location.search.indexOf('sent=1') >= 0) {
+            var m = document.getElementById('form-message');
+            if (m) {
+                m.textContent = 'הפנייה נשלחה בהצלחה! תודה.';
+                m.style.color = '#1e3a5f';
+            }
+        }
     }
 
     // Back to Top
