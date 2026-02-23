@@ -27,6 +27,18 @@ html, body {
     justify-content: center;
     padding: 1rem;
   }
+
+  #gameArea h1 {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 0 0.25rem 0;
+  }
+
+  #gameArea .game-by {
+    font-size: 0.85rem;
+    color: #bdc3c7;
+    margin: 0 0 1rem 0;
+  }
   
   /* קנבס - 800x400 */
   #pong { 
