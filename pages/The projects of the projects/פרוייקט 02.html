@@ -41,20 +41,20 @@
         <hr>
         
         <div class="form-container">
-            <form id="container2">
+            <form id="container2" action="/pages/LandingPage/תודה.HTML" method="get">
 
                 <h2>הרשמה למיקרוסופט</h2>
 
                 <label for="name">שם מלא:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required placeholder="הכנס את שמך המלא">
 
                 <label for="email">אימייל:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required placeholder="example@email.com">
 
                 <label for="about">ספר קצת על עצמך:</label>
-                <textarea id="about" name="about" placeholder="כאן תוכל לכתוב על עצמך..." required></textarea>
+                <textarea id="about" name="about" placeholder="כאן תוכל לכתוב על עצמך..." required rows="4"></textarea>
 
-                <a href="/pages/LandingPage/תודה.HTML"><button>שלח הרשמה</button></a>
+                <button type="submit">שלח הרשמה</button>
                 
             </form>
         </div>

@@ -114,10 +114,9 @@ hr {
 /**/
 /* קונטיינר הטופס */
 .form-container {
-    padding: 20px; /* ריווח פנימי */
-    background-color: white; /* צבע לבן */
-    border-radius: 10px; /* פינות מעוגלות */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* צל עדין */
+    max-width: 520px;
+    margin: 2rem auto;
+    padding: 2rem;
 }
 /* תוויות */
 label {
@@ -155,12 +154,15 @@ button:hover {
 /**/
 /* קונטיינר טופס */
 #container2 {
-    max-width: 600px; /* רוחב מקסימלי של הטופס */
-    margin: auto; /* מרכז את הטופס */
-    background-color: #fff; /* צבע רקע לטופס */
-    border-radius: 10px; /* פינות מעוגלות */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* צל */
-    padding: 20px; /* ריווח פנימי */
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 /* כותרת הטופס */
 #container2 h2 {

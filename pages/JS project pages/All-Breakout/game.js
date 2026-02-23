@@ -15,6 +15,7 @@
     var W, H, scale;
     var paddle = { x: 0, w: 100, h: 12, speed: 8 };
     var ball = { x: 0, y: 0, r: 6, dx: 0, dy: 0, speed: 5 };
+    var speedMultiplier = 1;
     var bricks = [];
     var score = 0, lives = 3, level = 1;
     var running = false;
@@ -171,6 +172,11 @@
     }
 
     function startGame() {
+        var speedRadio = document.querySelector('input[name="speed"]:checked');
+        if (speedRadio) {
+            var v = speedRadio.value;
+            speedMultiplier = v === 'slow' ? 0.6 : v === 'fast' ? 1.4 : 1;
+        }
         score = 0;
         lives = 3;
         level = 1;

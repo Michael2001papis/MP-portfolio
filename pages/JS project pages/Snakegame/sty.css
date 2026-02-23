@@ -91,9 +91,9 @@ h1 {
     touch-action: none;
 }
 
-/* לחצני ניווט - D-pad */
+/* לחצני ניווט - D-pad (רק מובייל/טאבלט) */
 .controls-dpad {
-    display: grid;
+    display: none;
     grid-template-areas:
         ". up ."
         "left . right"
@@ -137,6 +137,19 @@ h1 {
 /* רספונסיביות */
 @media (max-width: 600px) {
     h1 { font-size: 1.5rem; }
+}
+
+@media (max-width: 768px) {
+    .controls-dpad {
+        display: grid;
+        grid-template-areas:
+            ". up ."
+            "left . right"
+            ". down .";
+        gap: 4px;
+        width: 140px;
+        margin: 1rem auto;
+    }
 }
 
 @media (max-width: 480px) {

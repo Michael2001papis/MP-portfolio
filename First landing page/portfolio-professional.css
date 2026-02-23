@@ -51,6 +51,11 @@ img, video {
     position: sticky;
     top: 0;
     z-index: 100;
+    transition: box-shadow 0.35s ease, background 0.35s ease;
+}
+
+.portfolio-header:hover {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 }
 
 .portfolio-header .nav-wrap {
@@ -70,6 +75,11 @@ img, video {
     flex-direction: column;
     justify-content: center;
     gap: 5px;
+    transition: transform 0.25s ease;
+}
+
+.portfolio-header .hamburger:hover {
+    transform: scale(1.05);
 }
 
 .portfolio-header .hamburger span {
@@ -78,7 +88,7 @@ img, video {
     height: 3px;
     background: var(--text);
     border-radius: 2px;
-    transition: transform 0.3s, opacity 0.3s;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
 }
 
 .portfolio-header .hamburger.open span:nth-child(1) {
@@ -101,15 +111,35 @@ img, video {
     color: var(--text);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.2s;
     padding: 0.5rem 0.75rem;
     min-height: var(--tap-min);
     display: inline-flex;
     align-items: center;
+    position: relative;
+    transition: color 0.3s ease, transform 0.25s ease;
+}
+
+.portfolio-header a::after {
+    content: '';
+    position: absolute;
+    bottom: 0.25rem;
+    left: 0.75rem;
+    right: 0.75rem;
+    height: 2px;
+    background: var(--primary);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    border-radius: 1px;
 }
 
 .portfolio-header a:hover {
     color: var(--primary);
+    transform: translateY(-1px);
+}
+
+.portfolio-header a:hover::after {
+    transform: scaleX(1);
 }
 
 .portfolio-header a:focus {
@@ -404,6 +434,17 @@ img, video {
     gap: 1rem;
 }
 
+.contact-section .form-control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.contact-section .form-control label {
+    font-weight: 500;
+    color: var(--text);
+}
+
 .contact-section input,
 .contact-section select,
 .contact-section textarea {
@@ -542,14 +583,20 @@ img, video {
         display: flex;
     }
     .portfolio-header nav {
-        display: none;
+        display: flex;
         width: 100%;
         flex-direction: column;
         gap: 0.5rem;
-        padding-top: 1rem;
+        padding-top: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, padding 0.3s ease;
     }
     .portfolio-header nav.open {
-        display: flex;
+        max-height: 320px;
+        padding-top: 1rem;
+        opacity: 1;
     }
     .portfolio-header nav {
         flex-wrap: nowrap;

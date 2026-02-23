@@ -6,13 +6,16 @@
 
 html, body {
     overflow-x: hidden;
-    min-height: 100%;
+    min-height: 100vh;
     background: linear-gradient(135deg, #ffbb00 0%, #ff9500 100%);
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    padding: 1rem;
+    align-items: center;
 }
 
 .game-container {

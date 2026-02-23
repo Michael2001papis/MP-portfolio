@@ -132,8 +132,13 @@ function generateFruit() {
 function gameLoop() {
     if (gameOver) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.font = "30px Arial";
-        ctx.fillText("Game Over!", 100, 200);  // עדכון מיקום הצגת "Game Over"
+        ctx.font = "bold 28px Arial";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillStyle = "white";
+        ctx.fillText("Game Over!", canvas.width / 2, canvas.height / 2 - 20);
+        ctx.font = "16px Arial";
+        ctx.fillText("לחץ חידוש משחק להמשך", canvas.width / 2, canvas.height / 2 + 20);
         return;
     }
 
