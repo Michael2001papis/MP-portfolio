@@ -1,210 +1,74 @@
 <!DOCTYPE html>
-<!-- © 2025 MP — Michael Papismedov | MP-PORTFOLIO-ID: 2025-MP-001 | All rights reserved. -->
+<!-- © 2025 MP | MP-PORTFOLIO-ID: 2025-MP-001 -->
 <html lang="he">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="MP — Michael Papismedov | MP-PORTFOLIO-ID: 2025-MP-001">
-    <title>יצירת קשר לפיתוח אתר רשמי | MP Portfolio</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="stylesheet" href="/First landing page/portfolio-professional.css">
-    <style>
-        body { padding: 1rem; min-height: 100vh; display: flex; flex-direction: column; }
-        .official-form-wrapper { flex: 1; max-width: 520px; margin: 0 auto; width: 100%; }
-        .official-form-page { padding: 2rem 1.5rem; background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
-        .official-form-page h1 { font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center; color: #1e3a5f; }
-        .official-form-page .form { display: flex; flex-direction: column; gap: 1.1rem; }
-        .official-form-page input, .official-form-page select, .official-form-page textarea {
-            padding: 0.75rem 1rem; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 1rem; font-family: inherit;
-        }
-        .official-form-page input:focus, .official-form-page select:focus, .official-form-page textarea:focus {
-            outline: none; border-color: #1e3a5f; box-shadow: 0 0 0 2px rgba(30,58,95,0.15);
-        }
-        .official-form-page label { font-weight: 500; margin-bottom: 0.35rem; color: #2d3748; }
-        .official-form-page .form-control { display: flex; flex-direction: column; }
-        .official-form-page .btn-submit {
-            padding: 0.9rem 1.5rem; background: linear-gradient(135deg, #276d42, #2d7a4a);
-            color: white; border: none; border-radius: 10px; font-size: 1rem; font-weight: 600; cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .official-form-page .btn-submit:hover {
-            transform: translateY(-2px); box-shadow: 0 4px 12px rgba(39,109,66,0.4);
-        }
-        .back-link {
-            display: inline-flex; align-items: center; gap: 0.5rem;
-            padding: 0.6rem 1.25rem; margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #1e3a5f, #2c5282);
-            color: white !important; text-decoration: none; border-radius: 10px;
-            font-weight: 500; transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .back-link:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(30,58,95,0.4); }
-        .form-success { color: #2d7a4a; font-weight: 500; margin-top: 1rem; text-align: center; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="MP — Michael Papismedov | MP-PORTFOLIO-ID: 2025-MP-001">
+<title>יצירת קשר לפיתוח אתר רשמי | MP Portfolio</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="stylesheet" href="/First landing page/portfolio-professional.css">
 </head>
-<body>
-    <div class="official-form-wrapper">
-        <a href="/index.html#contact" class="back-link">← חזרה לדף הבית</a>
-        <main class="official-form-page">
-            <h1>Contact</h1>
-            <form class="form" id="contact-form" action="https://formsubmit.co/dvnka2@gmail.com" method="POST">
-                <input type="hidden" name="_subject" value="פנייה מ-MP Portfolio">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" id="contact-next" value="">
-                <div class="form-control">
-                    <label for="contact-name">שם מלא</label>
-                    <input type="text" id="contact-name" name="שם מלא" required placeholder="הכנס את שמך">
-                </div>
-                <div class="form-control">
-                    <label for="contact-email">אימייל</label>
-                    <input type="email" id="contact-email" name="אימייל" required placeholder="example@email.com">
-                </div>
-                <div class="form-control">
-                    <label for="contact-phone">טלפון</label>
-                    <input type="tel" id="contact-phone" name="טלפון" placeholder="טלפון אישי/עסקי">
-                </div>
-                <div class="form-control">
-                    <label for="contact-reason">סיבת הפנייה</label>
-                    <select id="contact-reason" name="סיבת הפנייה">
-                        <option value="">בחר...</option>
-                        <option value="develop-website">לפתח אתר</option>
-                        <option value="personal">אישי</option>
-                        <option value="support">תמיכה</option>
-                    </select>
-                </div>
-                <div class="form-control">
-                    <label for="contact-location">מיקום</label>
-                    <input type="text" id="contact-location" name="מיקום" placeholder="לא חובה">
-                </div>
-                <div class="form-control">
-                    <label for="contact-message">הודעה</label>
-                    <textarea id="contact-message" name="הודעה" rows="4" placeholder="כתוב את הודעתך..."></textarea>
-                </div>
-                <button type="submit" class="btn-submit">שלח</button>
-            </form>
-            <p id="contact-form-msg" class="form-success" style="display:none;"></p>
-
-            <hr style="margin: 2rem 0; border: none; border-top: 1px solid #e2e8f0;">
-            <h1 style="margin-top: 0;">יצירת קשר לפיתוח אתר רשמי</h1>
-            <form class="form" id="official-dev-form" action="https://formsubmit.co/dvnka2@gmail.com" method="POST">
-                <input type="hidden" name="_subject" value="פנייה לפיתוח אתר רשמי">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" id="official-next" value="">
-                <div class="form-control">
-                    <label for="client-first">שם פרטי</label>
-                    <input type="text" id="client-first" name="שם פרטי" required placeholder="ישראל">
-                </div>
-                <div class="form-control">
-                    <label for="client-last">שם משפחה</label>
-                    <input type="text" id="client-last" name="שם משפחה" required placeholder="ישראלי">
-                </div>
-                <div class="form-control">
-                    <label for="client-location">מיקום</label>
-                    <input type="text" id="client-location" name="מיקום" placeholder="תל אביב">
-                </div>
-                <div class="form-control">
-                    <label for="site-type">סוג אתר</label>
-                    <select id="site-type" name="סוג אתר" required>
-                        <option value="">בחר...</option>
-                        <option value="אישי">אישי</option>
-                        <option value="עסקי">עסקי</option>
-                        <option value="חברה גדולה">חברה גדולה</option>
-                        <option value="בלוג">בלוג</option>
-                        <option value="עסק קטן">עסק קטן</option>
-                        <option value="אתר טיוטה">אתר טיוטה</option>
-                    </select>
-                </div>
-                <div class="form-control">
-                    <label for="client-budget">תקציב (לא חובה)</label>
-                    <input type="text" id="client-budget" name="תקציב" placeholder="לדוגמה: 5,000-10,000 ₪">
-                </div>
-                <button type="submit" class="btn-submit">שלח פנייה</button>
-            </form>
-            <p id="official-form-msg" class="form-success" style="display:none;"></p>
-        </main>
-    </div>
-    <footer class="portfolio-footer" id="mp-signature" style="margin-top: auto; padding: 1.5rem; text-align: center;">
-        <p>© 2025 MP — Michael Papismedov | MP-PORTFOLIO-ID: 2025-MP-001 · <a href="/legal.html">Terms</a></p>
-    </footer>
-    <script>
-        (function(){
-            var baseUrl = window.location.origin + '/MPContactusforofficialwebsitedevelopment.html';
-            var contactNext = document.getElementById('contact-next');
-            if (contactNext) contactNext.value = baseUrl + '?sent=1#contact-form';
-            var officialNext = document.getElementById('official-next');
-            if (officialNext) officialNext.value = baseUrl + '?sent=1#official-dev-form';
-
-            var contactMsg = document.getElementById('contact-form-msg');
-            var officialMsg = document.getElementById('official-form-msg');
-            if (window.location.search.includes('sent=1')) {
-                if (window.location.hash === '#official-dev-form' && officialMsg) {
-                    officialMsg.textContent = 'הפנייה נשלחה בהצלחה! ניצור קשר בהקדם.';
-                    officialMsg.style.display = 'block';
-                } else if (contactMsg) {
-                    contactMsg.textContent = 'הפנייה נשלחה בהצלחה! תודה.';
-                    contactMsg.style.display = 'block';
-                }
-            }
-
-            var contactForm = document.getElementById('contact-form');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    var name = ((document.getElementById('contact-name') || {}).value || '').trim();
-                    var email = ((document.getElementById('contact-email') || {}).value || '').trim();
-                    var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!name || name.length < 2) {
-                        if (contactMsg) { contactMsg.textContent = 'נא למלא שם מלא (לפחות 2 תווים)'; contactMsg.style.color = '#c53030'; contactMsg.style.display = 'block'; }
-                        return;
-                    }
-                    if (!email || !emailRe.test(email)) {
-                        if (contactMsg) { contactMsg.textContent = 'נא למלא אימייל תקין'; contactMsg.style.color = '#c53030'; contactMsg.style.display = 'block'; }
-                        return;
-                    }
-                    var btn = contactForm.querySelector('button[type="submit"]');
-                    if (btn) { btn.disabled = true; btn.textContent = 'שולח...'; }
-                    if (contactMsg) { contactMsg.style.display = 'none'; }
-                    var formData = new FormData(contactForm);
-                    var data = {};
-                    formData.forEach(function(v, k) { data[k] = v; });
-                    fetch('https://formsubmit.co/ajax/dvnka2@gmail.com', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                        body: JSON.stringify(data)
-                    }).then(function(r) { return r.json(); }).then(function(res) {
-                        if (contactMsg) {
-                            contactMsg.textContent = 'הפנייה נשלחה בהצלחה! תודה.';
-                            contactMsg.style.color = '#2d7a4a';
-                            contactMsg.style.display = 'block';
-                        }
-                        contactForm.reset();
-                    }).catch(function() {
-                        if (contactMsg) {
-                            contactMsg.textContent = 'שגיאה בשליחה. נסה שוב.';
-                            contactMsg.style.color = '#c53030';
-                            contactMsg.style.display = 'block';
-                        }
-                    }).finally(function() {
-                        if (btn) { btn.disabled = false; btn.textContent = 'שלח'; }
-                    });
-                });
-            }
-
-            var officialForm = document.getElementById('official-dev-form');
-            if (officialForm) {
-                officialForm.addEventListener('submit', function(e) {
-                    var fn = ((document.getElementById('client-first') || {}).value || '').trim();
-                    var ln = ((document.getElementById('client-last') || {}).value || '').trim();
-                    if (!fn || !ln) {
-                        e.preventDefault();
-                        if (officialMsg) { officialMsg.textContent = 'נא למלא שם פרטי ומשפחה'; officialMsg.style.color = '#c53030'; officialMsg.style.display = 'block'; }
-                        return false;
-                    }
-                });
-            }
-        })();
-    </script>
-    <script src="/scripts/ownership-console.js"></script>
+<body class="form-page">
+<div class="official-form-wrapper">
+<a href="/index.html#contact" class="back-link">← חזרה לדף הבית</a>
+<main class="official-form-page">
+<h1>יצירת קשר לפיתוח אתר רשמי</h1>
+<form class="form" id="official-dev-form" action="https://formsubmit.co/dvnka2@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="פנייה לפיתוח אתר רשמי">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" id="official-next" value="">
+<div class="form-control">
+<label for="client-first">שם פרטי</label>
+<input type="text" id="client-first" name="שם פרטי" required placeholder="ישראל">
+</div>
+<div class="form-control">
+<label for="client-last">שם משפחה</label>
+<input type="text" id="client-last" name="שם משפחה" required placeholder="ישראלי">
+</div>
+<div class="form-control">
+<label for="client-location">מיקום</label>
+<input type="text" id="client-location" name="מיקום" placeholder="תל אביב">
+</div>
+<div class="form-control">
+<label for="site-type">סוג אתר</label>
+<select id="site-type" name="סוג אתר" required>
+<option value="">בחר...</option>
+<option value="אישי">אישי</option>
+<option value="עסקי">עסקי</option>
+<option value="חברה גדולה">חברה גדולה</option>
+<option value="בלוג">בלוג</option>
+<option value="עסק קטן">עסק קטן</option>
+<option value="אתר טיוטה">אתר טיוטה</option>
+</select>
+</div>
+<div class="form-control">
+<label for="client-budget">תקציב (לא חובה)</label>
+<input type="text" id="client-budget" name="תקציב" placeholder="לדוגמה: 5,000-10,000 ₪">
+</div>
+<button type="submit" class="btn-submit">שלח פנייה</button>
+</form>
+<p id="official-form-msg" class="form-success" style="display:none;"></p>
+</main>
+</div>
+<footer class="portfolio-footer" id="mp-signature" style="margin-top:auto;padding:1.5rem;text-align:center;">
+<p>© 2025 MP — Michael Papismedov | MP-PORTFOLIO-ID: 2025-MP-001 · <a href="/legal.html">Terms</a></p>
+</footer>
+<script>
+(function(){
+var n=document.getElementById('official-next');
+if(n)n.value=location.origin+'/MPContactusforofficialwebsitedevelopment.html?sent=1';
+var m=document.getElementById('official-form-msg');
+if(location.search.includes('sent=1')&&m){m.textContent='הפנייה נשלחה בהצלחה! ניצור קשר בהקדם.';m.style.display='block';}
+var f=document.getElementById('official-dev-form');
+if(f)f.addEventListener('submit',function(e){
+var fn=((document.getElementById('client-first')||{}).value||'').trim();
+var ln=((document.getElementById('client-last')||{}).value||'').trim();
+if(!fn||!ln){e.preventDefault();if(m){m.textContent='נא למלא שם פרטי ומשפחה';m.style.color='#c53030';m.style.display='block';}return false;}
+});
+})();
+</script>
+<script src="/scripts/ownership-console.js"></script>
 </body>
 </html>
