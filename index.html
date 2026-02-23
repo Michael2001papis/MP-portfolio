@@ -11,6 +11,8 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="/First landing page/portfolio-professional.css">
     <link rel="stylesheet" href="/styles/portfolio-extras.css">
+    <script src="/scripts/projects-catalog.js"></script>
+    <script src="/scripts/projects-render.js" defer></script>
     <script src="./First landing page/Main Menu.js" defer></script>
 </head>
 
@@ -60,221 +62,15 @@
             <button class="filter-btn surprise-btn" data-filter="all" type="button">🎲 הפתעה!</button>
         </div>
 
-        <!-- JavaScript Projects (9) -->
+        <!-- JavaScript Projects -->
         <h3 class="projects-subtitle">JavaScript Projects</h3>
-        <div class="projects-grid">
-            <article class="project-card-pro" data-type="js">
-                <div class="card-image" style="background-image: url('/images/Secondprojectphotos/Photosfordisplayfirst/CW1.webp');"></div>
-                <div class="card-content">
-                    <h3>Countries of the World</h3>
-                    <p class="card-desc">Country explorer using REST API with dynamic search</p>
-                    <p class="card-tech">HTML · CSS · JavaScript · REST API</p>
-                    <div class="card-buttons">
-                        <a href="/pages/JS project pages/All-countries/Countriesworld.html" class="btn-demo">Open Project</a>
-                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
-                    </div>
-                </div>
-            </article>
+        <div class="projects-grid" id="projects-js-grid"></div>
+        <noscript><p class="noscript-fallback">Enable JavaScript to view projects. <a href="/pages/עמודמעבריםכללי/index.html">View all projects</a></p></noscript>
 
-            <article class="project-card-pro" data-type="js">
-                <div class="card-image" style="background-image: url('/images/Secondprojectphotos/Photosfordisplayfirst/MG01.webp');"></div>
-                <div class="card-content">
-                    <h3>Memory Game</h3>
-                    <p class="card-desc">Interactive card matching game with score tracking</p>
-                    <p class="card-tech">HTML · CSS · JavaScript</p>
-                    <div class="card-buttons">
-                        <a href="/pages/JS project pages/All-MemoryGame/Memorygame.html" class="btn-demo">Open Project</a>
-                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card-pro" data-type="js">
-                <div class="card-image" style="background-image: url('/images/Secondprojectphotos/Photosfordisplayfirst/WL01.webp');"></div>
-                <div class="card-content">
-                    <h3>Users Management</h3>
-                    <p class="card-desc">User registration and login system with form validation</p>
-                    <p class="card-tech">HTML · CSS · JavaScript · ES Modules</p>
-                    <div class="card-buttons">
-                        <a href="/pages/JS project pages/All-AddifyPage/index.html" class="btn-demo">Open Project</a>
-                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card-pro" data-type="js">
-                <div class="card-image" style="background-image: url('/images/Secondprojectphotos/Photosfordisplayfirst/US02.jpg');"></div>
-                <div class="card-content">
-                    <h3>User Login</h3>
-                    <p class="card-desc">Client-side authentication interface with validation</p>
-                    <p class="card-tech">HTML · CSS · JavaScript</p>
-                    <div class="card-buttons">
-                        <a href="/pages/JS project pages/All-UserLogin/UserLogin.html" class="btn-demo">Open Project</a>
-                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card-pro" data-type="js">
-                <div class="card-image" style="background-image: url('/images/Secondprojectphotos/Photosfordisplayfirst/TTTG02.jpg');"></div>
-                <div class="card-content">
-                    <h3>Tic-Tac-Toe</h3>
-                    <p class="card-desc">Classic tic-tac-toe game with win detection and restart</p>
-                    <p class="card-tech">HTML · CSS · JavaScript</p>
-                    <div class="card-buttons">
-                        <a href="/pages/JS project pages/tic-tac-toe/h.html" class="btn-demo">Open Project</a>
-                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card-pro" data-type="js">
-                <div class="card-image" style="background-image: url('/images/Secondprojectphotos/Photosfordisplayfirst/C01.jpg');"></div>
-                <div class="card-content">
-                    <h3>Calculator</h3>
-                    <p class="card-desc">Functional calculator with basic arithmetic operations</p>
-                    <p class="card-tech">HTML · CSS · JavaScript</p>
-                    <div class="card-buttons">
-                        <a href="/pages/JS project pages/calculator/ht.html" class="btn-demo">Open Project</a>
-                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card-pro" data-type="js">
-                <div class="card-image" style="background-image: url('/images/Secondprojectphotos/Photosfordisplayfirst/SGN02.jpg');"></div>
-                <div class="card-content">
-                    <h3>Snake Game</h3>
-                    <p class="card-desc">Classic snake game with canvas rendering</p>
-                    <p class="card-tech">HTML · CSS · JavaScript</p>
-                    <div class="card-buttons">
-                        <a href="/pages/JS project pages/Snakegame/index.html" class="btn-demo">Open Project</a>
-                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card-pro" data-type="js">
-                <div class="card-image" style="background-image: url('/images/Secondprojectphotos/Photosfordisplayfirst/TG01.webp');"></div>
-                <div class="card-content">
-                    <h3>Trivia Quiz</h3>
-                    <p class="card-desc">Interactive trivia quiz with multiple choice</p>
-                    <p class="card-tech">HTML · CSS · JavaScript</p>
-                    <div class="card-buttons">
-                        <a href="/pages/JS project pages/Triviaplay/index.html" class="btn-demo">Open Project</a>
-                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card-pro" data-type="js">
-                <div class="card-image" style="background-image: url('/images/Secondprojectphotos/Photosfordisplayfirst/TTG02.jpg');"></div>
-                <div class="card-content">
-                    <h3>Table Tennis (Pong)</h3>
-                    <p class="card-desc">Two-player Pong game with score tracking</p>
-                    <p class="card-tech">HTML · CSS · JavaScript</p>
-                    <div class="card-buttons">
-                        <a href="/pages/JS project pages/TableTennis/index.html" class="btn-demo">Open Project</a>
-                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card-pro" data-type="js">
-                <div class="card-image" style="background-image: url('/images/Secondprojectphotos/Photosfordisplayfirst/TTG02.jpg');"></div>
-                <div class="card-content">
-                    <h3>Breakout</h3>
-                    <p class="card-desc">Classic brick breaker with paddle, ball physics and levels</p>
-                    <p class="card-tech">HTML · CSS · JavaScript · Canvas</p>
-                    <div class="card-buttons">
-                        <a href="/pages/JS project pages/All-Breakout/index.html" class="btn-demo">Open Project</a>
-                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
-                    </div>
-                </div>
-            </article>
-        </div>
-
-        <!-- HTML Projects (6) -->
+        <!-- HTML Projects -->
         <h3 class="projects-subtitle">HTML Projects</h3>
-        <div class="projects-grid projects-grid-html">
-            <article class="project-card-pro" data-type="html">
-                <div class="card-image" style="background-image: url('/images/Nowphotos/תמונהלעולםהרפואקבלהפניםראשונה.webp');"></div>
-                <div class="card-content">
-                    <h3>Medical Landing Page</h3>
-                    <p class="card-desc">Responsive landing page for medical services</p>
-                    <p class="card-tech">HTML · CSS</p>
-                    <div class="card-buttons">
-                        <a href="/pages/LandingPage/medical-project.html" class="btn-demo">Open Project</a>
-                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card-pro" data-type="html">
-                <div class="card-image" style="background-image: url('/images/Nowphotos/תמונהלעולםמייקרוסופטקבלתפניםראשונה.webp');"></div>
-                <div class="card-content">
-                    <h3>Microsoft Landing</h3>
-                    <p class="card-desc">Landing page inspired by Microsoft style</p>
-                    <p class="card-tech">HTML · CSS</p>
-                    <div class="card-buttons">
-                        <a href="/pages/LandingPage/microsoft-project.html" class="btn-demo">Open Project</a>
-                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card-pro" data-type="html">
-                <div class="card-image" style="background-image: url('/images/Nowphotos/תמונהלעולםהאפלקבלתפניםראשונה.webp');"></div>
-                <div class="card-content">
-                    <h3>Apple Landing</h3>
-                    <p class="card-desc">Landing page inspired by Apple design</p>
-                    <p class="card-tech">HTML · CSS</p>
-                    <div class="card-buttons">
-                        <a href="/pages/LandingPage/apple-project.html" class="btn-demo">Open Project</a>
-                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card-pro" data-type="html">
-                <div class="card-image" style="background-image: url('/images/Nowphotos/תמונהלעולםצהלקבלתפנים.webp');"></div>
-                <div class="card-content">
-                    <h3>IDF Landing</h3>
-                    <p class="card-desc">Landing page for IDF theme</p>
-                    <p class="card-tech">HTML · CSS</p>
-                    <div class="card-buttons">
-                        <a href="/pages/LandingPage/idf-project.html" class="btn-demo">Open Project</a>
-                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card-pro" data-type="html">
-                <div class="card-image" style="background-image: url('/images/Nowphotos/PB/תמונתרקעחלל.webp');"></div>
-                <div class="card-content">
-                    <h3>Space Landing</h3>
-                    <p class="card-desc">Space-themed landing page</p>
-                    <p class="card-tech">HTML · CSS</p>
-                    <div class="card-buttons">
-                        <a href="/pages/LandingPage/space-project.html" class="btn-demo">Open Project</a>
-                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card-pro" data-type="html">
-                <div class="card-image" style="background-image: url('/images/Nowphotos/PB/תמונתרקעAI.webp');"></div>
-                <div class="card-content">
-                    <h3>AI Landing</h3>
-                    <p class="card-desc">AI-themed landing page</p>
-                    <p class="card-tech">HTML · CSS</p>
-                    <div class="card-buttons">
-                        <a href="/pages/LandingPage/ai-project.html" class="btn-demo">Open Project</a>
-                        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="btn-github">GitHub</a>
-                    </div>
-                </div>
-            </article>
-        </div>
+        <div class="projects-grid projects-grid-html" id="projects-html-grid"></div>
+        <noscript><p class="noscript-fallback"><a href="/pages/LandingPage/עמודפרוייקטים.html">View HTML projects</a></p></noscript>
     </section>
 
     <!-- Contact -->

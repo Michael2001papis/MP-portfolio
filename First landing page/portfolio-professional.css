@@ -217,11 +217,22 @@ img, video {
     outline-offset: 2px;
 }
 
+.noscript-fallback {
+    padding: 1rem;
+    text-align: center;
+    color: var(--text-light);
+}
+.noscript-fallback a { color: var(--primary); }
+
 /* Project Grid: Mobile 1 | Tablet 2 | Desktop 3+ */
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
+}
+
+@media (min-width: 360px) {
+    .projects-grid { gap: 1.25rem; }
 }
 
 @media (min-width: 768px) {
@@ -238,7 +249,7 @@ img, video {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
     .projects-grid {
         grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     }

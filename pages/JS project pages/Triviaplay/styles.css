@@ -3,21 +3,6 @@
     overflow-x: hidden;
 }
 
-.project-nav {
-            background: rgba(82, 249, 255, 0.69);
-            padding: 10px 20px;
-            text-align: center;
-        }
-        .project-nav a {
-            margin: 0 15px;
-            color: #333;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .project-nav a:hover {
-            color: #1828d7;
-        }
-
         * {
         margin: 0;
         padding: 0;
