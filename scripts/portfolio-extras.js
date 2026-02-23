@@ -95,6 +95,30 @@
         }
     });
 
+    // ========== Smooth scroll (ease-in-out, מאוזן) ==========
+    function smoothScrollToElement(el, duration) {
+        duration = duration || 800;
+        var start = window.scrollY || window.pageYOffset;
+        var rect = el.getBoundingClientRect();
+        var target = start + rect.top - (window.innerHeight / 2) + (rect.height / 2);
+        var distance = target - start;
+        var startTime = null;
+
+        function easeInOutCubic(t) {
+            return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        }
+
+        function step(now) {
+            if (!startTime) startTime = now;
+            var elapsed = now - startTime;
+            var progress = Math.min(elapsed / duration, 1);
+            var eased = easeInOutCubic(progress);
+            window.scrollTo(0, start + distance * eased);
+            if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+    }
+
     // ========== Surprise Me - Random Project ==========
     document.addEventListener('DOMContentLoaded', function() {
         var surpriseBtn = document.querySelector('.surprise-btn');
@@ -104,7 +128,7 @@
                 var visible = Array.from(cards).filter(function(c) { return c.style.display !== 'none'; });
                 if (visible.length === 0) return;
                 var card = visible[Math.floor(Math.random() * visible.length)];
-                card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                smoothScrollToElement(card, 750);
                 card.classList.add('mp-surprise-highlight');
                 setTimeout(function() {
                     card.classList.remove('mp-surprise-highlight');
