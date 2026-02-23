@@ -40,7 +40,11 @@ document.addEventListener('DOMContentLoaded', function() {
     var form = document.getElementById('contact-form');
     if (form) {
         var nextInput = document.getElementById('contact-next');
-        if (nextInput) nextInput.value = window.location.origin + (window.location.pathname || '/index.html') + '?sent=1#contact';
+        if (nextInput) {
+            var url = window.location.href.split('?')[0].split('#')[0];
+            if (url.endsWith('/')) url += 'index.html';
+            nextInput.value = url + '?sent=1#contact';
+        }
 
         form.addEventListener('submit', function(e) {
             var msg = document.getElementById('form-message');
