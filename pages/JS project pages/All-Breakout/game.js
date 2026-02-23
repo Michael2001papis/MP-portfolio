@@ -205,13 +205,21 @@
         if (rect.width > 0) mouseX = (e.clientX - rect.left) * (W / rect.width);
     });
 
+    canvas.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        var rect = canvas.getBoundingClientRect();
+        if (rect.width > 0 && e.touches[0]) mouseX = (e.touches[0].clientX - rect.left) * (W / rect.width);
+    }, { passive: false });
+
     canvas.addEventListener('touchmove', function(e) {
         e.preventDefault();
         var rect = canvas.getBoundingClientRect();
-        mouseX = (e.touches[0].clientX - rect.left) * (W / rect.width);
+        if (rect.width > 0 && e.touches[0]) mouseX = (e.touches[0].clientX - rect.left) * (W / rect.width);
     }, { passive: false });
 
     window.addEventListener('resize', resize);
+    window.addEventListener('orientationchange', function() { setTimeout(resize, 100); });
     resize();
+    if (W === 0 || H === 0) requestAnimationFrame(function() { resize(); });
     gameLoop();
 })();

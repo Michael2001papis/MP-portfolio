@@ -1,4 +1,5 @@
 // MP Portfolio - Professional | © 2025 MP — Michael Papismedov | MP-PORTFOLIO-ID: 2025-MP-001
+// All rights reserved. Unauthorized copying prohibited.
 document.addEventListener('DOMContentLoaded', function() {
 
     // Hamburger menu

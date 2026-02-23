@@ -60,6 +60,9 @@ body {
     max-width: min(700px, 95vw);
     height: auto;
     aspect-ratio: 7 / 5;
+    touch-action: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .overlay {
@@ -130,4 +133,12 @@ body {
 
 @media (max-width: 600px) {
     .hud { gap: 1rem; font-size: 0.9rem; }
+    .game-wrap { padding: 0.5rem; }
+    .canvas-wrap { max-width: 100%; }
+    #gameCanvas { max-width: 100%; }
+    .hint { font-size: 0.8rem; }
+}
+
+@media (max-width: 400px) {
+    .hud { flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
 }

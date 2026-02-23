@@ -99,13 +99,28 @@ function initializeGame() {
 document.addEventListener("keydown", changeDirection);
 restartBtn.addEventListener("click", initializeGame);
 
+function setDirection(newDir) {
+    if (newDir === "LEFT" && direction !== "RIGHT") direction = "LEFT";
+    else if (newDir === "UP" && direction !== "DOWN") direction = "UP";
+    else if (newDir === "RIGHT" && direction !== "LEFT") direction = "RIGHT";
+    else if (newDir === "DOWN" && direction !== "UP") direction = "DOWN";
+}
+
 function changeDirection(event) {
     const key = event.keyCode;
-    if (key === 37 && direction !== "RIGHT") direction = "LEFT";
-    else if (key === 38 && direction !== "DOWN") direction = "UP";
-    else if (key === 39 && direction !== "LEFT") direction = "RIGHT";
-    else if (key === 40 && direction !== "UP") direction = "DOWN";
+    if (key === 37) setDirection("LEFT");
+    else if (key === 38) setDirection("UP");
+    else if (key === 39) setDirection("RIGHT");
+    else if (key === 40) setDirection("DOWN");
 }
+
+document.querySelectorAll(".dpad-btn").forEach(function(btn) {
+    btn.addEventListener("click", function() { setDirection(this.getAttribute("data-dir")); });
+    btn.addEventListener("touchstart", function(e) {
+        e.preventDefault();
+        setDirection(this.getAttribute("data-dir"));
+    }, { passive: false });
+});
 
 function generateFruit() {
     return {

@@ -1,4 +1,4 @@
-// MP Portfolio Extras | © 2025 MP — Michael Papismedov
+// MP Portfolio Extras | © 2025 MP — Michael Papismedov | MP-PORTFOLIO-ID: 2025-MP-001
 // Easter eggs, surprises & fun additions — only adds, does not modify existing behavior
 
 (function() {
