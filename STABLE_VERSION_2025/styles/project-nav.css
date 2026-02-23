@@ -1,0 +1,83 @@
+/* ============================================
+   JS Project Pages - ניווט אחיד
+   Responsive: Mobile stack | Desktop row
+   ============================================ */
+
+.project-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    padding: 0.75rem clamp(1rem, 4vw, 1.5rem);
+    background: #1e3a5f;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+.project-nav a {
+    padding: 0.6rem 1rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.15);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.project-nav a:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-1px);
+}
+
+/* המבורגר למובייל */
+.project-nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    flex-direction: column;
+    gap: 5px;
+}
+.project-nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+}
+.project-nav.open .project-nav-toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.project-nav.open .project-nav-toggle span:nth-child(2) { opacity: 0; }
+.project-nav.open .project-nav-toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+    .project-nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0.75rem 1rem;
+    }
+    .project-nav-toggle {
+        display: flex;
+    }
+    .project-nav > a {
+        display: none;
+        width: 100%;
+    }
+    .project-nav.open > a {
+        display: inline-flex;
+    }
+}
+@media (max-width: 480px) {
+    .project-nav.open > a {
+        max-width: 100%;
+    }
+}

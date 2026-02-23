@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>סנייק</title>
+    <meta name="author" content="MP — Michael Papismedov | MP-PORTFOLIO-ID: 2025-MP-001">
+    <link rel="stylesheet" href="./sty.css">
+    <link rel="stylesheet" href="/styles/project-nav.css">
+    <script src="./scr.js" defer></script>
+</head>
+<body dir="rtl">
+    <nav class="project-nav">
+        <a href="/index.html">חזרה לעמוד הבית</a>
+        <a href="/pages/עמודמעבריםכללי/index.html">לכל הפרויקטים</a>
+        <a href="/legal.html">Terms</a>
+        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+    <div class="container">
+        <h1>משחק סנייק</h1>
+        <p class="game-by">MP — Michael Papismedov</p>
+        <canvas id="gameCanvas"></canvas>
+        <div class="controls-dpad" aria-label="ניווט">
+            <button type="button" class="dpad-btn dpad-up" data-dir="UP" aria-label="למעלה">▲</button>
+            <button type="button" class="dpad-btn dpad-left" data-dir="LEFT" aria-label="שמאלה">◀</button>
+            <button type="button" class="dpad-btn dpad-right" data-dir="RIGHT" aria-label="ימינה">▶</button>
+            <button type="button" class="dpad-btn dpad-down" data-dir="DOWN" aria-label="למטה">▼</button>
+        </div>
+        <button id="restartBtn">חידוש משחק</button>
+    </div>
+    <footer id="mp-signature" style="text-align:center;padding:1rem;background:#1e3a5f;color:white;font-size:0.9rem;">
+        <p>© 2025 MP — Michael Papismedov | MP-PORTFOLIO-ID: 2025-MP-001 · <a href="/legal.html" style="color:white;">Terms</a></p>
+    </footer>
+    <script src="/scripts/project-nav-inject.js"></script>
+    <script src="/scripts/ownership-console.js"></script>
+</body>
+</html>

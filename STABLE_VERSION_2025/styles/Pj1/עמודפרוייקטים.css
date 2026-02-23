@@ -1,0 +1,144 @@
+/* הגדרות כלליות לעמוד */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    direction: rtl;
+}
+
+/* עיצוב כותרת העל */
+header {
+    background-color: rgba(192, 192, 192, 0.514); 
+    color: rgb(255, 255, 255); 
+    text-align: center;
+}
+
+/* עיצוב לתפריט עליון */
+nav, .top-menu {
+    background-color: rgba(51, 51, 51, 0.9);
+    color: white;
+    padding: 15px 0;
+}
+nav ul, .top-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+nav li, .top-menu li {
+    margin: 0 15px;
+}
+nav a, .top-menu a {
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+nav a:hover, .top-menu a:hover {
+    background-color: rgb(0, 204, 255);
+    color: #000000;
+    border: 1px solid white;
+    transform: scale(1.05);
+}
+
+/* עיצוב הכותרות */
+h1 {
+    margin: 10px 0;
+    color: rgba(92, 74, 255, 0.836);
+    font-size: 2.5em;
+    text-align: center;
+}
+
+/* קונטיינר הכרטיסים */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* עיצוב לכרטיסים */
+.card {
+    padding: 10px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    width: 250px;
+    height: 350px;
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+
+/*--*//*--*/
+/* עיצוב לכפתור בתוך הכרטיס */
+.card button {
+    background-color: rgba(0, 0, 0, 0.7); /* כפתור עם רקע שקוף קל */
+    color: white; /* צבע טקסט לכפתור */
+    border: none; /* ללא גבול */
+    padding: 10px 20px; /* ריפוד סביב הכפתור */
+    margin-bottom: 10px; /* מרווח תחתון לכפתור */
+    border-radius: 5px; /* פינות מעוגלות */
+    cursor: pointer; /* סמן עכבר */
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease; /* אפקט מעבר צבע והגדלה */
+}
+/* עיצוב לכפתור בתוך הכרטיס בעת ריחוף */
+.card button:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* שינוי צבע הכפתור בעת ריחוף */
+    color: #4CAF50; /* שינוי צבע טקסט לירוק בעת ריחוף */
+    transform: scale(1.05); /* הגדלה קלה בעת ריחוף */
+}
+/**/
+/* עיצוב רספונסיבי - כרטיסים */
+@media (max-width: 600px) {
+    .card {
+        width: 90%; /* כרטיסים יתפסו 90% מהשורות במסכים קטנים */
+    }
+}
+
+/* עיצוב רספונסיבי - תפריט עליון */
+@media (max-width: 600px) {
+    .top-menu ul {
+        flex-direction: column; /* הופך את הפריטים לרשימה בעיצוב קטן */
+        align-items: center; /* מרכז את הפריטים */
+    }
+
+    .top-menu li {
+        margin: 5px 0; /* מרווח בין הפריטים ברשימה */
+    }
+}
+/* עיצוב רספונסיבי - תפריט עליון */
+@media (max-width: 600px) {
+    .top-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-menu li {
+        margin: 8px 0; /* מרווח בין הפריטים */
+    }
+
+    nav a, .top-menu a {
+        padding: 12px 20px; /* קצת יותר ריפוד בכפתורים */
+    }
+}
+
+/**/

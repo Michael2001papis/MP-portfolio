@@ -1,0 +1,258 @@
+/**/
+/* סגנונות כלליים */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    background-image: url('/images/Nowphotos/תמונהלעולםצהלקבלתפנים.webp');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+html {
+    scroll-behavior: smooth; /* מאפשר גלילה חלקה */
+}
+/**/
+
+
+/* סגנון כותרת */
+.header {
+    background-color: #00500b76;
+    text-align: center;
+    padding: 20px 0;
+    color: rgb(255, 255, 255);
+}
+/*סגנון לתמונה של פרופיל*/
+.profile-img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+/*סגנונות לכותרות ולתיאורים*/
+h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+.description {
+    margin: 10px 0;
+    color: #00ad25;
+}
+/**/
+
+
+/*סגנון לכפתורים*/
+.buttons {
+    margin: 20px 0;
+}
+/**/
+
+/* סגנון לחלק האייקונים */
+.icons-section {
+    background-color: #f5f5f59c;
+    padding: 50px 0;
+    text-align: center;
+}
+.icon-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+/*סגנון לאייקונים*/
+.icon {
+    background-color: #65ff9379;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    width: 150px;
+    margin: 20px;
+}
+.icon img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+.icon p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+    color: #333;
+    font-weight: bold;
+}
+
+/* אפקט החזקה על אייקונים */
+.icon:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    background-color: #65ff93c9;
+}
+/**/
+
+/* סגנון לחלק הטופס */
+.form-section {
+    background-color: #f9f9f98a;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-container {
+    background-color: #00531c47;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+/**/
+
+
+/* סגנון כותרות ותיאורים בטופס */
+.form-container h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.form-container p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 25px;
+}
+/**/
+
+
+/* סגנון לשדות הטופס */
+form {
+    display: flex;
+    flex-direction: column;
+}
+form label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    text-align: right; /* אפשר לשנות ל-left אם רוצים לאלתר */
+    color: #2c3e50;
+}
+form input,
+form select,
+form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+}
+/**/
+
+
+/* סגנון לתפריט הנפתח */
+select {
+    -webkit-appearance: none; /* מסתיר את חץ ברירת המחדל ב-Chrome */
+    -moz-appearance: none; /* מסתיר את חץ ברירת המחדל ב-Firefox */
+    appearance: none; /* מסתיר את חץ ברירת המחדל ב-different browsers */
+    background-color: #ffffff; /* צבע רקע */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><polygon points="0,0 20,0 10,10" fill="%23333"/></svg>'); /* חץ מותאם אישית */
+    background-repeat: no-repeat; /* לא לחזור על התמונה */
+    background-position: right 10px center; /* מיקום החץ */
+    padding-right: 30px; /* רווח לשמאל של החץ */
+}
+/**/
+
+
+/* סגנון לשדה טקסט */
+textarea {
+    resize: none; /* מונע שינויים בגובה של שדה הטקסט */
+}
+/**/
+
+/* סגנון כפתור שליחה */
+.submit-btn {
+    background-color: #00942073; /* צבע רקע הכפתור */
+    color: white; /* צבע הטקסט */
+    padding: 12px 20px; /* רווחים פנימיים */
+    border: none; /* ללא גבול */
+    border-radius: 5px; /* פינות מעוגלות */
+    font-size: 1.1rem; /* גודל גופן */
+    cursor: pointer; /* מצביע כשהעכבר על הכפתור */
+    transition: background-color 0.3s ease; /* אפקט מעבר חלק */
+}
+.submit-btn:hover {
+    background-color: #00ad25; /* צבע רקע חדש בעת ריחוף */
+}
+/**/
+
+/* תפריט תחתון  */
+.footer {
+    background-color: #2c3e50a0;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.footer-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.footer-menu li {
+    margin: 0 15px;
+}
+.footer-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.footer-menu a:hover {
+    background-color: #fff;
+    color: #2c3e50;
+}
+.footer p {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+/**/
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .icon-container {
+        flex-direction: column;
+    }
+
+    .footer-menu {
+        flex-direction: column;
+    }
+
+    .footer-menu li {
+        margin: 10px 0;
+    }
+}
+/**/

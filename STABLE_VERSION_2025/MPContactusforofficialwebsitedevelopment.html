@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- © 2025 MP | MP-PORTFOLIO-ID: 2025-MP-001 -->
+<html lang="he">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="MP — Michael Papismedov | MP-PORTFOLIO-ID: 2025-MP-001">
+<title>יצירת קשר לפיתוח אתר רשמי | MP Portfolio</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="stylesheet" href="/First landing page/portfolio-professional.css">
+</head>
+<body class="form-page">
+<div class="official-form-wrapper">
+<a href="/index.html#contact" class="back-link">← חזרה לדף הבית</a>
+<main class="official-form-page">
+<h1>יצירת קשר לפיתוח אתר רשמי</h1>
+<form class="form" id="official-dev-form" action="https://formsubmit.co/dvnka2@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="פנייה לפיתוח אתר רשמי">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" id="official-next" value="">
+<div class="form-control">
+<label for="client-first">שם פרטי</label>
+<input type="text" id="client-first" name="שם פרטי" required placeholder="ישראל">
+</div>
+<div class="form-control">
+<label for="client-last">שם משפחה</label>
+<input type="text" id="client-last" name="שם משפחה" required placeholder="ישראלי">
+</div>
+<div class="form-control">
+<label for="client-location">מיקום</label>
+<input type="text" id="client-location" name="מיקום" placeholder="תל אביב">
+</div>
+<div class="form-control">
+<label for="site-type">סוג אתר</label>
+<select id="site-type" name="סוג אתר" required>
+<option value="">בחר...</option>
+<option value="אישי">אישי</option>
+<option value="עסקי">עסקי</option>
+<option value="חברה גדולה">חברה גדולה</option>
+<option value="בלוג">בלוג</option>
+<option value="עסק קטן">עסק קטן</option>
+<option value="אתר טיוטה">אתר טיוטה</option>
+</select>
+</div>
+<div class="form-control">
+<label for="client-budget">תקציב (לא חובה)</label>
+<input type="text" id="client-budget" name="תקציב" placeholder="לדוגמה: 5,000-10,000 ₪">
+</div>
+<button type="submit" class="btn-submit">שלח פנייה</button>
+</form>
+<p id="official-form-msg" class="form-success" style="display:none;"></p>
+</main>
+</div>
+<footer class="portfolio-footer" id="mp-signature" style="margin-top:auto;padding:1.5rem;text-align:center;">
+<p>© 2025 MP — Michael Papismedov | MP-PORTFOLIO-ID: 2025-MP-001 · <a href="/legal.html">Terms</a></p>
+</footer>
+<script>
+(function(){
+var n=document.getElementById('official-next');
+if(n)n.value=location.origin+'/MPContactusforofficialwebsitedevelopment.html?sent=1';
+var m=document.getElementById('official-form-msg');
+if(location.search.includes('sent=1')&&m){m.textContent='הפנייה נשלחה בהצלחה! ניצור קשר בהקדם.';m.style.display='block';}
+var f=document.getElementById('official-dev-form');
+if(f)f.addEventListener('submit',function(e){
+var fn=((document.getElementById('client-first')||{}).value||'').trim();
+var ln=((document.getElementById('client-last')||{}).value||'').trim();
+if(!fn||!ln){e.preventDefault();if(m){m.textContent='נא למלא שם פרטי ומשפחה';m.style.color='#c53030';m.style.display='block';}return false;}
+});
+})();
+</script>
+<script src="/scripts/ownership-console.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+/* עיצוב כללי */
+body {
+    background-color: #f3f4f6;
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    direction: rtl;
+  }
+  /* קונטיינר עמוד תודה */
+  .thank-you-container {
+    background: linear-gradient(135deg, #0077b6, #0096c7);
+    color: white;
+    text-align: center;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+  }
+  /* כותרת */
+  .thank-you-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  /* טקסט פסקה */
+  .thank-you-container p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  /* כפתור חזרה */
+  .button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #ffb703;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  }
+  .button:hover {
+    background-color: #fb8500;
+    transform: scale(1.05);
+  }
+  /* רספונסיביות */
+  @media screen and (max-width: 500px) {
+    .thank-you-container {
+      padding: 30px;
+    }
+  
+    .thank-you-container h1 {
+      font-size: 2em;
+    }
+  
+    .thank-you-container p {
+      font-size: 1.1em;
+    }
+  
+    .button {
+      font-size: 1em;
+      padding: 10px 20px;
+    }
+  }
+  

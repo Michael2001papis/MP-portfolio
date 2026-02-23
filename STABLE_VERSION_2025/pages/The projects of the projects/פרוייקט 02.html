@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="MP — Michael Papismedov | MP-PORTFOLIO-ID: 2025-MP-001">
+
+    <title> מיקרוסופט </title>
+
+    <link rel="stylesheet" href="/styles/Pj1/פרוייקט 02.css">
+
+</head>
+
+<body>
+
+    <!--/ תפריט עליונה /-->
+    <div class="header">
+        <img src="/images/Firstprojectphotos/Michael.img.webp" alt="תמונה שלי" id="imghdr">
+
+        <!--/ לחצני מעבר /-->
+        <nav>
+            <ul id="ulhdr">
+                <li><a href="/pages/LandingPage/עמודפרוייקטים.html" class="lihdr"> לעמוד הקודם </a></li>
+                <li><a href="#container2" class="lihdr"> לטופס </a></li>
+                <li><a href="/index.html" class="lihdr"> לעמוד הבית </a></li>
+            </ul>
+        </nav>
+
+        <!--/ כפתור ההדהר שלי /-->
+        <a href="/pages/LandingPage/צור קשר.HTML">
+            <button>תופס הרשמה</button>
+        </a>
+    </div>
+
+    <div class="container">
+
+        <div class="top-section">
+
+            <div class="content"></div>
+        </div>
+        <hr>
+        
+        <div class="form-container">
+            <form id="container2" action="/pages/LandingPage/תודה.HTML" method="get">
+
+                <h2>הרשמה למיקרוסופט</h2>
+
+                <label for="name">שם מלא:</label>
+                <input type="text" id="name" name="name" required placeholder="הכנס את שמך המלא">
+
+                <label for="email">אימייל:</label>
+                <input type="email" id="email" name="email" required placeholder="example@email.com">
+
+                <label for="about">ספר קצת על עצמך:</label>
+                <textarea id="about" name="about" placeholder="כאן תוכל לכתוב על עצמך..." required rows="4"></textarea>
+
+                <button type="submit">שלח הרשמה</button>
+                
+            </form>
+        </div>
+    </div>
+    <footer id="mp-signature" style="text-align:center;padding:1rem;background:#1e3a5f;color:white;font-size:0.9rem;">
+        <p>© 2025 MP — Michael Papismedov | MP-PORTFOLIO-ID: 2025-MP-001 · <a href="/legal.html" style="color:white;">Terms</a> · <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" style="color:white;">GitHub</a></p>
+    </footer>
+    <script src="/scripts/ownership-console.js"></script>
+</body>
+</html>

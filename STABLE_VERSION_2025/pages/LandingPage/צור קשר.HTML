@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Registration-form </title>
+
+    <link rel="stylesheet" href="/styles/shared-header-footer.css">
+    <link rel="stylesheet" href="/styles/Pj1/צור קשר.css">
+    
+</head>
+
+<body>
+
+    <header class="top-menu">
+
+        <img src="/images/Firstprojectphotos/Michael.img.webp" alt="Logo">
+
+        <a href="/index.html" > <button> בחזרה הביתה </button></a>
+        
+
+    </header>
+
+    <div class="container">
+
+        <h1> Registration form </h1>
+
+        <form>
+            
+            <div class="form-section">
+
+                <h2> פרטי משתמש </h2>
+
+                <label for="name">שם מלא:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">אימייל:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">סיסמה:</label>
+                <input type="password" id="password" name="password" required>
+
+            </div>
+
+            <div class="form-section">
+
+                <h2>העדפות</h2>
+
+                <label for="color">בחר צבע:</label>
+
+                <select id="color" name="color">
+                    <option value="black">שחור</option>
+                    <option value="red">אדום</option>
+                    <option value="white">לבן</option>
+                </select>
+
+                <label for="font">בחר סוג כתיבה:</label>
+
+                <select id="font" name="font">
+                    <option value="Arial">Arial</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Helvetica">Helvetica</option>
+                </select>
+
+            </div>
+
+            <div class="form-section">
+
+                <h2>כרטיס יום הולדת</h2>
+
+                <label for="birthday">בחר תאריך:</label>
+
+                <input type="date" id="birthday" name="birthday">
+
+            </div>
+
+            <button ctype="submit" class="button">שלח</button>
+
+        </form>
+
+    </div>
+
+    <script src="/scripts/ownership-console.js"></script>
+</body>
+
+</html>

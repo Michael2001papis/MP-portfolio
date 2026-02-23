@@ -45,4 +45,4 @@ git checkout -b refactor-data-driven
 ## LandingPageJS
 
 הניווט הראשי מפנה ל-`עמודמעבריםכללי` (Projects).  
-LandingPageJS (index01–index09) לא מקושר מהדף הראשי — הועבר ל־Archive/LandingPageJS/ (Refactor Plan 1.0).
+LandingPageJS (index01–index09) לא מקושר מהדף הראשי — נשאר בארכיון.

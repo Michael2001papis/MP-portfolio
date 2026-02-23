@@ -62,6 +62,7 @@ MP-portfolio/
 │   │   ├── All-AddifyPage/       # ניהול משתמשים
 │   │   └── All-UserLogin/        # התחברות
 │   ├── LandingPage/               # דפי נחיתה HTML
+│   ├── LandingPageJS/            # דפי מעבר לפרויקטים
 │   ├── עמודמעבריםכללי/           # ניווט כללי
 │   └── The projects of the projects/
 ├── styles/                       # עיצוב משותף
@@ -71,7 +72,6 @@ MP-portfolio/
 │   ├── ownership-console.js      # חותמת בעלות
 │   └── portfolio-extras.js       # Easter eggs, הפתעה
 ├── images/                       # תמונות וקטעי וידאו
-├── Archive/                      # LandingPageJS (לא מקושר מדף הבית)
 ├── docs/                         # תיעוד
 ├── LICENSE
 ├── GHLKJHD.txt                   # דוח שינויים

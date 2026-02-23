@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakout — משחק שבירת לבנים</title>
+    <meta name="author" content="MP — Michael Papismedov | MP-PORTFOLIO-ID: 2025-MP-001">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/styles/project-nav.css">
+</head>
+<body dir="rtl">
+    <nav class="project-nav">
+        <a href="/index.html">חזרה לעמוד הבית</a>
+        <a href="/pages/עמודמעבריםכללי/index.html">לכל הפרויקטים</a>
+        <a href="/legal.html">Terms</a>
+        <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+    <div class="game-wrap">
+        <h1>Breakout</h1>
+        <p class="game-by">MP — Michael Papismedov</p>
+        <div class="hud">
+            <span>ניקוד: <strong id="score">0</strong></span>
+            <span>חיים: <strong id="lives">3</strong></span>
+            <span>שלב: <strong id="level">1</strong></span>
+        </div>
+        <div class="canvas-wrap">
+            <canvas id="gameCanvas"></canvas>
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+                    <h2 id="overlayTitle">מוכן?</h2>
+                    <p id="overlayText">בחר מהירות</p>
+                    <div class="speed-options">
+                        <label><input type="radio" name="speed" value="slow" checked> איטי</label>
+                        <label><input type="radio" name="speed" value="normal"> רגיל</label>
+                        <label><input type="radio" name="speed" value="fast"> מהיר</label>
+                    </div>
+                    <button id="overlayBtn" class="btn-play">התחל משחק</button>
+                </div>
+            </div>
+        </div>
+        <p class="hint">הזז את העכבר או גע במסך כדי להזיז את המחבט</p>
+    </div>
+    <footer class="game-footer" id="mp-signature">
+        <p>© 2025 MP — Michael Papismedov | MP-PORTFOLIO-ID: 2025-MP-001 · <a href="/legal.html">Terms</a></p>
+    </footer>
+    <script src="./game.js" defer></script>
+    <script src="/scripts/project-nav-inject.js"></script>
+    <script src="/scripts/ownership-console.js"></script>
+</body>
+</html>

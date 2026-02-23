@@ -1,0 +1,200 @@
+/* ============================================
+   LandingPageJS - כרטיסי פרויקט בודד
+   Individual Project Landing Pages
+   ============================================ */
+
+:root {
+    --pj-bg: #f0f4f8;
+    --pj-card: #ffffff;
+    --pj-primary: #1e3a5f;
+    --pj-primary-hover: #2c5282;
+    --pj-text: #2d3748;
+    --pj-text-light: #718096;
+    --pj-shadow: 0 4px 20px rgba(30, 58, 95, 0.12);
+    --pj-shadow-hover: 0 8px 30px rgba(30, 58, 95, 0.18);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+    min-height: 100vh;
+    color: var(--pj-text);
+}
+
+/* Header */
+header {
+    background: var(--pj-primary);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+header nav ul li a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Projects Section */
+#projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    padding-bottom: 80px; /* מקום ל-footer קבוע */
+    min-height: calc(100vh - 180px);
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* כרטיס פרויקט */
+.project {
+    background: var(--pj-card);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--pj-shadow);
+    text-align: center;
+    width: 100%;
+    max-width: 360px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--pj-shadow-hover);
+}
+
+.project h2 {
+    font-size: 1.4rem;
+    color: var(--pj-text);
+    margin-bottom: 1rem;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.25rem;
+}
+
+/* כפתורים */
+.BTNppcp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.25rem;
+    margin: 0.35rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: white;
+    background: var(--pj-primary);
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.BTNppcp:hover {
+    background: var(--pj-primary-hover);
+    transform: translateY(-2px);
+}
+
+.BTNppcp[download] {
+    background: #2d7a4a;
+}
+
+.BTNppcp[download]:hover {
+    background: #276d42;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--pj-primary);
+    padding: 0.75rem 1rem;
+    text-align: center;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.15);
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+footer nav ul li a {
+    display: inline-block;
+}
+
+.footer-logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s;
+}
+
+footer nav ul li a:hover .footer-logo {
+    transform: scale(1.15);
+}
+
+footer p {
+    color: white;
+    margin: 0.5rem 0 0;
+    font-size: 0.9rem;
+}
+
+footer p a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* רספונסיבי */
+@media (max-width: 768px) {
+    #projects {
+        padding: 1.5rem 1rem;
+    }
+    .project {
+        max-width: 100%;
+    }
+}

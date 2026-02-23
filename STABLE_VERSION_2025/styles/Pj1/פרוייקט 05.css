@@ -1,0 +1,265 @@
+/* קביעת סגנון כללי */
+body {
+    font-family: 'Arial', sans-serif; /* גופן ברירת מחדל */
+    margin: 0; /* הסרת מרג'ין ברירת מחדל */
+    padding: 0; /* הסרת פדינג ברירת מחדל */
+    line-height: 1.6; /* גובה שורה לשיפור קריאות */
+    background-color: #4a4a4b; /* צבע רקע כללי */
+    color: #333; /* צבע טקסט כללי */
+    direction: rtl; /* מגדיר את כיוון ה-RTL */
+    background-image: url('/images/Nowphotos/PB/תמונתרקעחלל2.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+a {
+    text-decoration: none;
+}
+/* קביעת סגנון לקונטיינרים */
+.container {
+    max-width: 1200px; /* גובה מקסימלי לקונטיינר */
+    margin: auto; /* מרכז את הקונטיינר */
+    padding: 20px; /* פדינג פנימי לקונטיינר */
+    display: flex; /* שימוש בתצוגת פלקס */
+    height: 50vh; /* גובה של חצי מהמסך */
+    flex-wrap: wrap; /* מאפשר קיפול של קונטיינרים לשורות נוספות */
+}
+/* סגנון לטפסים */
+form {
+    display: flex; /* תצוגת פלקס לטופס */
+    flex-direction: column; /* תצוגה בעמודה */
+}
+form label {
+    margin-bottom: 5px; /* מרווח בין תוויות לשדות */
+}
+form input {
+    padding: 10px; /* פדינג פנימי לשדות */
+    border: 1px solid #ccc; /* גבול קל לשדות */
+    border-radius: 4px; /* פינות מעוגלות לשדות */
+    margin-bottom: 15px; /* מרווח בין השדות */
+}
+/* סגנון לכפתורים */
+button {
+    background-color: #007bff; /* צבע רקע לכפתור */
+    color: white; /* צבע טקסט לכפתור */
+    border: none; /* הסרת גבול לכפתור */
+    border-radius: 4px; /* פינות מעוגלות לכפתור */
+    padding: 10px 15px; /* פדינג פנימי לכפתור */
+    cursor: pointer; /* שינוי סמן בעת ריחוף על הכפתור */
+    transition: background-color 0.3s; /* אנימציה שינוי צבע רקע */
+}
+/* כפתור בעיצוב משופר */
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+}
+/* קונטיינר עם תמונה */
+.image-container {
+    background-image: url('/images/Nowphotos/תמונהלעולםהחללקבלתפניםראשונה.webp'); /* הכנס כאן את הנתיב לתמונה */
+    background-size: cover; /* התמונה תכסה את כל הקונטיינר */
+    position: relative; /* מאפשר שכבת מלל על התמונה */
+    flex: 1; /* תופס את כל הרוחב שנשאר */
+    min-height: 300px; /* גובה מינימלי */
+    overflow: hidden; /* מסתיר חלקים חיצוניים */
+    margin-bottom: 20px; /* ריווח בין הקונטיינרים */
+}
+.image-container img {
+    width: 100%; /* תמונה מתאימה לגובה */
+    height: auto; /* שומר על יחס הגובה-רוחב */
+}
+/* שכבת המלל על התמונה */
+.overlay {
+    position: absolute; /* שכבת המלל על התמונה */
+    display: flex; /* שימוש בפלקס כדי למרכז את המלל */
+    justify-content: center; /* מרכז אופקית */
+    align-items: center; /* מרכז אנכית */
+    background: rgba(0, 0, 0, 0.295); /* רקע שקוף */
+    color: white; /* צבע המלל לבן */
+    text-align: center; /* מרכז את המלל */
+    top: 0; left: 0; right: 0; bottom: 0; /* מתפרס על כל התמונה */
+}
+.overlay , h1 {
+    color: rgba(29, 107, 103, 0.815);
+}
+/*--*/
+/* עיצוב כללי של קונטיינר הטופס */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 0, 255, 0.2);
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    background: rgba(30, 30, 50, 0.8);
+}
+/* כותרות */
+.form-container h2 {
+    text-align: center;
+    color: #d1d1e9;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+.form-container h3 {
+    margin-top: 20px;
+    color: #a2a5f4;
+    font-weight: 500;
+}
+/* תוויות */
+label {
+    color: #9ca3db;
+    font-size: 0.95em;
+}
+/* שדות קלט */
+input {
+    width: 100%;
+    padding: 12px;
+    background: #2b2b3b;
+    border: 1px solid #444;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+input:focus {
+    border-color: #5d5dfa;
+    outline: none;
+    box-shadow: 0 0 8px rgba(93, 93, 250, 0.5);
+}
+/* כפתור שליחה */
+button, .btm-but button, .bottom-container a {
+    width: 100%;
+    padding: 12px;
+    background-color: #00bbff3f;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+button:hover, .btm-but button:hover, .bottom-container a:hover {
+    background-color: #4a4ad900;
+    transform: translateY(-2px);
+}
+/*--*/
+/* קונטיינר תחתון */
+.bottom-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    background: #000000a8;
+    box-sizing: border-box;
+}
+/* קונטיינרים חצי חצי */
+.half-container {
+    flex: 1 1 50%;
+    padding: 20px;
+    margin: 5px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    box-sizing: border-box;
+}
+.half-container:hover {
+    transform: translateY(-5px);
+}
+.half-container h2 {
+    margin-top: 0;
+    color: #000;
+}
+.half-container p {
+    color: #000;
+    line-height: 1.5;
+}
+/* קו מפריד */
+.separator {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #ccc, #007bff, #ccc);
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+.separator-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 0 10px;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 14px;
+    top: -8px;
+}
+/* כפתורי תחתית */
+.btm-but {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: #747474;
+    flex-wrap: wrap;
+}
+/*--*/
+#txhc {color: white;
+font-size: larger;
+    text-align: center;}
+/* התאמות למסכים קטנים */
+@media (max-width: 768px) {
+    .separator {
+        display: none;
+    }
+    
+    .half-container {
+        flex: 1 1 100%;
+        margin: 5px;
+        padding: 15px;
+    }
+    
+    .btm-but {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    .btm-but button {
+        width: 100%;
+        font-size: 1.2em;
+        padding: 15px 0;
+    }
+    
+    .form-container {
+        width: 80%;
+        max-width: 100%;
+    }
+    .image-container {
+        display: none;
+    }
+}
+/* התאמות לטלפונים ניידים */
+@media (max-width: 480px) {
+    body {
+        line-height: 1.4;
+    }
+
+    .btm-but button {
+        font-size: 1em;
+    }
+}
+
+
+
+
+
+

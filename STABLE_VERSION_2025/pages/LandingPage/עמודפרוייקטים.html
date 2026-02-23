@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Projects Gallery - 2.0 </title>
+    <meta name="author" content="MP — Michael Papismedov | MP-PORTFOLIO-ID: 2025-MP-001">
+    
+    <link rel="stylesheet" href="/styles/shared-header-footer.css">
+    <link rel="stylesheet" href="/styles/Pj1/PH1tot.css"> 
+    
+</head>
+
+<body>
+    
+    <div class="top-menu">
+        <button class="nav-toggle" aria-label="תפריט" aria-expanded="false"><span></span><span></span><span></span></button>
+        <nav>
+            <ul>
+
+                <li><a href="/index.html">בחזרה לעמוד הבית</a></li>
+                <li><a href="/legal.html">Terms</a></li>
+                <li><a href="/pages/LandingPage/צור קשר.HTML">צור קשר</a></li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <main id="gallery">
+
+        <div class="card-container">
+
+            <div class="card" style="background-image: url('/images/Nowphotos/PB/תמונתרקערפוא.webp');">
+                <a href="/pages/LandingPage/medical-project.html" ><button> View the project </button></a>
+            </div>
+
+            <div class="card" style="background-image: url('/images/Nowphotos/תמונהלעולםמייקרוסופטקבלתפניםראשונה.webp');">
+                <a href="/pages/LandingPage/microsoft-project.html" ><button> View the project </button></a>
+            </div>
+
+            <div class="card" style="background-image: url('/images/Nowphotos/תמונהלעולםהאפלקבלתפניםראשונה.webp');">
+                <a href="/pages/LandingPage/apple-project.html" ><button> View the project </button></a>
+            </div>
+
+            <div class="card" style="background-image: url('/images/Nowphotos/תמונהלעולםצהלקבלתפנים.webp');">
+                <a href="/pages/LandingPage/idf-project.html" ><button> View the project </button></a>
+            </div>
+
+            <div class="card" style="background-image: url('/images/Nowphotos/PB/תמונתרקעחלל.webp');">
+                <a href="./space-project.html" ><button> View the project </button></a>
+            </div>
+
+            <div class="card" style="background-image: url('/images/Nowphotos/PB/תמונתרקעAI.webp');">
+                <a href="./ai-project.html" ><button> View the project </button></a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 MP — Michael Papismedov · <a href="/legal.html">Terms</a> · <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener">GitHub</a></p>
+        <p><small>Unauthorized copying or redistribution is prohibited.</small></p>
+    </footer>
+    <script src="/scripts/ownership-console.js"></script>
+    <script>
+        (function(){
+            var t=document.querySelector('.top-menu .nav-toggle');
+            var n=document.querySelector('.top-menu nav');
+            if(t&&n){t.addEventListener('click',function(){t.classList.toggle('open');t.setAttribute('aria-expanded',t.classList.contains('open'));n.classList.toggle('open');});}
+        })();
+    </script>
+</body>
+</html>

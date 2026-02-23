@@ -1,0 +1,159 @@
+/* Breakout | © 2025 MP — Michael Papismedov */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(160deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #e2e8f0;
+}
+
+.game-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.game-wrap h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 0.25rem;
+    color: #fff;
+}
+
+.game-by {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-bottom: 1rem;
+}
+
+.hud {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.hud strong {
+    color: #38bdf8;
+}
+
+.canvas-wrap {
+    position: relative;
+    border: 3px solid #334155;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+#gameCanvas {
+    display: block;
+    background: #0f172a;
+    width: 100%;
+    max-width: min(700px, 95vw);
+    height: auto;
+    aspect-ratio: 7 / 5;
+    touch-action: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+.overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.overlay-content {
+    text-align: center;
+    padding: 2rem;
+}
+
+.overlay-content h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    color: #38bdf8;
+}
+
+.overlay-content p {
+    color: #94a3b8;
+    margin-bottom: 1.5rem;
+}
+
+.btn-play {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-play:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.5);
+}
+
+.speed-options {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+.speed-options label {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.hint {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.game-footer {
+    text-align: center;
+    padding: 1rem;
+    background: #0f172a;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.game-footer a {
+    color: #38bdf8;
+}
+
+@media (max-width: 600px) {
+    .hud { gap: 1rem; font-size: 0.9rem; }
+    .game-wrap { padding: 0.5rem; }
+    .canvas-wrap { max-width: 100%; }
+    #gameCanvas { max-width: 100%; }
+    .hint { font-size: 0.8rem; }
+}
+
+@media (max-width: 400px) {
+    .hud { flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+}

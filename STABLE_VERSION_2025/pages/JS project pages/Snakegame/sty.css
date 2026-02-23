@@ -1,0 +1,171 @@
+/* body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+#gameCanvas {
+    background-color: green;
+    display: block;
+    margin: auto;
+} */
+
+/* כלליים */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-x: hidden;
+}
+
+.container {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #f39c12;
+    margin-bottom: 0.25rem;
+}
+
+.game-by {
+    font-size: 0.85rem;
+    color: #95a5a6;
+    margin-bottom: 20px;
+}
+
+/* כפתור חידוש משחק */
+#restartBtn {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    min-height: 44px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+#restartBtn:hover {
+    background-color: #e67e22;
+}
+
+#restartBtn:active {
+    background-color: #d35400;
+}
+
+
+/* עיצוב לקנבס */
+#gameCanvas {
+    background-color: #2ecc71;
+    border: 5px solid #27ae60;
+    border-radius: 10px;
+    width: min(400px, 95vw, 85vmin);
+    height: min(400px, 95vw, 85vmin);
+    display: block;
+    margin: 0 auto;
+    touch-action: none;
+}
+
+/* לחצני ניווט - D-pad (רק מובייל/טאבלט) */
+.controls-dpad {
+    display: none;
+    grid-template-areas:
+        ". up ."
+        "left . right"
+        ". down .";
+    gap: 4px;
+    margin: 1rem auto;
+    width: 140px;
+}
+
+.dpad-btn {
+    width: 44px;
+    height: 44px;
+    min-height: 44px;
+    font-size: 1.2rem;
+    background: #f39c12;
+    color: white;
+    border: 2px solid #e67e22;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, transform 0.1s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.dpad-btn:hover {
+    background: #e67e22;
+}
+
+.dpad-btn:active {
+    transform: scale(0.95);
+    background: #d35400;
+}
+
+.dpad-up { grid-area: up; }
+.dpad-left { grid-area: left; }
+.dpad-right { grid-area: right; }
+.dpad-down { grid-area: down; }
+
+/* רספונסיביות */
+@media (max-width: 600px) {
+    h1 { font-size: 1.5rem; }
+}
+
+@media (max-width: 768px) {
+    .controls-dpad {
+        display: grid;
+        grid-template-areas:
+            ". up ."
+            "left . right"
+            ". down .";
+        gap: 4px;
+        width: 140px;
+        margin: 1rem auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .controls-dpad {
+        width: 120px;
+        margin: 1rem auto;
+    }
+    .dpad-btn {
+        width: 40px;
+        height: 40px;
+        min-height: 40px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 { font-size: 1.2rem; }
+}
+
