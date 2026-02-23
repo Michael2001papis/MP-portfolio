@@ -36,52 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Contact Form - FormSubmit.co (שליחה ישירה לאימייל)
-    var form = document.getElementById('contact-form');
-    if (form) {
-        var nextInput = document.getElementById('contact-next');
-        if (nextInput) {
-            var url = window.location.href.split('?')[0].split('#')[0];
-            if (url.endsWith('/')) url += 'index.html';
-            nextInput.value = url + '?sent=1#contact';
-        }
-
-        form.addEventListener('submit', function(e) {
-            var msg = document.getElementById('form-message');
-            var nameInput = document.getElementById('contact-name');
-            var emailInput = document.getElementById('contact-email');
-            var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            var name = nameInput ? nameInput.value.trim() : '';
-            var email = emailInput ? emailInput.value.trim() : '';
-
-            if (!msg) return;
-            msg.style.color = '#c53030';
-            if (!name || name.length < 2) {
-                e.preventDefault();
-                msg.textContent = 'נא להזין שם מלא (לפחות 2 תווים)';
-                return;
-            }
-            if (!email) {
-                e.preventDefault();
-                msg.textContent = 'נא להזין כתובת אימייל';
-                return;
-            }
-            if (!emailRe.test(email)) {
-                e.preventDefault();
-                msg.textContent = 'נא להזין אימייל תקין';
-                return;
-            }
-        });
-
-        if (window.location.search.indexOf('sent=1') >= 0) {
-            var m = document.getElementById('form-message');
-            if (m) {
-                m.textContent = 'הפנייה נשלחה בהצלחה! תודה.';
-                m.style.color = '#1e3a5f';
-            }
-        }
-    }
-
     // Back to Top
     var backBtn = document.getElementById('back-to-top');
     if (backBtn) {
