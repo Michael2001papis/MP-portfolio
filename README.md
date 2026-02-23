@@ -72,9 +72,7 @@ MP-portfolio/
 │   └── portfolio-extras.js       # Easter eggs, הפתעה
 ├── images/                       # תמונות וקטעי וידאו
 ├── Archive/                      # LandingPageJS (לא מקושר מדף הבית)
-├── docs/                         # תיעוד
 ├── LICENSE
-├── GHLKJHD.txt                   # דוח שינויים
 └── README.md
 ```
 

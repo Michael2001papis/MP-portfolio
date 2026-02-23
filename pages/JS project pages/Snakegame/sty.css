@@ -61,13 +61,14 @@ h1 {
     background-color: #f39c12;
     color: white;
     border: none;
-    padding: 10px 20px;
-    min-height: 44px;
-    font-size: 1.2rem;
-    border-radius: 5px;
+    padding: 12px 24px;
+    min-height: 48px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 10px;
     cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s;
+    margin-top: 1rem;
+    transition: background-color 0.2s, transform 0.1s;
 }
 
 #restartBtn:hover {
@@ -76,6 +77,7 @@ h1 {
 
 #restartBtn:active {
     background-color: #d35400;
+    transform: scale(0.98);
 }
 
 
@@ -94,24 +96,28 @@ h1 {
 /* לחצני ניווט - D-pad (רק מובייל/טאבלט) */
 .controls-dpad {
     display: none;
+    direction: ltr; /* D-pad תמיד באותו כיוון - שמאל/ימין נכונים */
     grid-template-areas:
         ". up ."
         "left . right"
         ". down .";
-    gap: 4px;
-    margin: 1rem auto;
-    width: 140px;
+    gap: 6px;
+    margin: 1.25rem auto;
+    padding: 12px;
+    width: 156px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 12px;
 }
 
 .dpad-btn {
     width: 44px;
     height: 44px;
     min-height: 44px;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     background: #f39c12;
     color: white;
     border: 2px solid #e67e22;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -139,29 +145,31 @@ h1 {
     h1 { font-size: 1.5rem; }
 }
 
+/* קיבוץ כפתורי המשחק */
+.game-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
 @media (max-width: 768px) {
     .controls-dpad {
         display: grid;
-        grid-template-areas:
-            ". up ."
-            "left . right"
-            ". down .";
-        gap: 4px;
-        width: 140px;
-        margin: 1rem auto;
     }
 }
 
 @media (max-width: 480px) {
     .controls-dpad {
-        width: 120px;
-        margin: 1rem auto;
+        width: 132px;
+        padding: 10px;
     }
     .dpad-btn {
         width: 40px;
         height: 40px;
         min-height: 40px;
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 }
 
