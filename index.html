@@ -282,19 +282,21 @@
         <h2>Contact</h2>
         <form action="https://formsubmit.co/dvnka2@gmail.com" method="POST" class="form" id="contact-form">
             <input type="hidden" name="_subject" value="פנייה מ-MP Portfolio">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_replyto" value="אימייל">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_next" id="contact-next" value="">
-            <input type="text" placeholder="שם מלא" id="contact-name" name="name" required>
-            <input type="email" placeholder="אימייל" id="contact-email" name="email" required>
-            <input type="tel" placeholder="טלפון אישי/עסקי" id="contact-phone" name="phone">
-            <select id="contact-reason" name="reason">
+            <input type="text" placeholder="שם מלא" id="contact-name" name="שם מלא" required>
+            <input type="email" placeholder="אימייל" id="contact-email" name="אימייל" required>
+            <input type="tel" placeholder="טלפון אישי/עסקי" id="contact-phone" name="טלפון">
+            <select id="contact-reason" name="סיבת הפנייה">
                 <option value="">סיבת הפנייה</option>
                 <option value="develop-website">לפתח אתר</option>
                 <option value="personal">אישי</option>
                 <option value="support">תמיכה</option>
             </select>
-            <input type="text" placeholder="מיקום (לא חובה)" id="contact-location" name="location">
-            <textarea placeholder="הודעה" id="contact-message" name="message" rows="4"></textarea>
+            <input type="text" placeholder="מיקום (לא חובה)" id="contact-location" name="מיקום">
+            <textarea placeholder="הודעה" id="contact-message" name="הודעה" rows="4"></textarea>
             <input type="submit" value="שלח">
         </form>
         <a href="/MPContactusforofficialwebsitedevelopment.html" class="btn-official-dev">יצירת קשר לפיתוח אתר רשמי</a>
