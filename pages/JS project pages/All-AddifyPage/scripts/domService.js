@@ -1,8 +1,10 @@
 import { User } from './User.js';
 
 const clearErrors = (form) => {
-    form.querySelectorAll('.field-error').forEach(el => { el.textContent = ''; });
-    form.querySelectorAll('input').forEach(el => el.classList.remove('error'));
+    if (form) {
+        form.querySelectorAll('.field-error').forEach(el => { el.textContent = ''; });
+        form.querySelectorAll('input').forEach(el => el.classList.remove('error'));
+    }
 };
 
 const showFieldError = (fieldId, message) => {
@@ -11,6 +13,21 @@ const showFieldError = (fieldId, message) => {
     if (input) input.classList.add('error');
     if (errorEl) errorEl.textContent = message;
 };
+
+const showToast = (message) => {
+    const existing = document.querySelector('.addify-toast');
+    if (existing) existing.remove();
+    const toast = document.createElement('div');
+    toast.className = 'addify-toast';
+    toast.textContent = message;
+    toast.style.cssText = 'position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#c53030;color:white;padding:12px 24px;border-radius:8px;font-size:0.95rem;z-index:9999;box-shadow:0 4px 20px rgba(0,0,0,0.2);animation:addifyToastIn 0.3s ease;';
+    document.body.appendChild(toast);
+    setTimeout(() => {
+        toast.style.animation = 'addifyToastOut 0.3s ease forwards';
+        setTimeout(() => toast.remove(), 300);
+    }, 3500);
+};
+
 
 const drawTableRows = (users) => {
     const tableBody = document.querySelector('#users-table-body');
@@ -154,6 +171,32 @@ const drawTableRows = (users) => {
 
 const registerForm = document.querySelector('.register-form');
 if (registerForm) {
+    const emailInput = document.getElementById('register-email');
+
+    const checkDuplicateUser = () => {
+        const em = (emailInput && emailInput.value || '').trim();
+        if (!em) {
+            if (emailInput) emailInput.classList.remove('error');
+            const errEl = document.getElementById('register-email-error');
+            if (errEl) errEl.textContent = '';
+            return false;
+        }
+        const exists = User.usersList.some(u => u.email && u.email.toLowerCase() === em.toLowerCase());
+        if (exists) {
+            showFieldError('register-email', 'משתמש עם כתובת דוא"ל זו כבר קיים במערכת');
+            return true;
+        }
+        if (emailInput) emailInput.classList.remove('error');
+        const errEl = document.getElementById('register-email-error');
+        if (errEl) errEl.textContent = '';
+        return false;
+    };
+
+    if (emailInput) {
+        emailInput.addEventListener('input', checkDuplicateUser);
+        emailInput.addEventListener('blur', checkDuplicateUser);
+    }
+
     registerForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         clearErrors(registerForm);
@@ -182,8 +225,10 @@ if (registerForm) {
         }
         if (hasError) return;
 
-        if (User.usersList.find((u) => u.email === email)) {
-            showFieldError('register-email', 'משתמש עם כתובת דוא"ל זו כבר קיים');
+        const duplicateUser = User.usersList.find((u) => u.email && u.email.toLowerCase() === email.toLowerCase());
+        if (duplicateUser) {
+            showFieldError('register-email', 'משתמש עם כתובת דוא"ל זו כבר קיים במערכת');
+            showToast('משתמש עם הפרטים האלה כבר קיים במערכת');
             return;
         }
 
