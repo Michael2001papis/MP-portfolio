@@ -70,5 +70,11 @@ password.addEventListener('input', (e) => {
     checkFormValidity();
 });
 
-document.getElementById('form').addEventListener('submit', (e) => e.preventDefault());
+document.getElementById('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!username.value || !email.value || !password.value) return;
+    if (submitButton.disabled) return;
+    var output = document.getElementById('output');
+    output.innerHTML = '<div class="user-table-wrap"><h2>פרטי הכניסה</h2><table class="user-data-table"><thead><tr><th>שם משתמש</th><th>אימייל</th><th>סיסמה</th></tr></thead><tbody><tr><td>' + username.value + '</td><td>' + email.value + '</td><td>' + password.value + '</td></tr></tbody></table></div>';
+});
 checkFormValidity();

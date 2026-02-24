@@ -88,6 +88,8 @@ canvas.width = 400;
 canvas.height = 400;
 
 let snake, direction, fruit, gameOver, gameInterval, isPaused = false, gameStarted = false;
+var snakeScores = [];
+try { snakeScores = JSON.parse(localStorage.getItem('snakeScores') || '[]'); } catch(e) {}
 
 function initializeGame() {
     snake = [{ x: 200, y: 200 }];
@@ -205,9 +207,22 @@ function gameLoop() {
     // Check for collisions
     if (head.x < 0 || head.x >= canvas.width || head.y < 0 || head.y >= canvas.height || snake.slice(1).some(segment => segment.x === head.x && segment.y === head.y)) {
         gameOver = true;
+        var score = snake.length;
+        snakeScores.push({ n: 'שחקן', s: score });
+        snakeScores.sort(function(a,b) { return b.s - a.s; });
+        snakeScores = snakeScores.slice(0, 10);
+        try { localStorage.setItem('snakeScores', JSON.stringify(snakeScores)); } catch(e) {}
+        renderSnakeScores();
     }
 }
 
+function renderSnakeScores() {
+    var el = document.getElementById('snake-scores-list');
+    if (!el) return;
+    el.innerHTML = snakeScores.length ? snakeScores.map(function(x, i) { return '<li>' + (i+1) + '. ' + x.n + ': ' + x.s + '</li>'; }).join('') : '<li>אין עדיין תוצאות</li>';
+}
+
 drawStartScreen();
+renderSnakeScores();
 
 

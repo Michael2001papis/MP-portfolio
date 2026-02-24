@@ -89,14 +89,30 @@ function resetBall() {
     ball.speedY = 4 * (Math.random() > 0.5 ? 1 : -1);
 }
 
+// חלון ניצחון
+function showVictoryModal(winner) {
+    gameStarted = false;
+    var overlay = document.createElement('div');
+    overlay.className = 'pong-victory-overlay';
+    overlay.innerHTML = '<div class="pong-victory-card"><div class="pong-victory-emoji">🏆</div><h2>כל הכבוד!</h2><p>' + winner + '</p><p class="pong-victory-sub">ניצחון מתוק!</p><button class="pong-victory-btn">שחק שוב</button></div>';
+    overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.75);display:flex;align-items:center;justify-content:center;z-index:9999;animation:fadeIn 0.3s ease;';
+    var card = overlay.querySelector('.pong-victory-card');
+    card.style.cssText = 'background:linear-gradient(135deg,#fff,#f8f9fa);padding:2.5rem;border-radius:20px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.4);animation:popIn 0.4s ease;';
+    overlay.querySelector('.pong-victory-btn').onclick = function() {
+        overlay.remove();
+        resetGame();
+        gameStarted = true;
+        gameLoop();
+    };
+    document.body.appendChild(overlay);
+}
+
 // בדיקת מנצח
 function checkWinner() {
     if (leftScore >= 5) {
-        alert('שחקן שמאל ניצח!');
-        resetGame();
+        showVictoryModal('שחקן שמאל ניצח! 🎉');
     } else if (rightScore >= 5) {
-        alert('שחקן ימין ניצח!');
-        resetGame();
+        showVictoryModal('שחקן ימין ניצח! 🎉');
     }
 }
 

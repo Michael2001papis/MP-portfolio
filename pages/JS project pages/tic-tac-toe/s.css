@@ -41,6 +41,10 @@ body {
     color: #4a5568;
     margin-bottom: 20px;
 }
+.mode-select { margin-bottom: 1rem; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+.mode-select label { font-size: 0.95rem; }
+.mode-select select { padding: 0.35rem 0.5rem; border-radius: 6px; }
+
 .game-buttons {
     display: flex;
     flex-direction: row;

@@ -67,6 +67,9 @@ html, body {
     flex-wrap: wrap;
 }
 .speed-select label { cursor: pointer; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes popIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
   
   /* כפתור */
   .button { 

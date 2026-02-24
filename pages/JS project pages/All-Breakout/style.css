@@ -134,6 +134,30 @@ body {
     color: #64748b;
 }
 
+.breakout-mobile-btns {
+    display: none;
+    gap: 2rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+.breakout-mobile-btns button {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    min-height: 44px;
+}
+@media (max-width: 768px) {
+    .breakout-mobile-btns { display: flex; }
+}
+.breakout-scores { margin-top: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; max-width: 200px; }
+.breakout-scores h3 { font-size: 0.95rem; margin-bottom: 0.5rem; }
+.breakout-scores ol { padding-right: 1.25rem; margin: 0; font-size: 0.9rem; }
+
 .game-footer {
     text-align: center;
     padding: 1rem;

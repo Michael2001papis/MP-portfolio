@@ -108,25 +108,23 @@
         }
 
         @media (max-width: 600px) {
-            button {
-                width: 90%;
-            }
-
+            body { padding: 0.75rem; }
             #question-area {
-                padding: 15px;
+                padding: 1.25rem;
+                margin-bottom: 0.75rem;
             }
-
-            #score {
-                font-size: 1.2em;
+            #question-area button {
+                min-height: 48px;
+                font-size: 1rem;
+                padding: 14px;
             }
+            #question-area p { font-size: 1.05em; }
+            #score { font-size: 1.3em; }
+            #reset, #new-game { width: 100%; max-width: 200px; margin: 0.5rem auto; }
         }
 
         @media (max-width: 400px) {
-            h1 {
-                font-size: 1.4em;
-            }
-
-            p {
-                font-size: 1em;
-            }
+            h1 { font-size: 1.4em; }
+            p { font-size: 1em; }
+            #question-area { padding: 1rem; }
         }

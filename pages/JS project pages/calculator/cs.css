@@ -81,6 +81,10 @@ body > * + * {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+.calc-formulas { display: flex; gap: 6px; margin-bottom: 8px; flex-wrap: wrap; }
+.formula-btn { padding: 6px 12px; font-size: 0.85rem; background: #444; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+.formula-btn:hover { background: #555; }
+
 .calculator p {
     font-size: clamp(1.25rem, 4vw, 1.75rem);
     height: 50px;
@@ -93,18 +97,35 @@ body > * + * {
 }
 
 .calc-history {
-    margin-top: 8px;
-    padding: 8px;
-    background: #333;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    color: #aaa;
-    max-height: 100px;
+    margin-top: 12px;
+    padding: 10px 12px;
+    background: #2a2a2a;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #ccc;
+    max-height: 120px;
     overflow-y: auto;
+    border: 1px solid #444;
 }
-.calc-history .hist-header { display: flex; justify-content: space-between; margin-bottom: 4px; }
-.calc-history button { padding: 2px 8px; font-size: 0.75rem; cursor: pointer; }
+.calc-history .hist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #fff;
+}
+.calc-history #clearHist {
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    background: #444;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
 .calc-history ul { margin: 0; padding-right: 1rem; list-style: none; }
+.calc-history li { padding: 2px 0; }
 /* - קונטיינר כפתורי המחשבון -
 .AllCalculatorButtons {
     display: flex;
@@ -162,9 +183,12 @@ body > * + * {
     body {
         padding: 0.5rem;
         justify-content: flex-start;
+        min-height: 100vh;
+        min-height: 100dvh;
     }
     .calc-header {
         margin-bottom: 0.5rem;
+        flex-shrink: 0;
     }
     .calculator {
         width: 100%;
@@ -172,11 +196,12 @@ body > * + * {
         flex: 1;
         display: flex;
         flex-direction: column;
-        min-height: 50vh;
+        min-height: 60vh;
+        min-height: 60dvh;
         padding: 15px;
     }
     .calculator p {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         min-height: 60px;
     }
     .calculator .AllCalculatorButtons {
@@ -188,8 +213,12 @@ body > * + * {
     }
     .calculator .AllCalculatorButtons button {
         width: calc(25% - 6px);
-        min-height: 54px;
-        font-size: 1.25rem;
+        min-height: 56px;
+        font-size: 1.3rem;
+    }
+    .calc-history {
+        margin-top: 12px;
+        max-height: 80px;
     }
 }
 

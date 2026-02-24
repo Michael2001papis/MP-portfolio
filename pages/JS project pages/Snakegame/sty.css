@@ -185,3 +185,8 @@ h1 {
     h1 { font-size: 1.2rem; }
 }
 
+.snake-scores { margin-top: 1rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 10px; max-width: 250px; margin-left: auto; margin-right: auto; }
+.snake-scores h3 { font-size: 1rem; margin-bottom: 0.5rem; color: #f39c12; }
+.snake-scores ol { padding-right: 1.5rem; margin: 0; color: #ecf0f1; }
+.snake-scores li { padding: 2px 0; }
+

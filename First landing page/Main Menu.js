@@ -2,7 +2,22 @@
 // All rights reserved. Unauthorized copying prohibited.
 document.addEventListener('DOMContentLoaded', function() {
 
-    // Smooth scroll for anchor links (cross-browser)
+    // Smooth scroll for anchor links (polyfill for all browsers)
+    function smoothScrollTo(el) {
+        if (!el) return;
+        var start = window.pageYOffset || document.documentElement.scrollTop;
+        var target = el.getBoundingClientRect().top + start;
+        var dist = target - start;
+        var startTime = null;
+        function step(now) {
+            if (!startTime) startTime = now;
+            var t = Math.min((now - startTime) / 500, 1);
+            var eased = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+            window.scrollTo(0, start + dist * eased);
+            if (t < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+    }
     document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
         var href = anchor.getAttribute('href');
         if (href === '#') return;
@@ -10,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var target = document.querySelector(href);
             if (target) {
                 e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                smoothScrollTo(target);
                 var hamb = document.querySelector('.portfolio-header .hamburger');
                 var n = document.querySelector('.portfolio-header nav');
                 if (hamb && n && n.classList.contains('open')) {

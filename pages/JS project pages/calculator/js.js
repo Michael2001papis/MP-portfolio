@@ -1,8 +1,9 @@
 // איסוף כל הכפתורים
 const Btns = document.querySelectorAll("button");
 
-// הוספת מאזין לחיצה לכל כפתור
+// הוספת מאזין לחיצה לכל כפתור (מלבד backspace, CA, %, =, נוסחאות)
 Btns.forEach((btn) => {
+    if (btn.id === "backspaceBtn" || btn.id === "cleanAll" || btn.id === "percent" || btn.id === "Equality" || btn.classList.contains("formula-btn")) return;
     btn.addEventListener("click", btnClick);
 });
 
@@ -23,6 +24,19 @@ Percent.addEventListener("click", calculatePercent);
 // כפתור מחיקת ספרה בודדת
 const backspaceBtn = document.querySelector("#backspaceBtn");
 if (backspaceBtn) backspaceBtn.addEventListener("click", backspace);
+
+// נוסחאות מוכנות
+document.querySelectorAll(".formula-btn").forEach(function(btn) {
+    btn.addEventListener("click", function() {
+        var v = document.querySelector(".value");
+        var n = parseFloat(v.textContent);
+        if (isNaN(n)) return;
+        var f = this.getAttribute("data-formula");
+        if (f === "*0.15") v.textContent = (n * 0.15).toString();
+        else if (f === "*0.2") v.textContent = (n * 0.2).toString();
+        else if (f === "*1.17") v.textContent = (n * 1.17).toString();
+    });
+});
 
 // פונקציה לחישוב תוצאה (ללא eval - חישוב בטוח)
 function safeCalculate(expr) {
@@ -99,7 +113,7 @@ function updateHistoryDisplay() {
         return;
     }
     hist.style.display = "block";
-    hist.innerHTML = "<div class='hist-header'><span>היסטוריה</span><button id='clearHist'>ניקוי</button></div><ul>" +
+    hist.innerHTML = "<div class='hist-header'><span>היסטוריית חישובים</span><button type='button' id='clearHist'>ניקוי</button></div><ul>" +
         calcHistory.slice(-8).reverse().map(function(h) { return "<li>" + h + "</li>"; }).join("") + "</ul>";
     var clearBtn = document.getElementById("clearHist");
     if (clearBtn) clearBtn.onclick = function() { calcHistory = []; updateHistoryDisplay(); };

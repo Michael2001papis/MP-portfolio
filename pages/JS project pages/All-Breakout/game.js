@@ -14,6 +14,7 @@
 
     var W, H, scale;
     var paddle = { x: 0, w: 100, h: 12, speed: 8 };
+    var paddleTouchX = null;
     var ball = { x: 0, y: 0, r: 6, dx: 0, dy: 0, speed: 5 };
     var speedMultiplier = 1;
     var bricks = [];
@@ -151,7 +152,11 @@
             initLevel();
         }
 
-        var targetX = (mouseX > 0 || mouseX < 0) ? mouseX : W / 2;
+        if (typeof window.paddleStep === 'number' && window.paddleStep !== 0) {
+            paddleTouchX = (paddleTouchX == null ? W/2 : paddleTouchX) + window.paddleStep * 12;
+            paddleTouchX = Math.max(paddle.w/2, Math.min(W - paddle.w/2, paddleTouchX));
+        }
+        var targetX = (mouseX > 0 || mouseX < 0) ? mouseX : (paddleTouchX != null ? paddleTouchX : W / 2);
         paddle.x = targetX - paddle.w / 2;
         paddle.x = Math.max(0, Math.min(W - paddle.w, paddle.x));
     }
@@ -188,8 +193,24 @@
         initLevel();
     }
 
+    var breakoutScores = [];
+    try { breakoutScores = JSON.parse(localStorage.getItem('breakoutScores') || '[]'); } catch(e) {}
+    function saveScore(s) {
+        breakoutScores.push({ s: s });
+        breakoutScores.sort(function(a,b) { return b.s - a.s; });
+        breakoutScores = breakoutScores.slice(0, 10);
+        try { localStorage.setItem('breakoutScores', JSON.stringify(breakoutScores)); } catch(e) {}
+        var el = document.getElementById('breakout-scores-list');
+        if (el) el.innerHTML = breakoutScores.map(function(x,i) { return '<li>' + (i+1) + '. ' + x.s + '</li>'; }).join('');
+    }
+    function renderBreakoutScores() {
+        var el = document.getElementById('breakout-scores-list');
+        if (el) el.innerHTML = breakoutScores.length ? breakoutScores.map(function(x,i) { return '<li>' + (i+1) + '. ' + x.s + '</li>'; }).join('') : '<li>אין עדיין</li>';
+    }
+
     function gameOver() {
         running = false;
+        saveScore(score);
         overlay.classList.remove('hidden');
         overlayTitle.textContent = 'המשחק נגמר';
         overlayText.textContent = 'ניקוד סופי: ' + score;
@@ -198,6 +219,7 @@
 
     function winGame() {
         running = false;
+        saveScore(score);
         overlay.classList.remove('hidden');
         overlayTitle.textContent = 'כל הכבוד!';
         overlayText.textContent = 'סיימת את כל השלבים! ניקוד: ' + score;
@@ -205,6 +227,23 @@
     }
 
     overlayBtn.addEventListener('click', startGame);
+    renderBreakoutScores();
+
+    var pl = document.getElementById('paddleLeft');
+    var pr = document.getElementById('paddleRight');
+    if (pl && pr) {
+        window.paddleStep = 0;
+        pl.addEventListener('mousedown', function() { window.paddleStep = -1; });
+        pl.addEventListener('mouseup', function() { window.paddleStep = 0; });
+        pl.addEventListener('mouseleave', function() { window.paddleStep = 0; });
+        pr.addEventListener('mousedown', function() { window.paddleStep = 1; });
+        pr.addEventListener('mouseup', function() { window.paddleStep = 0; });
+        pr.addEventListener('mouseleave', function() { window.paddleStep = 0; });
+        pl.addEventListener('touchstart', function(e) { e.preventDefault(); window.paddleStep = -1; });
+        pl.addEventListener('touchend', function() { window.paddleStep = 0; });
+        pr.addEventListener('touchstart', function(e) { e.preventDefault(); window.paddleStep = 1; });
+        pr.addEventListener('touchend', function() { window.paddleStep = 0; });
+    }
 
     canvas.addEventListener('mousemove', function(e) {
         var rect = canvas.getBoundingClientRect();

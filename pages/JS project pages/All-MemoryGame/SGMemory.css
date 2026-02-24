@@ -228,6 +228,23 @@
   }
 }
 
+.game-actions { display: flex; gap: 1rem; justify-content: center; margin-top: 1rem; flex-wrap: wrap; }
+.hint-button {
+  padding: 10px 20px;
+  background-color: #2196F3;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.hint-button:hover { background-color: #1976D2; transform: scale(1.05); }
+.times-table { margin-top: 1.5rem; padding: 1rem; background: rgba(255,255,255,0.9); border-radius: 10px; max-width: 300px; margin-left: auto; margin-right: auto; }
+.times-table h3 { font-size: 1rem; margin-bottom: 0.5rem; color: #333; }
+.times-table ol { padding-right: 1.5rem; margin: 0; }
+.times-table li { padding: 2px 0; }
+
 /* עיצוב כפתור איפוס */
 .reset-button {
   padding: 10px 20px; /* ריפוד פנימי */
