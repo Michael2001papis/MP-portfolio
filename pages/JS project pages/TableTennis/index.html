@@ -21,11 +21,17 @@
         <p class="game-by">MP — Michael Papismedov</p>
         <canvas id="pong"></canvas>
         <div class="score">שחקן שמאל: <span id="leftScore">0</span> | שחקן ימין: <span id="rightScore">0</span></div>
-        <button class="button" id="startBtn">Start Game</button>
-        <button class="button" id="stopBtn">Stop Game</button>
+        <div class="speed-select">
+            <label>מהירות כדור:</label>
+            <label><input type="radio" name="ballSpeed" value="slow" checked> איטי</label>
+            <label><input type="radio" name="ballSpeed" value="normal"> רגיל</label>
+            <label><input type="radio" name="ballSpeed" value="fast"> מהיר</label>
+        </div>
+        <button class="button" id="startBtn">התחל משחק</button>
+        <button class="button" id="stopBtn">השהה</button>
     </div>
     <footer id="mp-signature" style="text-align:center;padding:1rem;background:#1e3a5f;color:white;font-size:0.9rem;">
-        <p>© 2025 MP — Michael Papismedov | MP-PORTFOLIO-ID: 2025-MP-001 · <a href="/legal.html" style="color:white;">Terms</a></p>
+        <p>© 2025 MP — Michael Papismedov | MP-PORTFOLIO-ID: 2025-MP-001 · <a href="/legal.html" style="color:#7dd3fc;">Terms</a> · <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" style="color:#7dd3fc;">GitHub</a></p>
     </footer>
     <script src="/scripts/project-nav-inject.js"></script>
     <script src="/scripts/ownership-console.js"></script>

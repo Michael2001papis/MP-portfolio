@@ -1,7 +1,20 @@
 /* ============================================
    JS Project Pages - ניווט אחיד
    Responsive: Mobile stack | Desktop row
+   Footer סטטי בתחתית
    ============================================ */
+
+/* Layout: פוטר תמיד בתחתית */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#mp-signature,
+footer#mp-signature {
+    margin-top: auto;
+    flex-shrink: 0;
+}
 
 .project-nav {
     display: flex;

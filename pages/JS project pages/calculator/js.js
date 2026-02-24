@@ -20,6 +20,10 @@ Equality.addEventListener("click", calculate);
 const Percent = document.querySelector("#percent");
 Percent.addEventListener("click", calculatePercent);
 
+// כפתור מחיקת ספרה בודדת
+const backspaceBtn = document.querySelector("#backspaceBtn");
+if (backspaceBtn) backspaceBtn.addEventListener("click", backspace);
+
 // פונקציה לחישוב תוצאה (ללא eval - חישוב בטוח)
 function safeCalculate(expr) {
     expr = expr.replace(/\s/g, '');
@@ -62,15 +66,43 @@ function safeCalculate(expr) {
     }
 }
 
+var calcHistory = [];
+
 function calculate() {
     const valueEl = document.querySelector(".value");
-    const result = safeCalculate(valueEl.textContent);
-    valueEl.textContent = (result !== null && !isNaN(result)) ? String(result) : "Error";
+    const expr = valueEl.textContent;
+    const result = safeCalculate(expr);
+    if (result !== null && !isNaN(result)) {
+        calcHistory.push(expr + " = " + result);
+        updateHistoryDisplay();
+        valueEl.textContent = String(result);
+    } else {
+        valueEl.textContent = "Error";
+    }
 }
 
 function clear() {
     const valueEl = document.querySelector(".value");
     valueEl.textContent = "";
+}
+
+function backspace() {
+    const valueEl = document.querySelector(".value");
+    valueEl.textContent = valueEl.textContent.slice(0, -1);
+}
+
+function updateHistoryDisplay() {
+    var hist = document.getElementById("calc-history");
+    if (!hist) return;
+    if (calcHistory.length === 0) {
+        hist.style.display = "none";
+        return;
+    }
+    hist.style.display = "block";
+    hist.innerHTML = "<div class='hist-header'><span>היסטוריה</span><button id='clearHist'>ניקוי</button></div><ul>" +
+        calcHistory.slice(-8).reverse().map(function(h) { return "<li>" + h + "</li>"; }).join("") + "</ul>";
+    var clearBtn = document.getElementById("clearHist");
+    if (clearBtn) clearBtn.onclick = function() { calcHistory = []; updateHistoryDisplay(); };
 }
 
 function btnClick() {
@@ -102,8 +134,8 @@ document.addEventListener("keydown", (event) => {
         // הוספת סימן חישוב
         valueEl.textContent += event.key;
     } else if (event.key === "Backspace") {
-        // ניקוי המסך
-        clear();
+        event.preventDefault();
+        backspace();
     } else if (event.key === "Enter") {
         // חישוב תוצאה
         calculate();

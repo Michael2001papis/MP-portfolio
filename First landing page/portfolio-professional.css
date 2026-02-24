@@ -394,25 +394,29 @@ img, video {
     text-decoration: underline;
 }
 
-/* ========== About (Optional - Short) ========== */
+/* ========== About ========== */
 .about-section {
-    padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 4vw, 2rem);
-    background: var(--bg-card);
+    padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 4vw, 2.5rem);
+    background: linear-gradient(180deg, var(--bg-card) 0%, rgba(248,249,250,0.95) 100%);
     margin: 2rem auto;
-    max-width: 600px;
+    max-width: 640px;
     text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
 }
 
 .about-section h2 {
-    font-size: clamp(1.1rem, 2vw, 1.25rem);
-    margin-bottom: 1rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+    margin-bottom: 1.25rem;
+    color: var(--primary);
 }
 
 .about-section p {
-    color: var(--text-light);
-    font-size: clamp(0.9rem, 1.5vw, 0.95rem);
-    max-width: 90%;
+    color: var(--text);
+    font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+    max-width: 95%;
     margin: 0 auto;
+    line-height: 1.75;
 }
 
 /* ========== Contact ========== */

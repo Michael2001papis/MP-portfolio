@@ -10,6 +10,7 @@ let leftPaddle = { x: 20, y: canvas.height / 2 - paddleHeight / 2, width: paddle
 let rightPaddle = { x: canvas.width - 30, y: canvas.height / 2 - paddleHeight / 2, width: paddleWidth, height: paddleHeight, color: '#e74c3c' };
 
 // הגדרת מאפיינים לכדור
+var ballSpeedMultiplier = 1;
 let ball = { x: canvas.width / 2, y: canvas.height / 2, radius: 10, speedX: 4, speedY: 4, color: '#ecf0f1' };
 
 // הגדרת משתנים עבור הציונים
@@ -38,8 +39,8 @@ function drawPaddle(paddle) {
 
 // עדכון מיקום הכדור
 function updateBall() {
-    ball.x += ball.speedX;
-    ball.y += ball.speedY;
+    ball.x += ball.speedX * ballSpeedMultiplier;
+    ball.y += ball.speedY * ballSpeedMultiplier;
 
     // שינוי כיוון כאשר הכדור פוגע בקירות
     if (ball.y + ball.radius > canvas.height || ball.y - ball.radius < 0) {
@@ -120,9 +121,20 @@ function gameLoop() {
     requestAnimationFrame(gameLoop);
 }
 
+// בחירת מהירות
+document.querySelectorAll('input[name="ballSpeed"]').forEach(function(r) {
+    r.addEventListener('change', function() {
+        ballSpeedMultiplier = this.value === 'slow' ? 0.6 : this.value === 'fast' ? 1.5 : 1;
+    });
+});
+var speedRadios = document.querySelector('input[name="ballSpeed"]:checked');
+if (speedRadios) ballSpeedMultiplier = speedRadios.value === 'slow' ? 0.6 : speedRadios.value === 'fast' ? 1.5 : 1;
+
 // התחלת המשחק
 document.getElementById('startBtn').addEventListener('click', () => {
     if (!gameStarted) {
+        var sel = document.querySelector('input[name="ballSpeed"]:checked');
+        if (sel) ballSpeedMultiplier = sel.value === 'slow' ? 0.6 : sel.value === 'fast' ? 1.5 : 1;
         gameStarted = true;
         resetBall();
         gameLoop();

@@ -21,13 +21,15 @@
         <p class="game-by">MP — Michael Papismedov</p>
         <canvas id="gameCanvas"></canvas>
         <div class="game-controls">
+            <button id="startBtn" class="snake-ctrl-btn">התחל משחק</button>
+            <button id="pauseBtn" class="snake-ctrl-btn" style="display:none;">השהה</button>
             <div class="controls-dpad" aria-label="ניווט הנחש">
                 <button type="button" class="dpad-btn dpad-up" data-dir="UP" aria-label="למעלה">▲</button>
                 <button type="button" class="dpad-btn dpad-left" data-dir="LEFT" aria-label="שמאלה">◀</button>
                 <button type="button" class="dpad-btn dpad-right" data-dir="RIGHT" aria-label="ימינה">▶</button>
                 <button type="button" class="dpad-btn dpad-down" data-dir="DOWN" aria-label="למטה">▼</button>
             </div>
-            <button id="restartBtn">חידוש משחק</button>
+            <button id="restartBtn" class="snake-ctrl-btn">חידוש משחק</button>
         </div>
     </div>
     <footer id="mp-signature" style="text-align:center;padding:1rem;background:#1e3a5f;color:white;font-size:0.9rem;">

@@ -2,6 +2,26 @@
 // All rights reserved. Unauthorized copying prohibited.
 document.addEventListener('DOMContentLoaded', function() {
 
+    // Smooth scroll for anchor links (cross-browser)
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        var href = anchor.getAttribute('href');
+        if (href === '#') return;
+        anchor.addEventListener('click', function(e) {
+            var target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                var hamb = document.querySelector('.portfolio-header .hamburger');
+                var n = document.querySelector('.portfolio-header nav');
+                if (hamb && n && n.classList.contains('open')) {
+                    hamb.classList.remove('open');
+                    n.classList.remove('open');
+                    hamb.setAttribute('aria-expanded', 'false');
+                }
+            }
+        });
+    });
+
     // Hamburger menu
     var hamburger = document.querySelector('.portfolio-header .hamburger');
     var nav = document.querySelector('.portfolio-header nav');

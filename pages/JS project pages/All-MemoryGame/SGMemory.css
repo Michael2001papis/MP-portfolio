@@ -239,7 +239,7 @@
   cursor: pointer; /* סמן מצביע */
   transition: background-color 0.3s, transform 0.3s; /* אפקטים חלקים */
   margin-top: 15px; /* רווח מעל הכפתור */
-  margin-left: 20px; /* רווח בין כפתור האיפוס לכפתור חזרה */
+  margin-left: 0;
 }
 
 /* שינוי צבע רקע כשהכפתור מקבל פוקוס */

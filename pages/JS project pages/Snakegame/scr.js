@@ -81,23 +81,46 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 const restartBtn = document.getElementById("restartBtn");
+const startBtn = document.getElementById("startBtn");
+const pauseBtn = document.getElementById("pauseBtn");
 
 canvas.width = 400;
 canvas.height = 400;
 
-let snake, direction, fruit, gameOver, gameInterval;
+let snake, direction, fruit, gameOver, gameInterval, isPaused = false, gameStarted = false;
 
 function initializeGame() {
-    snake = [{ x: 200, y: 200 }];  // שינויים למיקום ההתחלתי כדי להתאים ל-400x400
+    snake = [{ x: 200, y: 200 }];
     direction = "RIGHT";
     fruit = generateFruit();
     gameOver = false;
-    clearInterval(gameInterval); // עצור את הלולאה הישנה אם קיימת
-    gameInterval = setInterval(gameLoop, 85); // הגדר מהירות (100ms בין כל שלב)
+    isPaused = false;
+    gameStarted = true;
+    clearInterval(gameInterval);
+    gameInterval = setInterval(gameLoop, 85);
+    if (startBtn) startBtn.style.display = "none";
+    if (pauseBtn) { pauseBtn.style.display = "inline-block"; pauseBtn.textContent = "השהה"; }
 }
 
-document.addEventListener("keydown", changeDirection);
-restartBtn.addEventListener("click", initializeGame);
+function pauseGame() {
+    if (!gameStarted || gameOver) return;
+    isPaused = !isPaused;
+    if (isPaused) {
+        clearInterval(gameInterval);
+        if (pauseBtn) pauseBtn.textContent = "המשך";
+    } else {
+        gameInterval = setInterval(gameLoop, 85);
+        if (pauseBtn) pauseBtn.textContent = "השהה";
+    }
+}
+
+document.addEventListener("keydown", function(e) {
+    if (e.keyCode === 32) { e.preventDefault(); pauseGame(); return; }
+    changeDirection(e);
+});
+restartBtn.addEventListener("click", function() { initializeGame(); });
+if (startBtn) startBtn.addEventListener("click", initializeGame);
+if (pauseBtn) pauseBtn.addEventListener("click", pauseGame);
 
 function setDirection(newDir) {
     if (newDir === "LEFT" && direction !== "RIGHT") direction = "LEFT";
@@ -129,7 +152,18 @@ function generateFruit() {
     };
 }
 
+function drawStartScreen() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.font = "bold 22px Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillStyle = "white";
+    ctx.fillText("לחץ 'התחל משחק' כדי להתחיל", canvas.width / 2, canvas.height / 2);
+}
+
 function gameLoop() {
+    if (!gameStarted) { drawStartScreen(); return; }
+    if (isPaused) return;
     if (gameOver) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.font = "bold 28px Arial";
@@ -174,7 +208,6 @@ function gameLoop() {
     }
 }
 
-initializeGame();
-
+drawStartScreen();
 
 

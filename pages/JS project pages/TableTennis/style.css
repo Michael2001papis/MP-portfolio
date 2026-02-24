@@ -56,6 +56,17 @@ html, body {
     color: white; 
     margin: 10px; 
   }
+
+.speed-select {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem 0;
+    color: white;
+    flex-wrap: wrap;
+}
+.speed-select label { cursor: pointer; }
   
   /* כפתור */
   .button { 

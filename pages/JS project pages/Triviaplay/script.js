@@ -31,18 +31,28 @@
         let score = 0;
         let currentQuestionIndex = 0;
 
+        function shuffleArray(arr) {
+            const a = [...arr];
+            for (let i = a.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [a[i], a[j]] = [a[j], a[i]];
+            }
+            return a;
+        }
+
         function displayQuestion() {
             const questionData = questions[currentQuestionIndex];
             questionElement.innerText = questionData.question;
+            const shuffled = shuffleArray(questionData.answers.map((a, i) => ({ text: a, origIndex: i })));
+            const newCorrectIndex = shuffled.findIndex(x => x.origIndex === questionData.correctAnswer);
             answerButtons.forEach((button, index) => {
-                button.innerText = questionData.answers[index];
-                button.onclick = () => checkAnswer(index);
+                button.innerText = shuffled[index].text;
+                button.onclick = () => checkAnswer(newCorrectIndex, index);
             });
         }
 
-        function checkAnswer(selectedIndex) {
-            const questionData = questions[currentQuestionIndex];
-            if (selectedIndex === questionData.correctAnswer) {
+        function checkAnswer(correctIndex, selectedIndex) {
+            if (selectedIndex === correctIndex) {
                 score += 7.5;
                 alert("תשובה נכונה!");
             } else {
