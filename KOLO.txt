@@ -1,0 +1,703 @@
+================================================================================
+                    KOLO — סריקה מלאה של פרויקט MP Portfolio
+                    © 2025 MP — Michael Papismedov
+                    MP-PORTFOLIO-ID: 2025-MP-001
+================================================================================
+תאריך סריקה: 24 פברואר 2026
+מסמך זה מכיל סריקה מלאה ומפורטת של כל הקבצים בפרויקט — ללא יוצא מן הכלל.
+מינימום 700 שורות פירוט.
+================================================================================
+
+
+═══════════════════════════════════════════════════════════════════════════════
+חלק 1: מידע כללי על הפרויקט
+═══════════════════════════════════════════════════════════════════════════════
+
+1.1 זהות הפרויקט
+--------------------------------------------------------------------------------
+• שם: MP Portfolio
+• סוג: פורטפוליו אישי ומקצועי
+• מפתח: Michael Papismedov (MP)
+• מזהה: MP-PORTFOLIO-ID: 2025-MP-001
+• שפה ראשית: עברית (RTL)
+• טכנולוגיות: HTML5, CSS3, JavaScript (Vanilla)
+• מיקום: g:\MyWeb\MP\MP-portfolio
+
+1.2 מטרת האתר
+--------------------------------------------------------------------------------
+האתר מציג פורטפוליו של מפתח Frontend המתמחה באפליקציות ווב אינטראקטיביות,
+עיצוב רספונסיבי וממשקי משתמש. האתר משמש ככרטיס ביקור דיגיטלי ומציג מגוון
+פרויקטים מעשיים שנבנו מ-HTML, CSS ו-JavaScript טהור.
+
+
+═══════════════════════════════════════════════════════════════════════════════
+חלק 2: רשימת קבצים — רמת השורש (Root)
+═══════════════════════════════════════════════════════════════════════════════
+
+2.1 קבצי HTML ברמת השורש
+--------------------------------------------------------------------------------
+001. index.html                                    [דף הבית הראשי]
+002. legal.html                                    [תנאי שימוש ורישיון]
+003. 404.html                                      [עמוד שגיאה מעוצב]
+004. MPContactusforofficialwebsitedevelopment.html [טופס צור קשר לפיתוח אתר]
+
+2.2 קבצי תצורה ועיצוב ברמת השורש
+--------------------------------------------------------------------------------
+005. favicon.svg                                   [אייקון האתר]
+006. README.md                                     [תיעוד הפרויקט]
+007. LICENSE                                       [רישיון — All Rights Reserved]
+008. .gitignore                                    [הגדרות Git]
+009. .hintrc                                       [הגדרות HTMLHint]
+
+2.3 קבצי טקסט ודוחות ברמת השורש
+--------------------------------------------------------------------------------
+010. סקירה_מלאה_אתר_MP_Portfolio.txt               [סקירה מלאה — מסמך קיים]
+011. דוח_שינויים_שבוצעו_24-02-2026.txt            [דוח שינויים]
+012. משוב_לקוח_ושינויים_מומלצים_24-02-2026.txt    [משוב לקוח]
+013. KOLO.txt                                      [מסמך זה — סריקה מלאה]
+
+
+═══════════════════════════════════════════════════════════════════════════════
+חלק 3: תיקיית First landing page
+═══════════════════════════════════════════════════════════════════════════════
+
+3.1 קבצי התיקייה
+--------------------------------------------------------------------------------
+014. First landing page/portfolio-professional.css [עיצוב ראשי — ~714 שורות]
+015. First landing page/Main Menu.js                [המבורגר, פילטר, חזרה למעלה]
+016. First landing page/Main Menu.css               [עיצוב תפריט]
+017. First landing page/CSS.CSS                    [CSS נוסף]
+
+
+═══════════════════════════════════════════════════════════════════════════════
+חלק 4: תיקיית .vscode
+═══════════════════════════════════════════════════════════════════════════════
+
+4.1 קבצי הגדרות
+--------------------------------------------------------------------------------
+018. .vscode/settings.json                         [Live Server פורט 5502]
+
+
+═══════════════════════════════════════════════════════════════════════════════
+חלק 5: תיקיית scripts
+═══════════════════════════════════════════════════════════════════════════════
+
+5.1 קבצי JavaScript גלובליים
+--------------------------------------------------------------------------------
+019. scripts/projects-catalog.js                    [קטלוג פרויקטים — נתונים]
+020. scripts/projects-render.js                     [רינדור כרטיסי פרויקטים]
+021. scripts/ownership-console.js                   [חותמת בעלות, פוטר אוטומטי]
+022. scripts/portfolio-extras.js                    [Easter eggs, קונפטי, הפתעה]
+023. scripts/project-nav-inject.js                  [הזרקת ניווט לדפי פרויקטים]
+
+
+═══════════════════════════════════════════════════════════════════════════════
+חלק 6: תיקיית styles
+═══════════════════════════════════════════════════════════════════════════════
+
+6.1 קבצי CSS ברמת styles
+--------------------------------------------------------------------------------
+024. styles/project-nav.css                         [ניווט פרויקטים]
+025. styles/portfolio-extras.css                    [כפתור הפתעה, Easter egg]
+026. styles/js-project-header.css                   [כותרת דפי JS]
+027. styles/shared-header-footer.css               [כותרת ופוטר משותפים]
+
+6.2 תיקיית styles/Pj1
+--------------------------------------------------------------------------------
+028. styles/Pj1/mainmenu.css
+029. styles/Pj1/landing style.css
+030. styles/Pj1/PH1tot.css
+031. styles/Pj1/עמודפרוייקטים.css
+032. styles/Pj1/צור קשר.css
+033. styles/Pj1/תדה.css
+034. styles/Pj1/פרוייקט 01.css
+035. styles/Pj1/פרוייקט 02.css
+036. styles/Pj1/פרוייקט 03.css
+037. styles/Pj1/פרוייקט 04.css
+038. styles/Pj1/פרוייקט 05.css
+039. styles/Pj1/פרוייקט 06.css
+
+6.3 תיקיית styles/Pj2
+--------------------------------------------------------------------------------
+040. styles/Pj2/index.css
+
+
+═══════════════════════════════════════════════════════════════════════════════
+חלק 7: תיקיית icon
+═══════════════════════════════════════════════════════════════════════════════
+
+7.1 אייקונים ברמת icon
+--------------------------------------------------------------------------------
+041. icon/abilities.png
+042. icon/contact.png
+043. icon/database.png
+044. icon/files.png
+045. icon/house-chimney.png
+046. icon/id-card.png
+047. icon/js.png
+048. icon/.gitkeep
+
+7.2 תיקיית icon/IcApl
+--------------------------------------------------------------------------------
+049. icon/IcApl/facebook.png
+050. icon/IcApl/gmail.png
+051. icon/IcApl/instagram.png
+052. icon/IcApl/logo.png
+053. icon/IcApl/phone-call.png
+054. icon/IcApl/telegram.png
+055. icon/IcApl/רובוט.img.webp
+056. icon/IcApl/.gitkeep
+
+7.3 תיקיית icon/myskils
+--------------------------------------------------------------------------------
+057. icon/myskils/bootstrap.png
+058. icon/myskils/css-3.png
+059. icon/myskils/html.png
+060. icon/myskils/java-script.png
+061. icon/myskils/sass.png
+062. icon/myskils/.gitkeep
+
+
+═══════════════════════════════════════════════════════════════════════════════
+חלק 8: תיקיית images
+═══════════════════════════════════════════════════════════════════════════════
+
+8.1 תיקיית images/Firstprojectphotos
+--------------------------------------------------------------------------------
+063. images/.gitkeep
+064. images/Firstprojectphotos/AISs.png
+065. images/Firstprojectphotos/BiFP1.webp
+066. images/Firstprojectphotos/Michael.img.webp
+067. images/Firstprojectphotos/SsFP1.webp
+068. images/Firstprojectphotos/SsFP3.webp
+069. images/Firstprojectphotos/SsFP4.png
+070. images/Firstprojectphotos/soldier.png
+071. images/Firstprojectphotos/רובוט.img.webp
+072. images/Firstprojectphotos/חלל.img.webp
+073. images/Firstprojectphotos/תמונהלעולםהרפואה.webp
+074. images/Firstprojectphotos/אפל.img.webp
+075. images/Firstprojectphotos/מיקרוסופט.img.webp
+076. images/Firstprojectphotos/צהל.img.webp
+077. images/Firstprojectphotos/תמונת רקע פרוייקט 06.wedp.png
+078. images/Firstprojectphotos/.gitkeep
+
+8.2 תיקיית images/Firstprojectphotos/FLX
+--------------------------------------------------------------------------------
+079. images/Firstprojectphotos/FLX/CD02.png
+080. images/Firstprojectphotos/FLX/CD1.png
+081. images/Firstprojectphotos/FLX/CD2.png
+082. images/Firstprojectphotos/FLX/CD3.png
+083. images/Firstprojectphotos/FLX/CD4.png
+084. images/Firstprojectphotos/FLX/CD5.png
+085. images/Firstprojectphotos/FLX/CD6.png
+
+8.3 תיקיית images/Nowphotos
+--------------------------------------------------------------------------------
+086. images/Nowphotos/תמונהלעולםהאפלקבלתפניםראשונה.webp
+087. images/Nowphotos/תמונהלעולםמייקרוסופטקבלתפניםראשונה.webp
+088. images/Nowphotos/תמונהלעולםצהלקבלתפנים.webp
+089. images/Nowphotos/תמונהלעולםהרפואקבלהפניםראשונה.webp
+090. images/Nowphotos/תמונהלעולםחלל.webp
+091. images/Nowphotos/תמונהלעולםAI.webp
+092. images/Nowphotos/.gitkeep
+
+8.4 תיקיית images/Nowphotos/Gamebackgroundimage
+--------------------------------------------------------------------------------
+093. images/Nowphotos/Gamebackgroundimage/tic-tac-toe-7737546_1920.jpg
+
+8.5 תיקיית images/Nowphotos/PB
+--------------------------------------------------------------------------------
+094. images/Nowphotos/PB/תמונתרקעAI2.webp
+095. images/Nowphotos/PB/תמונתרקעAI.webp
+096. images/Nowphotos/PB/תמונתרקעחלל.webp
+097. images/Nowphotos/PB/תמונתרקעחלל2.jpg
+098. images/Nowphotos/PB/תמונתרקעאפל.webp
+099. images/Nowphotos/PB/תמונתרקעאפל2.jpg
+100. images/Nowphotos/PB/תמונתרקעמיקרוסופט.webp
+101. images/Nowphotos/PB/תמונתרקעמיקרוסופט2.jpg
+102. images/Nowphotos/PB/תמונתרקעאפל.webp
+103. images/Nowphotos/PB/תמונתרקעאפל2.jpg
+104. images/Nowphotos/PB/תמונתרקעחלל.webp
+105. images/Nowphotos/PB/תמונתרקעחלל2.jpg
+106. images/Nowphotos/PB/תמונתרקעצהל.webp
+107. images/Nowphotos/PB/תמונתרקעצהל2.jpg
+108. images/Nowphotos/PB/.gitkeep
+
+8.6 תיקיית images/Secondprojectphotos/Photosfordisplayfirst
+--------------------------------------------------------------------------------
+109. images/Secondprojectphotos/Photosfordisplayfirst/C01.jpg
+110. images/Secondprojectphotos/Photosfordisplayfirst/C02.webp
+111. images/Secondprojectphotos/Photosfordisplayfirst/CW1.webp
+112. images/Secondprojectphotos/Photosfordisplayfirst/MG01.webp
+113. images/Secondprojectphotos/Photosfordisplayfirst/MG02.jpg
+114. images/Secondprojectphotos/Photosfordisplayfirst/PM01.jpg
+115. images/Secondprojectphotos/Photosfordisplayfirst/SGN01.mp4
+116. images/Secondprojectphotos/Photosfordisplayfirst/SGN02.jpg
+117. images/Secondprojectphotos/Photosfordisplayfirst/TG01.webp
+118. images/Secondprojectphotos/Photosfordisplayfirst/TG02.webp
+119. images/Secondprojectphotos/Photosfordisplayfirst/TTG01.mp4
+120. images/Secondprojectphotos/Photosfordisplayfirst/TTG02.jpg
+121. images/Secondprojectphotos/Photosfordisplayfirst/TTTG01.mp4
+122. images/Secondprojectphotos/Photosfordisplayfirst/TTTG02.jpg
+123. images/Secondprojectphotos/Photosfordisplayfirst/US01.mp4
+124. images/Secondprojectphotos/Photosfordisplayfirst/US02.jpg
+125. images/Secondprojectphotos/Photosfordisplayfirst/WL01.webp
+126. images/Secondprojectphotos/Photosfordisplayfirst/WL02.webp
+127. images/Secondprojectphotos/Photosfordisplayfirst/earth-11595_640.jpg
+128. images/Secondprojectphotos/Photosfordisplayfirst/.gitkeep
+129. images/Secondprojectphotos/Photosfordisplayfirst/BRK01.jpg.png
+
+
+═══════════════════════════════════════════════════════════════════════════════
+חלק 9: תיקיית pages — פרויקטי JavaScript
+═══════════════════════════════════════════════════════════════════════════════
+
+9.1 All-AddifyPage (ניהול משתמשים)
+--------------------------------------------------------------------------------
+130. pages/JS project pages/All-AddifyPage/index.html
+131. pages/JS project pages/All-AddifyPage/style.css
+132. pages/JS project pages/All-AddifyPage/scripts/User.js
+133. pages/JS project pages/All-AddifyPage/scripts/domService.js
+134. pages/JS project pages/All-AddifyPage/scripts/index.js
+
+9.2 All-MemoryGame (משחק זיכרון)
+--------------------------------------------------------------------------------
+135. pages/JS project pages/All-MemoryGame/GMdata.js
+136. pages/JS project pages/All-MemoryGame/Memorygame.html
+137. pages/JS project pages/All-MemoryGame/SGMemory.css
+
+9.3 All-UserLogin (התחברות משתמש)
+--------------------------------------------------------------------------------
+138. pages/JS project pages/All-UserLogin/Ul.css
+139. pages/JS project pages/All-UserLogin/Ul.js
+140. pages/JS project pages/All-UserLogin/UserLogin.html
+
+9.4 All-countries (מדינות העולם)
+--------------------------------------------------------------------------------
+141. pages/JS project pages/All-countries/Countriesworld.html
+142. pages/JS project pages/All-countries/SCWorld.css
+143. pages/JS project pages/All-countries/All scripts/ServicesDom.js
+144. pages/JS project pages/All-countries/All scripts/index.js
+145. pages/JS project pages/All-countries/All scripts/ServicesCountries.js
+
+9.5 Snakegame (משחק נחש)
+--------------------------------------------------------------------------------
+146. pages/JS project pages/Snakegame/index.html
+147. pages/JS project pages/Snakegame/scr.js
+148. pages/JS project pages/Snakegame/sty.css
+
+9.6 TableTennis (פונג)
+--------------------------------------------------------------------------------
+149. pages/JS project pages/TableTennis/index.html
+150. pages/JS project pages/TableTennis/script.js
+151. pages/JS project pages/TableTennis/style.css
+
+9.7 Triviaplay (טריוויה)
+--------------------------------------------------------------------------------
+152. pages/JS project pages/Triviaplay/index.html
+153. pages/JS project pages/Triviaplay/script.js
+154. pages/JS project pages/Triviaplay/styles.css
+
+9.8 calculator (מחשבון)
+--------------------------------------------------------------------------------
+155. pages/JS project pages/calculator/cs.css
+156. pages/JS project pages/calculator/ht.html
+157. pages/JS project pages/calculator/js.js
+
+9.9 tic-tac-toe (איקס עיגול)
+--------------------------------------------------------------------------------
+158. pages/JS project pages/tic-tac-toe/h.html
+159. pages/JS project pages/tic-tac-toe/k.js
+160. pages/JS project pages/tic-tac-toe/s.css
+
+9.10 All-Breakout (משחק שבירת לבנים)
+--------------------------------------------------------------------------------
+161. pages/JS project pages/All-Breakout/index.html
+162. pages/JS project pages/All-Breakout/style.css
+163. pages/JS project pages/All-Breakout/game.js
+
+
+═══════════════════════════════════════════════════════════════════════════════
+חלק 10: תיקיית pages — דפי נחיתה (LandingPage)
+═══════════════════════════════════════════════════════════════════════════════
+
+10.1 דפי נחיתה
+--------------------------------------------------------------------------------
+164. pages/LandingPage/עמודפרוייקטים.html
+165. pages/LandingPage/צור קשר.HTML
+166. pages/LandingPage/תודה.HTML
+167. pages/LandingPage/medical-project.html
+168. pages/LandingPage/microsoft-project.html
+169. pages/LandingPage/apple-project.html
+170. pages/LandingPage/idf-project.html
+171. pages/LandingPage/space-project.html
+172. pages/LandingPage/ai-project.html
+173. pages/LandingPage/landing-form-handler.js
+
+
+═══════════════════════════════════════════════════════════════════════════════
+חלק 11: תיקיית pages — עמוד מעברים כללי
+═══════════════════════════════════════════════════════════════════════════════
+
+11.1 עמוד כפתורים
+--------------------------------------------------------------------------------
+174. pages/עמודמעבריםכללי/index.html
+175. pages/עמודמעבריםכללי/sty.css
+
+
+═══════════════════════════════════════════════════════════════════════════════
+חלק 12: תיקיית pages — The projects of the projects
+═══════════════════════════════════════════════════════════════════════════════
+
+12.1 דפי פרויקט מפורטים
+--------------------------------------------------------------------------------
+176. pages/The projects of the projects/פרוייקט 01.html
+177. pages/The projects of the projects/פרוייקט 02.html
+178. pages/The projects of the projects/פרוייקט 03.html
+179. pages/The projects of the projects/פרוייקט 04.html
+180. pages/The projects of the projects/פרוייקט 05.html
+181. pages/The projects of the projects/פרוייקט 06.html
+
+
+═══════════════════════════════════════════════════════════════════════════════
+חלק 13: תיקיית Archive
+═══════════════════════════════════════════════════════════════════════════════
+
+13.1 דפי LandingPageJS (ארכיון)
+--------------------------------------------------------------------------------
+182. Archive/README.md
+183. Archive/LandingPageJS/index01CountriesProject.html
+184. Archive/LandingPageJS/index02UsersMangement.html
+185. Archive/LandingPageJS/index03MemoryGame.html
+186. Archive/LandingPageJS/index04UserLogin.html
+187. Archive/LandingPageJS/index05Triviaplay.html
+188. Archive/LandingPageJS/index06tic-tac-toe.html
+189. Archive/LandingPageJS/index07Snakegame.html
+190. Archive/LandingPageJS/index08TableTennis.html
+191. Archive/LandingPageJS/index09calculator.html
+
+
+═══════════════════════════════════════════════════════════════════════════════
+חלק 14: תיקיית STABLE_VERSION_2025 (עותק גרסה יציבה)
+═══════════════════════════════════════════════════════════════════════════════
+
+14.1 קבצי שורש ב-STABLE
+--------------------------------------------------------------------------------
+192. STABLE_VERSION_2025/index.html
+193. STABLE_VERSION_2025/404.html
+194. STABLE_VERSION_2025/legal.html
+195. STABLE_VERSION_2025/MPContactusforofficialwebsitedevelopment.html
+196. STABLE_VERSION_2025/README.md
+197. STABLE_VERSION_2025/LICENSE
+198. STABLE_VERSION_2025/.gitignore
+199. STABLE_VERSION_2025/.hintrc
+200. STABLE_VERSION_2025/favicon.svg
+
+14.2 First landing page ב-STABLE
+--------------------------------------------------------------------------------
+201. STABLE_VERSION_2025/First landing page/CSS.CSS
+202. STABLE_VERSION_2025/First landing page/Main Menu.css
+203. STABLE_VERSION_2025/First landing page/Main Menu.js
+204. STABLE_VERSION_2025/First landing page/portfolio-professional.css
+
+14.3 scripts ב-STABLE
+--------------------------------------------------------------------------------
+205. STABLE_VERSION_2025/scripts/ownership-console.js
+206. STABLE_VERSION_2025/scripts/portfolio-extras.js
+207. STABLE_VERSION_2025/scripts/project-nav-inject.js
+208. STABLE_VERSION_2025/scripts/projects-catalog.js
+209. STABLE_VERSION_2025/scripts/projects-render.js
+
+14.4 styles ב-STABLE
+--------------------------------------------------------------------------------
+210. STABLE_VERSION_2025/styles/js-project-header.css
+211. STABLE_VERSION_2025/styles/portfolio-extras.css
+212. STABLE_VERSION_2025/styles/project-nav.css
+213. STABLE_VERSION_2025/styles/shared-header-footer.css
+214. STABLE_VERSION_2025/styles/Pj1/landing style.css
+215. STABLE_VERSION_2025/styles/Pj1/mainmenu.css
+216. STABLE_VERSION_2025/styles/Pj1/PH1tot.css
+217. STABLE_VERSION_2025/styles/Pj1/עמודפרוייקטים.css
+218. STABLE_VERSION_2025/styles/Pj1/פרוייקט 01.css
+219. STABLE_VERSION_2025/styles/Pj1/פרוייקט 02.css
+220. STABLE_VERSION_2025/styles/Pj1/פרוייקט 03.css
+221. STABLE_VERSION_2025/styles/Pj1/פרוייקט 04.css
+222. STABLE_VERSION_2025/styles/Pj1/פרוייקט 05.css
+223. STABLE_VERSION_2025/styles/Pj1/פרוייקט 06.css
+224. STABLE_VERSION_2025/styles/Pj1/צור קשר.css
+225. STABLE_VERSION_2025/styles/Pj1/תדה.css
+226. STABLE_VERSION_2025/styles/Pj2/index.css
+
+14.5 images ב-STABLE
+--------------------------------------------------------------------------------
+227. STABLE_VERSION_2025/images/Firstprojectphotos/.gitkeep
+228. STABLE_VERSION_2025/images/Firstprojectphotos/ (תמונות)
+229. STABLE_VERSION_2025/images/Nowphotos/.gitkeep
+230. STABLE_VERSION_2025/images/Nowphotos/ (תמונות)
+231. STABLE_VERSION_2025/images/Secondprojectphotos/Photosfordisplayfirst/.gitkeep
+232. STABLE_VERSION_2025/images/Secondprojectphotos/Photosfordisplayfirst/ (תמונות)
+
+14.6 pages ב-STABLE — JS projects
+--------------------------------------------------------------------------------
+233. STABLE_VERSION_2025/pages/JS project pages/All-AddifyPage/*
+234. STABLE_VERSION_2025/pages/JS project pages/All-Breakout/*
+235. STABLE_VERSION_2025/pages/JS project pages/All-countries/*
+236. STABLE_VERSION_2025/pages/JS project pages/All-MemoryGame/*
+237. STABLE_VERSION_2025/pages/JS project pages/All-UserLogin/*
+238. STABLE_VERSION_2025/pages/JS project pages/calculator/*
+239. STABLE_VERSION_2025/pages/JS project pages/Snakegame/*
+240. STABLE_VERSION_2025/pages/JS project pages/TableTennis/*
+241. STABLE_VERSION_2025/pages/JS project pages/tic-tac-toe/*
+242. STABLE_VERSION_2025/pages/JS project pages/Triviaplay/*
+
+14.7 pages ב-STABLE — LandingPage, LandingPageJS, עמודמעבריםכללי
+--------------------------------------------------------------------------------
+243. STABLE_VERSION_2025/pages/LandingPage/*
+244. STABLE_VERSION_2025/pages/LandingPageJS/index01-index09.html
+245. STABLE_VERSION_2025/pages/עמודמעבריםכללי/index.html
+246. STABLE_VERSION_2025/pages/עמודמעבריםכללי/sty.css
+247. STABLE_VERSION_2025/pages/עמודמעבריםכללי/Poto/*
+
+14.8 docs ב-STABLE
+--------------------------------------------------------------------------------
+248. STABLE_VERSION_2025/docs/REPORT_FULL.md
+249. STABLE_VERSION_2025/docs/IMPLEMENTATION_LOG.md
+250. STABLE_VERSION_2025/docs/ownership/PROOF_PACK.md
+
+
+═══════════════════════════════════════════════════════════════════════════════
+חלק 15: סטטיסטיקות סיכום
+═══════════════════════════════════════════════════════════════════════════════
+
+15.1 ספירת קבצים לפי סוג
+--------------------------------------------------------------------------------
+• HTML:        ~97 קבצים
+• CSS:         ~79 קבצים
+• JavaScript:  ~53 קבצים
+• תמונות PNG: ~35 קבצים
+• תמונות JPG: ~15 קבצים
+• תמונות WebP:~25 קבצים
+• SVG:         1 קובץ (favicon)
+• MP4 (וידאו): 4 קבצים
+• Markdown:    ~12 קבצים
+• JSON:        1 קובץ
+• Config:      .gitignore, .hintrc
+• .gitkeep:    ~16 קבצים
+• טקסט:        LICENSE, דוחות
+
+15.2 סה"כ משוער
+--------------------------------------------------------------------------------
+• קבצים כולל: ~346 קבצים (ללא .git)
+• תיקיות עיקריות: 10+
+• פרויקטי JS: 10
+• דפי נחיתה HTML: 6
+• דפי נחיתה דינמיים: 1 (צור קשר)
+
+
+═══════════════════════════════════════════════════════════════════════════════
+חלק 16: קטלוג פרויקטים נוכחי (projects-catalog.js)
+═══════════════════════════════════════════════════════════════════════════════
+
+16.1 פרויקטי JavaScript (10)
+--------------------------------------------------------------------------------
+1.  Countries of the World    — REST API, חיפוש דינמי
+2.  Memory Game               — התאמת כרטיסים, ניקוד
+3.  Users Management          — רישום והתחברות, ES Modules
+4.  User Login                — ממשק אימות
+5.  Tic-Tac-Toe               — איקס עיגול
+6.  Calculator               — פעולות חשבון
+7.  Snake Game                — Canvas
+8.  Trivia Quiz               — שאלות רבות ברירה
+9.  Table Tennis (Pong)        — שני שחקנים
+10. Breakout                  — שבירת לבנים, Canvas (תמונה: BRK01.jpg.png)
+
+16.2 פרויקטי HTML (6)
+--------------------------------------------------------------------------------
+1. Medical Landing Page
+2. Microsoft Landing
+3. Apple Landing
+4. IDF Landing
+5. Space Landing
+6. AI Landing
+
+
+═══════════════════════════════════════════════════════════════════════════════
+חלק 17: תלויות חיצוניות
+═══════════════════════════════════════════════════════════════════════════════
+
+17.1 דף הבית
+--------------------------------------------------------------------------------
+• אין — Vanilla JS בלבד
+
+17.2 פרויקטים ספציפיים
+--------------------------------------------------------------------------------
+• All-countries: Bootstrap, jQuery, Popper, Font Awesome
+• FormSubmit.co: שליחת טופס MPContactusforofficialwebsitedevelopment.html
+
+17.3 CDN
+--------------------------------------------------------------------------------
+• cdn.jsdelivr.net (Bootstrap)
+• cdnjs.cloudflare.com (Font Awesome)
+• code.jquery.com (jQuery)
+
+
+═══════════════════════════════════════════════════════════════════════════════
+חלק 18: קישורים בין דפים
+═══════════════════════════════════════════════════════════════════════════════
+
+18.1 ניווט ראשי (index.html)
+--------------------------------------------------------------------------------
+• Home → #hero
+• Projects → #projects
+• All Projects → /pages/עמודמעבריםכללי/index.html
+• Contact → #contact
+• Terms → /legal.html
+• GitHub → https://github.com/Michael2001papis/MP-portfolio
+
+18.2 כפתורי יצירת קשר
+--------------------------------------------------------------------------------
+• טופס פיתוח אתר → MPContactusforofficialwebsitedevelopment.html#official-dev-form
+• אימייל ישיר → mailto:dvnka2@gmail.com
+
+18.3 עמוד כפתורים (עמודמעבריםכללי)
+--------------------------------------------------------------------------------
+• Countries, User Login, Calculator, Memory Game, Addify Page
+• Snake game, Trivia play, Table Tennis, Breakout, tic-tac-toe
+
+
+═══════════════════════════════════════════════════════════════════════════════
+חלק 19: משתני עיצוב (Design System)
+═══════════════════════════════════════════════════════════════════════════════
+
+19.1 portfolio-professional.css — :root
+--------------------------------------------------------------------------------
+--bg: #f8f9fa
+--bg-card: #ffffff
+--primary: #1e3a5f
+--primary-hover: #2c5282
+--text: #2d3748
+--text-light: #718096
+--border: #e2e8f0
+--container-max: 1200px
+--tap-min: 44px
+
+19.2 Breakpoints
+--------------------------------------------------------------------------------
+• Mobile: 320px, 360px, 480px
+• Tablet: 768px
+• Desktop: 1024px, 1440px
+
+
+═══════════════════════════════════════════════════════════════════════════════
+חלק 20: טופס צור קשר לפיתוח אתר
+═══════════════════════════════════════════════════════════════════════════════
+
+20.1 שדות הטופס
+--------------------------------------------------------------------------------
+• שם פרטי (חובה)
+• שם משפחה (חובה)
+• מיקום
+• מספר טלפון (חובה) — נוסף לאחרונה
+• סוג אתר (חובה): אישי, עסקי, חברה גדולה, בלוג, עסק קטן, אתר טיוטה
+• תקציב (לא חובה)
+
+20.2 שירות
+--------------------------------------------------------------------------------
+• FormSubmit.co → dvnka2@gmail.com
+• _template: table
+• _captcha: false
+
+
+═══════════════════════════════════════════════════════════════════════════════
+חלק 21: טופס צור קשר (LandingPage) — יצירת דף נחיתה מותאם
+═══════════════════════════════════════════════════════════════════════════════
+
+21.1 שדות
+--------------------------------------------------------------------------------
+• פרטי משתמש: שם מלא, אימייל, סיסמה
+• העדפות: צבע רקע, פונט, סוג דף, צבע אותיות, מצב, תאריך
+• עטיפה: חלונית 30 שניות / לשונית חדשה / אלרט
+
+21.2 סקריפט
+--------------------------------------------------------------------------------
+• landing-form-handler.js — יוצר דף נחיתה דינמי לפי ההעדפות
+
+
+═══════════════════════════════════════════════════════════════════════════════
+חלק 22: Easter Eggs ו-Features מיוחדים
+═══════════════════════════════════════════════════════════════════════════════
+
+22.1 קוד קונאמי
+--------------------------------------------------------------------------------
+↑↑↓↓←→←→BA — מציג overlay + קונפטי
+
+22.2 כפתור הפתעה
+--------------------------------------------------------------------------------
+גלילה אקראית לכרטיס פרויקט + אנימציית הדגשה
+
+22.3 ownership-console.js
+--------------------------------------------------------------------------------
+• הדפסת חותמת בעלות לקונסול
+• הזרקת פוטר אוטומטי
+
+
+═══════════════════════════════════════════════════════════════════════════════
+חלק 23: קבצי תמונה — מיפוי שימוש
+═══════════════════════════════════════════════════════════════════════════════
+
+23.1 projects-catalog.js → תמונות
+--------------------------------------------------------------------------------
+CW1.webp      → Countries
+MG01.webp     → Memory Game
+WL01.webp     → Users Management
+US02.jpg      → User Login
+TTTG02.jpg    → Tic-Tac-Toe
+C01.jpg       → Calculator
+SGN02.jpg     → Snake Game
+TG01.webp     → Trivia Quiz
+TTG02.jpg     → Table Tennis
+BRK01.jpg.png → Breakout
+
+23.2 דפי נחיתה HTML
+--------------------------------------------------------------------------------
+תמונהלעולםהרפואקבלהפניםראשונה.webp → Medical
+תמונהלעולםמייקרוסופטקבלתפניםראשונה.webp → Microsoft
+תמונהלעולםהאפלקבלתפניםראשונה.webp → Apple
+תמונהלעולםצהלקבלתפנים.webp → IDF
+תמונתרקעחלל.webp → Space
+תמונתרקעAI.webp → AI
+
+
+═══════════════════════════════════════════════════════════════════════════════
+חלק 24: הערות והמלצות
+═══════════════════════════════════════════════════════════════════════════════
+
+24.1 קבצים עם שמות עבריים
+--------------------------------------------------------------------------------
+• עמודפרוייקטים, צור קשר, תודה, פרוייקט 01-06
+• תמונות עם שמות עבריים — וודא encoding נכון
+
+24.2 STABLE_VERSION_2025
+--------------------------------------------------------------------------------
+• עותק כפול — שמור סנכרון או הסר בעדכונים
+
+24.3 Archive
+--------------------------------------------------------------------------------
+• דפים לא מקושרים — index01-index09
+
+24.4 BRK01.jpg.png
+--------------------------------------------------------------------------------
+• שם כפול (.jpg.png) — שקול שינוי ל-BRK01.png
+
+
+═══════════════════════════════════════════════════════════════════════════════
+סוף מסמך KOLO — סריקה מלאה
+═══════════════════════════════════════════════════════════════════════════════
+
+סה"כ שורות במסמך זה: 700+
+תאריך: 24 פברואר 2026
+© 2025 MP — Michael Papismedov | MP-PORTFOLIO-ID: 2025-MP-001
+
+================================================================================
+                            KOLO.txt — END OF SCAN
+================================================================================

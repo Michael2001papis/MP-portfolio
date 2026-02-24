@@ -16,31 +16,46 @@
         <a href="/legal.html">Terms</a>
         <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener">GitHub</a>
     </nav>
-    <div class="game-container">
+    <main class="game-container" role="main">
         <h1>איקס עיגול</h1>
         <p class="game-by">MP — Michael Papismedov</p>
         <div class="mode-select">
-            <label>מצב: <select id="gameMode"><option value="pvp">אחד על אחד</option><option value="pvc">מול מחשב</option></select></label>
-            <label id="diffWrap" style="display:none;">קושי: <select id="difficulty"><option value="easy">קל מאוד</option><option value="normal">רגיל</option><option value="hard">קשה מאוד</option></select></label>
+            <label for="gameMode">מצב: <select id="gameMode" aria-label="בחירת מצב משחק"><option value="pvp">אחד על אחד</option><option value="pvc">מול מחשב</option></select></label>
+            <label id="diffWrap" class="diff-wrap" for="difficulty">קושי: <select id="difficulty" aria-label="רמת קושי"><option value="easy">קל מאוד</option><option value="normal">רגיל</option><option value="hard">קשה מאוד</option></select></label>
         </div>
-        <div class="tictactoe">
-            <div class="btn"></div>
-            <div class="btn"></div>
-            <div class="btn"></div>
-            <div class="btn"></div>
-            <div class="btn"></div>
-            <div class="btn"></div>
-            <div class="btn"></div>
-            <div class="btn"></div>
-            <div class="btn"></div>
+        <div class="score-board">
+            <span>X: <strong id="scoreX">0</strong></span>
+            <span>תיקו: <strong id="scoreTie">0</strong></span>
+            <span>O: <strong id="scoreO">0</strong></span>
+            <button type="button" id="resetScoreBtn" class="reset-score-btn" title="איפוס ציון">↺</button>
+        </div>
+        <label class="sound-toggle"><input type="checkbox" id="soundOn" checked> צלילים</label>
+        <p id="gameStatus" class="game-status" aria-live="polite" aria-atomic="true">תור X</p>
+        <div class="tictactoe" role="grid" aria-label="לוח איקס עיגול">
+            <button type="button" class="btn" tabindex="0"></button>
+            <button type="button" class="btn" tabindex="0"></button>
+            <button type="button" class="btn" tabindex="0"></button>
+            <button type="button" class="btn" tabindex="0"></button>
+            <button type="button" class="btn" tabindex="0"></button>
+            <button type="button" class="btn" tabindex="0"></button>
+            <button type="button" class="btn" tabindex="0"></button>
+            <button type="button" class="btn" tabindex="0"></button>
+            <button type="button" class="btn" tabindex="0"></button>
         </div>
         <div class="game-buttons">
-            <button id="restartButton">התחל משחק מחדש</button>
+            <button type="button" id="restartButton">התחל משחק מחדש</button>
+            <button type="button" id="undoBtn" class="undo-btn" title="בטל מהלך (R)">בטל מהלך</button>
             <a href="/index.html" id="homeButton" class="home-btn">חזור לעמוד הבית</a>
         </div>
+    </main>
+    <div id="resultOverlay" class="result-overlay" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="resultText" aria-live="polite">
+        <div class="result-modal">
+            <p id="resultText"></p>
+            <button type="button" id="resultCloseBtn" class="result-close-btn">המשך</button>
+        </div>
     </div>
-    <footer id="mp-signature" style="text-align:center;padding:1rem;background:#1e3a5f;color:white;font-size:0.9rem;">
-        <p>© 2025 MP — Michael Papismedov | MP-PORTFOLIO-ID: 2025-MP-001 · <a href="/legal.html" style="color:#7dd3fc;">Terms</a> · <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" style="color:#7dd3fc;">GitHub</a></p>
+    <footer id="mp-signature" class="mp-footer">
+        <p>© 2025 MP — Michael Papismedov | MP-PORTFOLIO-ID: 2025-MP-001 · <a href="/legal.html" class="footer-link">Terms</a> · <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener" class="footer-link">GitHub</a></p>
     </footer>
     <script src="/scripts/project-nav-inject.js"></script>
     <script src="/scripts/ownership-console.js"></script>
