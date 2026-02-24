@@ -1,88 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title> Registration-form </title>
-
+    <title>טופס יצירת דף נחיתה מותאם</title>
     <link rel="stylesheet" href="/styles/shared-header-footer.css">
     <link rel="stylesheet" href="/styles/Pj1/צור קשר.css">
-    
 </head>
-
 <body>
 
     <header class="top-menu">
-
         <img src="/images/Firstprojectphotos/Michael.img.webp" alt="Logo">
-
-        <a href="/index.html" > <button> בחזרה הביתה </button></a>
-        
-
+        <a href="/index.html"><button>בחזרה הביתה</button></a>
     </header>
 
     <div class="container">
+        <h1>יצירת דף נחיתה מותאם</h1>
+        <p class="form-intro">מלא את הפרטים והעדפותיך – הדף נחיתה יופעל לפי ההגדרות שבחרת.</p>
 
-        <h1> Registration form </h1>
-
-        <form>
-            
+        <form id="landing-form">
             <div class="form-section">
-
-                <h2> פרטי משתמש </h2>
-
+                <h2>פרטי משתמש</h2>
                 <label for="name">שם מלא:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" placeholder="מיקי פפיס" required>
 
                 <label for="email">אימייל:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder="abc@co.com" required>
 
                 <label for="password">סיסמה:</label>
-                <input type="password" id="password" name="password" required>
-
+                <input type="password" id="password" name="password" placeholder="מינימום 8 תווים" minlength="8" required>
             </div>
 
             <div class="form-section">
+                <h2>העדפות דף הנחיתה</h2>
 
-                <h2>העדפות</h2>
-
-                <label for="color">בחר צבע:</label>
-
-                <select id="color" name="color">
+                <label for="bgColor">בחר צבע רקע:</label>
+                <select id="bgColor" name="bgColor">
+                    <option value="white">לבן</option>
                     <option value="black">שחור</option>
                     <option value="red">אדום</option>
-                    <option value="white">לבן</option>
+                    <option value="yellow">צהוב</option>
+                    <option value="green">ירוק</option>
+                    <option value="blue">כחול</option>
                 </select>
 
                 <label for="font">בחר סוג כתיבה:</label>
-
                 <select id="font" name="font">
                     <option value="Arial">Arial</option>
                     <option value="Verdana">Verdana</option>
                     <option value="Helvetica">Helvetica</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Courier New">Courier New</option>
                 </select>
 
+                <label for="pageType">סוג הדף:</label>
+                <select id="pageType" name="pageType">
+                    <option value="birthday">ברכה ליום הולדת</option>
+                    <option value="work">סיכום עבודה</option>
+                    <option value="inventory">ספירת מלאי</option>
+                    <option value="writing">כתיבה</option>
+                </select>
+
+                <label for="textColor">צבע אותיות:</label>
+                <select id="textColor" name="textColor">
+                    <option value="white">לבן</option>
+                    <option value="black">שחור</option>
+                    <option value="red">אדום</option>
+                    <option value="yellow">צהוב</option>
+                    <option value="green">ירוק</option>
+                    <option value="blue">כחול</option>
+                </select>
+
+                <label for="mode">מצב:</label>
+                <select id="mode" name="mode">
+                    <option value="delicate">עדין</option>
+                    <option value="smooth">חלק</option>
+                    <option value="fast">מהיר</option>
+                </select>
+
+                <label for="birthday">תאריך (ליום הולדת):</label>
+                <input type="date" id="birthday" name="birthday">
             </div>
 
             <div class="form-section">
-
-                <h2>כרטיס יום הולדת</h2>
-
-                <label for="birthday">בחר תאריך:</label>
-
-                <input type="date" id="birthday" name="birthday">
-
+                <h2>עטיפת הדף נחיתה</h2>
+                <label for="wrapper">איך להציג את הדף:</label>
+                <select id="wrapper" name="wrapper">
+                    <option value="popup">חלונית קטנה ל-30 שניות</option>
+                    <option value="newtab">דף נחיתה שלם (לשונית חדשה)</option>
+                    <option value="alert">אלרט מהיר – לא נעים לעיין</option>
+                </select>
             </div>
 
-            <button ctype="submit" class="button">שלח</button>
-
+            <button type="submit" class="button">צור דף נחיתה</button>
         </form>
-
     </div>
 
-    <script src="/scripts/ownership-console.js"></script>
-</body>
+    <footer id="mp-signature" class="footer mp-signature" role="contentinfo">
+        <p>© 2025 MP — Michael Papismedov | MP-PORTFOLIO-ID: 2025-MP-001 · <a href="/legal.html">Terms</a> · <a href="https://github.com/Michael2001papis/MP-portfolio" target="_blank" rel="noopener">GitHub</a></p>
+    </footer>
 
+    <script src="/scripts/ownership-console.js"></script>
+    <script src="/pages/LandingPage/landing-form-handler.js"></script>
+</body>
 </html>
