@@ -46,6 +46,13 @@ document.addEventListener('DOMContentLoaded', function() {
             hamburger.setAttribute('aria-expanded', hamburger.classList.contains('open'));
             nav.classList.toggle('open');
         });
+        document.addEventListener('click', function(e) {
+            if (nav.classList.contains('open') && !nav.contains(e.target) && !hamburger.contains(e.target)) {
+                nav.classList.remove('open');
+                hamburger.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
+        });
     }
 
     // Filter Projects

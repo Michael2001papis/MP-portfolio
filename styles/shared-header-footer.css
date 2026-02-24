@@ -1,7 +1,10 @@
 /* ============================================
    MP Portfolio - עיצוב אחיד Header ו-Footer
    Shared Header & Footer Styles
+   נשען על styles/reset.css
    ============================================ */
+
+@import url('/styles/reset.css');
 
 :root {
     --site-bg: #f0f4f8;
@@ -11,10 +14,6 @@
     --site-btn-hover: #2c5282;
     --site-text: #2d3748;
     --site-text-light: #718096;
-}
-
-html, body {
-    overflow-x: hidden;
 }
 
 /* תפריט עליון אחיד */

@@ -94,3 +94,34 @@ footer#mp-signature {
         max-width: 100%;
     }
 }
+
+/* Footer אחיד — דפי משחקים */
+#mp-signature,
+footer#mp-signature,
+.game-footer,
+.footer,
+.mp-footer {
+    text-align: center;
+    padding: 1.25rem 2rem;
+    background: #1e3a5f;
+    color: rgba(255,255,255,0.95);
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.15);
+}
+#mp-signature a,
+footer#mp-signature a,
+.game-footer a,
+.footer a,
+.mp-footer a,
+.mp-footer .footer-link {
+    color: #7dd3fc;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+#mp-signature a:hover,
+footer#mp-signature a:hover,
+.game-footer a:hover,
+.footer a:hover,
+.mp-footer a:hover {
+    opacity: 0.9;
+}

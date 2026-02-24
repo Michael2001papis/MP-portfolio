@@ -21,11 +21,7 @@
     --tap-min: 44px;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Reset ב-styles/reset.css — נטען קודם */
 
 html {
     scroll-behavior: smooth;
@@ -615,6 +611,12 @@ body.form-page { padding: 1rem; min-height: 100vh; display: flex; flex-direction
 .portfolio-footer a {
     color: var(--primary);
     text-decoration: none;
+}
+
+.portfolio-footer small {
+    display: block;
+    margin-top: 0.25rem;
+    opacity: 0.85;
 }
 
 /* ========== Back to Top ========== */
