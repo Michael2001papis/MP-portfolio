@@ -10,7 +10,7 @@ window.MP_PROJECTS_CATALOG = {
         { title: 'Snake Game', desc: 'Classic snake game with canvas rendering', tech: 'HTML · CSS · JavaScript', link: '/pages/JS project pages/Snakegame/index.html', img: '/images/Secondprojectphotos/Photosfordisplayfirst/SGN02.jpg' },
         { title: 'Trivia Quiz', desc: 'Interactive trivia quiz with multiple choice', tech: 'HTML · CSS · JavaScript', link: '/pages/JS project pages/Triviaplay/index.html', img: '/images/Secondprojectphotos/Photosfordisplayfirst/TG01.webp' },
         { title: 'Table Tennis (Pong)', desc: 'Two-player Pong game with score tracking', tech: 'HTML · CSS · JavaScript', link: '/pages/JS project pages/TableTennis/index.html', img: '/images/Secondprojectphotos/Photosfordisplayfirst/TTG02.jpg' },
-        { title: 'Breakout', desc: 'Classic brick breaker with paddle, ball physics and levels', tech: 'HTML · CSS · JavaScript · Canvas', link: '/pages/JS project pages/All-Breakout/index.html', img: '/images/Secondprojectphotos/Photosfordisplayfirst/TTG02.jpg' }
+        { title: 'Breakout', desc: 'Classic brick breaker with paddle, ball physics and levels', tech: 'HTML · CSS · JavaScript · Canvas', link: '/pages/JS project pages/All-Breakout/index.html', img: '/images/Secondprojectphotos/Photosfordisplayfirst/BRK01.jpg.png' }
     ],
     html: [
         { title: 'Medical Landing Page', desc: 'Responsive landing page for medical services', tech: 'HTML · CSS', link: '/pages/LandingPage/medical-project.html', img: '/images/Nowphotos/תמונהלעולםהרפואקבלהפניםראשונה.webp' },
