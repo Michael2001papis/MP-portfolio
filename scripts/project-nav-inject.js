@@ -3,8 +3,8 @@
     'use strict';
     var GITHUB = 'https://github.com/Michael2001papis/MP-portfolio';
     var navHTML = '<button class="project-nav-toggle" aria-label="תפריט" aria-expanded="false"><span></span><span></span><span></span></button>' +
-        '<a href="/index.html">Home</a>' +
-        '<a href="/pages/עמודמעבריםכללי/index.html">Projects</a>' +
+        '<a href="/index.html">חזרה לעמוד הבית</a>' +
+        '<a href="/pages/עמודמעבריםכללי/index.html">לכל הפרויקטים</a>' +
         '<a href="/legal.html">Terms</a>' +
         '<a href="' + GITHUB + '" target="_blank" rel="noopener">GitHub</a>';
     function setupNav(nav) {
